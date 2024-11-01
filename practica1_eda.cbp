@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="practica1_eda" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/practica1_eda" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/practica1_eda" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Any.h" />
+		<Unit filename="include/Districte.h" />
+		<Unit filename="include/Estudi.h" />
+		<Unit filename="include/Nacionalitat.h" />
+		<Unit filename="include/Padro.h" />
+		<Unit filename="include/Persona.h" />
+		<Unit filename="include/eines.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Any.cpp" />
+		<Unit filename="src/Districte.cpp" />
+		<Unit filename="src/Estudi.cpp" />
+		<Unit filename="src/Nacionalitat.cpp" />
+		<Unit filename="src/Padro.cpp" />
+		<Unit filename="src/Persona.cpp" />
+		<Unit filename="src/eines.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
