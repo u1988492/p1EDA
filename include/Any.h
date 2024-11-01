@@ -5,16 +5,19 @@
 #include <map>
 #include <list>
 #include <string>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
 #include "Districte.h"
 
 
 using namespace std;
 
-class Padro {
+class Any {
     public:
-        Padro();
-
-        int afegir(int any, int districte, int codiNivellEstudis, const string &nivellEstudis, int anyNaixement, int codiNacionalitat, const string &nomNacionalitat);
+        Any();
+        void afegirAny(int districte, int codiNivellEstudis, const string &nivellEstudis, int anyNaixement, int codiNacionalitat, const string &nomNacionalitat, int seccio);
+        void mostraAny(int districte);
         //vector<int> obtenirNumHabitantsPerDistricte() const;
         //vector<pair<int, double>> resumEdat() const;
         //vector<string> resumEstudis() const;
@@ -22,7 +25,7 @@ class Padro {
         //pair<vector<string>, vector<string>> diferentsNacionalitats(int districte1, int districte2) const;
 
     private:
-        vector<Districte> vecDistrictes;  // Almacena los distritos
+        vector<Districte> vecDistrictes;  //Almacena los distritos
 };
 
 #endif // ANY_H

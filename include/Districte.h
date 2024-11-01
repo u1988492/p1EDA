@@ -5,6 +5,9 @@
 #include <map>
 #include <list>
 #include <string>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
 #include "Persona.h"
 
 using namespace std;
@@ -13,7 +16,9 @@ class Districte
 {
     public:
         Districte() {};
-        void afegir(int codiNivellEstudis, const string &nivellEstudis, int anyNaixement, int codiNacionalitat, const string &nomNacionalitat);
+        void afegirDistricte(int codiNivellEstudis, const string &nivellEstudis, int anyNaixement, int codiNacionalitat, const string &nomNacionalitat, int seccio);
+        bool existeixSeccio(int seccio);
+        void mostraDistr();
         //long obtenirNumHabitants() const;
         //double obtenirEdatMitjana() const;
         //añadir clase: Resumestudis; CONTENIDOR resumEstudis() const;

@@ -5,15 +5,20 @@
 #include <map>
 #include <list>
 #include <string>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
 #include "Any.h"
+#include "eines.h"
 
 using namespace std;
 
 class Padro {
 public:
-    Padro(){};
+    //Padro(){};
     int llegirDades(const string &path);
     bool existeixAny(int any) const;
+    void mostraPadro(int any, int districte);
 
 //    map<int, long> obtenirNumHabitantsPerAny() const;
 //    vector<long> obtenirNumHabitantsPerDistricte(int any) const;

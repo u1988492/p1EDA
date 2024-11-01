@@ -18,7 +18,7 @@ class Nacionalitat
 
     private:
         int codiNacionalitat;
-        string codiNacionalitat;
+        string nacionalitat;
 
 };
 

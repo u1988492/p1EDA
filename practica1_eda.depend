@@ -1,0 +1,92 @@
+# depslib dependency file v1.0
+1730476250 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\any.cpp
+	"Any.h"
+	"Districte.h"
+
+1730476242 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\any.h
+	<vector>
+	<map>
+	<list>
+	<string>
+	<fstream>
+	<iomanip>
+	<iostream>
+	"Districte.h"
+
+1730476254 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\districte.h
+	<vector>
+	<map>
+	<list>
+	<string>
+	<fstream>
+	<iomanip>
+	<iostream>
+	"Persona.h"
+
+1730476303 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\persona.h
+	<vector>
+	<map>
+	<list>
+	<string>
+	<fstream>
+	<iomanip>
+	<iostream>
+	"Estudi.h"
+	"Nacionalitat.h"
+
+1730467858 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\estudi.h
+	<vector>
+	<map>
+	<list>
+	<string>
+
+1730472981 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\nacionalitat.h
+	<vector>
+	<map>
+	<list>
+	<string>
+
+1730467262 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\eines.cpp
+	"eines.h"
+
+1730467256 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\eines.h
+	<string>
+	<vector>
+
+1730476332 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\main.cpp
+	<vector>
+	<map>
+	<list>
+	<string>
+	"Padro.h"
+
+1730476224 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\padro.h
+	<vector>
+	<map>
+	<list>
+	<string>
+	<fstream>
+	<iomanip>
+	<iostream>
+	"Any.h"
+	"eines.h"
+
+1730475691 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\estudi.cpp
+	"Estudi.h"
+
+1730475685 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\nacionalitat.cpp
+	"Nacionalitat.h"
+
+1730476304 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\persona.cpp
+	"Persona.h"
+	"Estudi.h"
+	"Nacionalitat.h"
+
+1730476224 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\padro.cpp
+	"Padro.h"
+	"Any.h"
+
+1730476287 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\districte.cpp
+	"Districte.h"
+	"Persona.h"
+
