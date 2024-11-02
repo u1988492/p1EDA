@@ -60,7 +60,7 @@
 	<string>
 	"Padro.h"
 
-1730528975 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\padro.h
+1730535099 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\padro.h
 	<vector>
 	<map>
 	<list>
@@ -82,7 +82,7 @@
 	"Estudi.h"
 	"Nacionalitat.h"
 
-1730531082 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\padro.cpp
+1730566233 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\padro.cpp
 	"Padro.h"
 	"Any.h"
 

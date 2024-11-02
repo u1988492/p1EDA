@@ -64,7 +64,7 @@ int Padro::llegirDades(const string &path){
         getline(f, linea); //leer siguiente linea
     }
     f.close();
-    return 0;
+    return nDades;
 }
 
 //Función para buscar si existe o no un año en el mapa del objeto Padro
