@@ -19,7 +19,7 @@ bool validarDades(int any, int districte, int codiNivellEstudis, string nivellEs
 }
 
 //constructor vacío
-//Padro::Padro(){}
+Padro::Padro(){}
 
 //Función para leer los datos de un archivo CSV introducido por el usuario, y cargarlos a las estructuras de datos
 int Padro::llegirDades(const string &path){
@@ -39,7 +39,7 @@ int Padro::llegirDades(const string &path){
     getline(f, linea); //saltar linea de la cabecera
     getline(f, linea); //leer segunda linea del archivo
     while(!f.eof()){
-        campos = tokens(linea, ',', false);
+        campos = tokens(linea, ',', true);
         if(campos.size()>=12){ //solo procesar lineas que tengan al menos los datos necesarios
             //procesar los campos de interes
             int any = stringToInt(campos[0]);
@@ -53,7 +53,7 @@ int Padro::llegirDades(const string &path){
 
             //comprobar que los datos sean válidos antes de cargarlos
             if(validarDades(any, districte, codiNivellEstudis, nivellEstudis, anyNaixement, codiNacionalitat, nomNacionalitat, seccio)){
-                if(existeixAny(any)){
+                if(!existeixAny(any)){
                     //si no existe el año en el mapa de Padro, crear nuevo objeto vacío de año y añadir a nueva posición en padroAnys
                     padroAnys[any] = Any();
                 }

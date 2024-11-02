@@ -23,7 +23,13 @@ int main()
     int any, districte;
     cin >> any;
     cin >> districte;
-    p.mostraPadro(any, districte);
+    while(any!=0 || districte!=0){
+        p.mostraPadro(any, districte);
+        cout << "Introduce el año y numero de distrito para consultar sus datos: " << endl;
+        cin >> any;
+        cin >> districte;
+    }
+
 
     return 0;
 }

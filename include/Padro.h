@@ -15,7 +15,7 @@ using namespace std;
 
 class Padro {
 public:
-    //Padro(){};
+    Padro();
     int llegirDades(const string &path);
     bool existeixAny(int any) const;
     void mostraPadro(int any, int districte);
