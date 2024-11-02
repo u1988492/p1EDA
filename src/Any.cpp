@@ -16,6 +16,17 @@ void Any::afegirAny(int districte, int codiNivellEstudis, const string &nivellEs
     vecDistrictes[districte].afegirDistricte(codiNivellEstudis, nivellEstudis, anyNaixement, codiNacionalitat, nomNacionalitat, seccio);
 }
 
+//Función para consultar el total de habitantes por distrito en un año
+vector<int> Any::obtenirNumHabitantsPerDistricte() const{
+    vector<int> habitants;
+    for(int i = 1; i<vecDistrictes.size(); i++){
+        habitants.push_back(vecDistrictes[i].obtenirNumHabitants());
+    }
+    return habitants;
+}
+
+
+
 void Any::mostraAny(int districte){
     vecDistrictes[districte].mostraDistr();
 }

@@ -18,7 +18,7 @@ class Any {
         Any();
         void afegirAny(int districte, int codiNivellEstudis, const string &nivellEstudis, int anyNaixement, int codiNacionalitat, const string &nomNacionalitat, int seccio);
         void mostraAny(int districte);
-        //vector<int> obtenirNumHabitantsPerDistricte() const;
+        vector<int> obtenirNumHabitantsPerDistricte() const;
         //vector<pair<int, double>> resumEdat() const;
         //vector<string> resumEstudis() const;
         //vector<pair<int, int>> edatNacioPerDistricte(int edat, int codiNacionalitat) const;

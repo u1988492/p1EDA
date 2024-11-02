@@ -18,11 +18,9 @@ public:
     Padro();
     int llegirDades(const string &path);
     bool existeixAny(int any) const;
-    void mostraPadro(int any, int districte);
-
-//    map<int, long> obtenirNumHabitantsPerAny() const;
-//    vector<long> obtenirNumHabitantsPerDistricte(int any) const;
-//    map<int, long> obtenirNumHabitantsPerSeccio(int any, int districte) const;
+    map<int, long> obtenirNumHabitantsPerAny() const;
+    vector<long> obtenirNumHabitantsPerDistricte(int any) const;
+    map<int, long> obtenirNumHabitantsPerSeccio(int any, int districte) const;
 //    ResumEstudis resumEstudis() const;
 //    map<int,int> nombreEstudisDistricte(int districte) const;
 //    ResumNivellEstudis resumNivellEstudis() const;

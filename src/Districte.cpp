@@ -1,7 +1,7 @@
 #include "Districte.h"
 #include "Persona.h"
 
-//Funció para añadir una persona a la lista de personas de la sección correspondiente
+//Función para añadir una persona a la lista de personas de la sección correspondiente
 void Districte::afegirDistricte(int codiNivellEstudis, const string &nivellEstudis, int anyNaixement, int codiNacionalitat, const string &nomNacionalitat, int seccio){
     //pre: datos de padrón válidos
     Persona p(codiNivellEstudis, nivellEstudis, anyNaixement, codiNacionalitat, nomNacionalitat);
@@ -11,6 +11,16 @@ void Districte::afegirDistricte(int codiNivellEstudis, const string &nivellEstud
 //Función para comprobar si una sección existe en el distrito o no
 bool Districte::existeixSeccio(int seccio){
     return habitantsSeccio.find(seccio) != habitantsSeccio.end();
+}
+
+//Función para obtener el número de habitantes del distrito
+long Districte::obtenirNumHabitants() const{
+    long nHabitants = 0;
+    for(const auto &seccio: habitantsSeccio){
+        const auto &listaPersonas = seccio.second;
+        nHabitants += listaPersonas.size();
+    }
+    return nHabitants;
 }
 
 void Districte::mostraDistr(){

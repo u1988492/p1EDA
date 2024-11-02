@@ -15,7 +15,7 @@ void mostraTitol(const string &titol){
     int ancho = titol.size() + 4;
     cout << string(ancho, '*') << endl;
     cout << "* " << titol << " *" << endl;
-    cout << string(titol, '*') << endl;
+    cout << string(ancho, '*') << endl;
 }
 
 void lineaChar(char c){
@@ -40,12 +40,43 @@ void cargarDatos(Padro &p){
 }
 
 //02: EXISTE AÑO
+void existeixAny(Padro &p){
+    mostraTitol("02. Existeix any");
+    int any;
+    cout << "Any: "; cin >> any;
+    if(!p.existeixAny(any)){
+        cout << "Any inexistent" << endl;
+    }
+    else{
+        cout << "Any existent" << endl;
+    }
+}
 
 //03: NÚMERO DE HABITANTES DEL PADRÓN, POR AÑO, Y PROMEDIO
+void numHabitants(const Padro &p){
+    mostraTitol("03. Obtenir nombre d'habitants");
+    map<int, long>habitants = p.obtenirNumHabitantsPerAny();
+    int totalPadro = 0;
+
+    for(const auto &any: habitants){
+        int anyActual = any.first;
+        long total = any.second;
+        cout << anyActual << " habitants: " << total << endl;
+        totalPadro += total;
+    }
+    long promig = (habitants.size()>0) ? totalPadro/habitants.size(): 0; //comprobar si habitants>0 antes de operar para evitar errores
+    cout << "PROMIG: " << setprecision(2) << promig << endl;
+}
 
 //04: NÚMERO DE HABITANTES DE UN AÑO
+void numHabitantsAny(Padro &p){
+    return;
+}
 
 //05: NÚMERO DE HABITANTES DE UN AÑO Y DISTRITO
+void numHabitantsAnyDistricte(Padro &p){
+    return;
+}
 
 //06: RESUMEN POR ESTUDIOS
 
@@ -80,18 +111,22 @@ void menu(){
 }
 
 //GESTIÓN DE OPCIÓN DEL USUARIO
-void gestioOpcio(int opcio, Padro p){
+void gestioOpcio(int opcio, Padro &p){
     switch(opcio){
         case 1:
             cargarDatos(p);
             break;
         case 2:
+            existeixAny(p);
             break;
         case 3:
+            numHabitants(p);
             break;
         case 4:
+            numHabitantsAny(p);
             break;
         case 5:
+            numHabitantsAnyDistricte(p);
             break;
         case 6:
             break;
@@ -129,6 +164,8 @@ int main()
     cin >> opcio;
     while(opcio!=0){
         gestioOpcio(opcio, p);
+        cout << "Introduce una opción del 1 al 15, o 0 para acabar." << endl;
+        cin >> opcio;
     }
 
     cout << "Finalizando el programa." << endl;

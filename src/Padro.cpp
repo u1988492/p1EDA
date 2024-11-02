@@ -72,7 +72,27 @@ bool Padro::existeixAny(int any) const{
     return padroAnys.find(any) != padroAnys.end();
 }
 
-void Padro::mostraPadro(int any, int districte){
-    cout << any << " - " << districte << " - ";
-    padroAnys[any].mostraAny(districte);
+//Función para obtener el número de habitantes del padrón, por año
+map<int, long> Padro::obtenirNumHabitantsPerAny() const{
+    map<int, long> habitants;
+
+    for(const auto &any: padroAnys){
+        int anyActual = any.first;
+        const Any &anyObjecte = any.second;
+
+        long totalAny = 0;
+        vector<int> districtesTotal = anyObjecte.obtenirNumHabitantsPerDistricte();
+
+        for(int i=1; i<districtesTotal.size(); i++){
+            totalAny += districtesTotal[i];
+        }
+        habitants[anyActual] = totalAny;
+    }
+    return habitants;
 }
+
+
+//void Padro::mostraPadro(int any, int districte){
+//    cout << any << " - " << districte << " - ";
+//    padroAnys[any].mostraAny(districte);
+//}
