@@ -81,9 +81,9 @@ map<int, long> Padro::obtenirNumHabitantsPerAny() const{
         const Any &anyObjecte = any.second;
 
         long totalAny = 0;
-        vector<int> districtesTotal = anyObjecte.obtenirNumHabitantsPerDistricte();
+        vector<long> districtesTotal = anyObjecte.obtenirNumHabitantsPerDistricte();
 
-        for(int i=1; i<districtesTotal.size(); i++){
+        for(unsigned i=0; i<districtesTotal.size(); i++){
             totalAny += districtesTotal[i];
         }
         habitants[anyActual] = totalAny;
@@ -91,6 +91,25 @@ map<int, long> Padro::obtenirNumHabitantsPerAny() const{
     return habitants;
 }
 
+//Función para obtener el número de habitantes de un año en concreto, por distrito
+vector<long> Padro::obtenirNumHabitantsPerDistricte(int any) const{
+    vector<long> habitantsAny; //vector para guardar los habitantes de cada distrito
+    const Any &anyObjecte = padroAnys.at(any);
+    habitantsAny = anyObjecte.obtenirNumHabitantsPerDistricte();
+    return habitantsAny;
+}
+
+//Función para obtener el número de habitantes de un año y distrito concretos
+map<int, long> Padro::obtenirNumHabitantsPerSeccio(int any, int districte) const{
+    //llamar a función para obtener habitantes por sección de un distrito
+    auto obj = padroAnys.find(any); //se da por hecho que el año existe porque se ha validado previamente
+    const Any &anyObjecte = obj->second;
+    return anyObjecte.obtenirNumHabitantsPerSeccio(districte);
+}
+
+//Función para obtener los títulos de los estudios de la población de cada año del padrón
+ResumEstudis Padro::resumEstudis() const{
+}
 
 //void Padro::mostraPadro(int any, int districte){
 //    cout << any << " - " << districte << " - ";

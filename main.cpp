@@ -70,12 +70,53 @@ void numHabitants(const Padro &p){
 
 //04: NÚMERO DE HABITANTES DE UN AÑO
 void numHabitantsAny(Padro &p){
-    return;
+    mostraTitol("04: Obtenir nombre d'habitants d'un any");
+    int any;
+    cout << "Any: "; cin >> any;
+
+    if(p.existeixAny(any)){
+        vector<long> habitants = p.obtenirNumHabitantsPerDistricte(any);
+        long total = 0;
+
+        if(!habitants.empty()){
+            //mostrar si hay elementos
+            for(int i=0; i<habitants.size(); i++){
+                cout << "Districte: " << i+1 << " habitants: " << habitants[i] << endl;
+                total += habitants[i];
+            }
+        }
+        else{
+            cout << endl;
+        }
+        cout << "TOTAL: " << total << endl;
+    }
+    else{
+        cerr << "ERROR: Any inexistent" << endl;
+    }
 }
 
 //05: NÚMERO DE HABITANTES DE UN AÑO Y DISTRITO
 void numHabitantsAnyDistricte(Padro &p){
-    return;
+    mostraTitol("05: Obtenir nombre d'habitants d'un any i districte");
+    int any, districte;
+    cout << "Any: "; cin >> any;
+    cout << "Districte: "; cin >> districte;
+
+    //validar año y distrito
+    if(p.existeixAny(any)){
+        if(districte>0 && districte<6){
+            map<int, long> habitants = p.obtenirNumHabitantsPerSeccio(any, districte);
+            long total = 0;
+            //recorrer map y mostrar
+            for(const auto &elem: habitants){
+                cout << "Seccio: " << elem.first << " Habitants: " << elem.second << endl;
+                total += elem.second;
+            }
+            cout << "TOTAL: " << total << endl;
+        }
+       else cerr << "ERROR: Districte " << districte  << " invalid" << endl;
+    }
+    else cerr << "ERROR: Any " << any << " inexistent" << endl;
 }
 
 //06: RESUMEN POR ESTUDIOS

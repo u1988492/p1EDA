@@ -20,6 +20,7 @@ class Districte
         bool existeixSeccio(int seccio);
         void mostraDistr();
         long obtenirNumHabitants() const;
+        map<int, long> obtenirNumHabitantsSeccio() const;
         //double obtenirEdatMitjana() const;
         //añadir clase: Resumestudis; CONTENIDOR resumEstudis() const;
         //añadir clase: ResumNacionalitat; CONTENIDOR resumNacionalitats() const;

@@ -23,6 +23,18 @@ long Districte::obtenirNumHabitants() const{
     return nHabitants;
 }
 
+//Función para obtener los habitantes de cada sección de un distrito
+map<int, long> Districte::obtenirNumHabitantsSeccio() const{
+    map<int, long> habitants;
+    //recorrer lista de habitantes de cada sección del padron
+    for(const auto &seccio: habitantsSeccio){
+        int numSeccio = seccio.first;
+        long nHabitants = seccio.second.size();
+        habitants[numSeccio] = nHabitants; //guardar en map habitants
+    }
+    return habitants;
+}
+
 void Districte::mostraDistr(){
     int count = 0;
     for(const auto &elem: habitantsSeccio){
