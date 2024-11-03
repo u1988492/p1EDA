@@ -109,6 +109,7 @@ map<int, long> Padro::obtenirNumHabitantsPerSeccio(int any, int districte) const
 
 //Función para obtener los títulos de los estudios de la población de cada año del padrón
 ResumEstudis Padro::resumEstudis() const{
+
 }
 
 //void Padro::mostraPadro(int any, int districte){
