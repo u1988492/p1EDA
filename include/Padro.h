@@ -39,7 +39,7 @@ public:
     //Pre: any y districte son el año y distrito son un año y distrito válidos de padroAnys
     //Post: devuelve un map con los habitantes por cada sección del distrito en el año introducido
 
-    ResumEstudis resumEstudis() const;
+    //ResumEstudis resumEstudis() const;
     //Pre:
     //Post: Devuelve un ResumEstudis que contiene los estudios de los habitantes de cada año en padroAnys
 
@@ -55,16 +55,17 @@ public:
 private:
     map<int, Any> padroAnys;
 
-public:
-    class ResumEstudis{
-        public:
-            ResumEstudis(){};
-        private:
-            map<int, list<string>> estudisAny;
-    };
 
-    class ResumNacionalitats{
-    };
+//public:
+//    class ResumEstudis{
+//        public:
+//            ResumEstudis(){};
+//        private:
+//            map<int, list<string>> estudisAny;
+//    };
+//
+//    class ResumNacionalitats{
+//    };
 };
 
 #endif //PADRO_H

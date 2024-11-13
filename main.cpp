@@ -58,11 +58,12 @@ void numHabitants(const Padro &p){
     map<int, long>habitants = p.obtenirNumHabitantsPerAny();
     int totalPadro = 0;
 
-    for(const auto &any: habitants){
-        int anyActual = any.first;
-        long total = any.second;
-        cout << anyActual << " habitants: " << total << endl;
+    map<int, long>::const_iterator itHab = habitants.begin();
+    while(itHab!=habitants.end()){
+        long total = itHab->second;
+        cout << itHab->first << " habitants: " << itHab->second << endl;
         totalPadro += total;
+        itHab++;
     }
     long promig = (habitants.size()>0) ? totalPadro/habitants.size(): 0; //comprobar si habitants>0 antes de operar para evitar errores
     cout << "PROMIG: " << setprecision(2) << promig << endl;
@@ -80,7 +81,7 @@ void numHabitantsAny(Padro &p){
 
         if(!habitants.empty()){
             //mostrar si hay elementos
-            for(int i=0; i<habitants.size(); i++){
+            for(unsigned i=0; i<habitants.size(); i++){
                 cout << "Districte: " << i+1 << " habitants: " << habitants[i] << endl;
                 total += habitants[i];
             }
@@ -104,13 +105,15 @@ void numHabitantsAnyDistricte(Padro &p){
 
     //validar año y distrito
     if(p.existeixAny(any)){
-        if(districte>0 && districte<6){
+        if(districte>0 && districte<=6){
             map<int, long> habitants = p.obtenirNumHabitantsPerSeccio(any, districte);
             long total = 0;
             //recorrer map y mostrar
-            for(const auto &elem: habitants){
-                cout << "Seccio: " << elem.first << " Habitants: " << elem.second << endl;
-                total += elem.second;
+            map<int, long>::const_iterator itHabitants = habitants.begin();
+            while(itHabitants!=habitants.end()){
+                cout << "Seccio: " << itHabitants->first << " Habitants: " << itHabitants->second << endl;
+                total += itHabitants->second;
+                itHabitants++;
             }
             cout << "TOTAL: " << total << endl;
         }
@@ -188,6 +191,7 @@ void gestioOpcio(int opcio, Padro &p){
         case 14:
             break;
         case 15:
+            menu();
             break;
         default:
             cout << "Opción no válida. Introduce una opción de 1 a 15, o 0 para acabar." << endl;

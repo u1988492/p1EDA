@@ -33,6 +33,6 @@ map<int, long> Any::obtenirNumHabitantsPerSeccio(int districte) const{
 }
 
 
-void Any::mostraAny(int districte){
-    vecDistrictes[districte].mostraDistr();
-}
+//void Any::mostraAny(int districte){
+//    vecDistrictes[districte].mostraDistr();
+//}

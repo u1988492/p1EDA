@@ -16,9 +16,10 @@ bool Districte::existeixSeccio(int seccio){
 //Función para obtener el número de habitantes del distrito
 long Districte::obtenirNumHabitants() const{
     long nHabitants = 0;
-    for(const auto &seccio: habitantsSeccio){
-        const auto &listaPersonas = seccio.second;
-        nHabitants += listaPersonas.size();
+    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
+    while(itSeccio!=habitantsSeccio.end()){
+        nHabitants += itSeccio->second.size();
+        itSeccio++;
     }
     return nHabitants;
 }
@@ -27,24 +28,37 @@ long Districte::obtenirNumHabitants() const{
 map<int, long> Districte::obtenirNumHabitantsSeccio() const{
     map<int, long> habitants;
     //recorrer lista de habitantes de cada sección del padron
-    for(const auto &seccio: habitantsSeccio){
-        int numSeccio = seccio.first;
-        long nHabitants = seccio.second.size();
-        habitants[numSeccio] = nHabitants; //guardar en map habitants
+    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
+    while(itSeccio!=habitantsSeccio.end()){
+        habitants[itSeccio->first] = itSeccio->second.size();
+        itSeccio++;
     }
     return habitants;
 }
 
-void Districte::mostraDistr(){
-    int count = 0;
-    for(const auto &elem: habitantsSeccio){
-        int seccio = elem.first;
-        const auto &personaList = elem.second;
-        for(const Persona &persona: personaList){
-            cout << seccio << " - ";
-            persona.mostraPersona();
-            count++;
-            if(count>=20) return;
-        }
-    }
-}
+//void Districte::mostraDistr(){
+//    int counter = 0;
+//    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
+//    while(itSeccio!=habitantsSeccio.end()){
+//        list<Persona>const_iterator itPersona = itSeccio->second.begin();
+//        while(itPersona!=itSeccio->second.end()){
+//            cout << itSeccio->first << " - ";
+//            itPersona.mostraPersona();
+//            counter++
+//            it(counter>=20) return; //limite para que no se me raye esto
+//
+//        }
+//    }
+//
+//
+//    for(const auto &elem: habitantsSeccio){
+//        int seccio = elem.first;
+//        const auto &personaList = elem.second;
+//        for(const Persona &persona: personaList){
+//            cout << seccio << " - ";
+//            persona.mostraPersona();
+//            count++;
+//            if(count>=20) return;
+//        }
+//    }
+//}

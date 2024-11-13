@@ -75,18 +75,17 @@ bool Padro::existeixAny(int any) const{
 //Función para obtener el número de habitantes del padrón, por año
 map<int, long> Padro::obtenirNumHabitantsPerAny() const{
     map<int, long> habitants;
+    map<int, Any>::const_iterator itPadro = padroAnys.begin();
 
-    for(const auto &any: padroAnys){
-        int anyActual = any.first;
-        const Any &anyObjecte = any.second;
-
+    while(itPadro!=padroAnys.end()){
         long totalAny = 0;
-        vector<long> districtesTotal = anyObjecte.obtenirNumHabitantsPerDistricte();
+        vector<long> districtesTotal = itPadro->second.obtenirNumHabitantsPerDistricte();
 
         for(unsigned i=0; i<districtesTotal.size(); i++){
             totalAny += districtesTotal[i];
         }
-        habitants[anyActual] = totalAny;
+        habitants[itPadro->first] = totalAny;
+        itPadro++;
     }
     return habitants;
 }
@@ -94,23 +93,22 @@ map<int, long> Padro::obtenirNumHabitantsPerAny() const{
 //Función para obtener el número de habitantes de un año en concreto, por distrito
 vector<long> Padro::obtenirNumHabitantsPerDistricte(int any) const{
     vector<long> habitantsAny; //vector para guardar los habitantes de cada distrito
-    const Any &anyObjecte = padroAnys.at(any);
-    habitantsAny = anyObjecte.obtenirNumHabitantsPerDistricte();
+    map<int, Any>::const_iterator itPadro = padroAnys.find(any);
+    habitantsAny = itPadro->second.obtenirNumHabitantsPerDistricte();
     return habitantsAny;
 }
 
 //Función para obtener el número de habitantes de un año y distrito concretos
 map<int, long> Padro::obtenirNumHabitantsPerSeccio(int any, int districte) const{
     //llamar a función para obtener habitantes por sección de un distrito
-    auto obj = padroAnys.find(any); //se da por hecho que el año existe porque se ha validado previamente
-    const Any &anyObjecte = obj->second;
-    return anyObjecte.obtenirNumHabitantsPerSeccio(districte);
+    map<int, Any>::const_iterator itPadro = padroAnys.find(any); //se da por hecho que el año existe porque se ha validado previamente
+    return itPadro->second.obtenirNumHabitantsPerSeccio(districte);
 }
 
 //Función para obtener los títulos de los estudios de la población de cada año del padrón
-ResumEstudis Padro::resumEstudis() const{
-
-}
+//ResumEstudis Padro::resumEstudis() const{
+//
+//}
 
 //void Padro::mostraPadro(int any, int districte){
 //    cout << any << " - " << districte << " - ";

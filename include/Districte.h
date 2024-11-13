@@ -18,7 +18,7 @@ class Districte
         Districte() {};
         void afegirDistricte(int codiNivellEstudis, const string &nivellEstudis, int anyNaixement, int codiNacionalitat, const string &nomNacionalitat, int seccio);
         bool existeixSeccio(int seccio);
-        void mostraDistr();
+//        void mostraDistr();
         long obtenirNumHabitants() const;
         map<int, long> obtenirNumHabitantsSeccio() const;
         //double obtenirEdatMitjana() const;

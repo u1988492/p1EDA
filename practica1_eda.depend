@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1730653889 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\any.cpp
+1730654222 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\any.cpp
 	"Any.h"
 	"Districte.h"
 
-1730654222 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\any.h
+1731514798 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\any.h
 	<vector>
 	<map>
 	<list>
@@ -13,7 +13,7 @@
 	<iostream>
 	"Districte.h"
 
-1730653641 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\districte.h
+1731514783 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\districte.h
 	<vector>
 	<map>
 	<list>
@@ -53,7 +53,7 @@
 	<string>
 	<vector>
 
-1730654074 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\main.cpp
+1731513749 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\main.cpp
 	<vector>
 	<map>
 	<list>
@@ -62,7 +62,7 @@
 	<iomanip>
 	"Padro.h"
 
-1730636393 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\padro.h
+1731513317 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\padro.h
 	<vector>
 	<map>
 	<list>
@@ -85,11 +85,11 @@
 	"Estudi.h"
 	"Nacionalitat.h"
 
-1730635589 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\padro.cpp
+1731513674 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\padro.cpp
 	"Padro.h"
 	"Any.h"
 
-1730653770 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\districte.cpp
+1731514786 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\districte.cpp
 	"Districte.h"
 	"Persona.h"
 
