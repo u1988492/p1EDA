@@ -32,6 +32,9 @@ map<int, long> Any::obtenirNumHabitantsPerSeccio(int districte) const{
     return vecDistrictes[districte].obtenirNumHabitantsSeccio();
 }
 
+vector<string> Any::resumEstudis() const{
+    //guardar vector de sets de los estudios de cada distrito en un unico string sin estudios repetidos
+}
 
 //void Any::mostraAny(int districte){
 //    vecDistrictes[districte].mostraDistr();

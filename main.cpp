@@ -5,6 +5,7 @@
 #include <iostream>
 #include <iomanip>
 #include "Padro.h"
+#include "Resums.h"
 
 using namespace std;
 
@@ -122,7 +123,22 @@ void numHabitantsAnyDistricte(Padro &p){
     else cerr << "ERROR: Any " << any << " inexistent" << endl;
 }
 
-//06: RESUMEN POR ESTUDIOS
+//06: RESUMEN DE ESTUDIOS DE LA POBLACIÓN POR AÑO
+void resumEstudisPoblacio(Padro &p){
+    mostraTitol("06. Resum per estudis");
+    //una variable de tipo resum, resumestudis para guardar el resultado de la funcion de padro
+    ResumEstudis res = p.resumEstudis();
+
+    //un iterador para recorrer el resultado y mostrarlo
+    ResumEstudis::const_iterator itResum = res.begin();
+    while(itResum!=res.end()){
+        //mostrar
+        cout << itResum->first << " ";
+        //iterador para recorrer la lista de estudios
+
+        itResum++;
+    }
+}
 
 //07: NÚMERO DE ESTUDIOS POR DISTRITO
 
@@ -173,6 +189,7 @@ void gestioOpcio(int opcio, Padro &p){
             numHabitantsAnyDistricte(p);
             break;
         case 6:
+            resumEstudisPoblacio(p);
             break;
         case 7:
             break;

@@ -21,7 +21,7 @@ class Any {
         vector<long> obtenirNumHabitantsPerDistricte() const;
         map<int, long> obtenirNumHabitantsPerSeccio(int districte) const;
         //vector<pair<int, double>> resumEdat() const;
-        //vector<string> resumEstudis() const;
+        vector<string> resumEstudis() const;
         //vector<pair<int, int>> edatNacioPerDistricte(int edat, int codiNacionalitat) const;
         //pair<vector<string>, vector<string>> diferentsNacionalitats(int districte1, int districte2) const;
 

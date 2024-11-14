@@ -5,10 +5,12 @@
 #include <map>
 #include <list>
 #include <string>
+#include <set>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
 #include "Persona.h"
+#include "Resums.h"
 
 using namespace std;
 
@@ -22,7 +24,7 @@ class Districte
         long obtenirNumHabitants() const;
         map<int, long> obtenirNumHabitantsSeccio() const;
         //double obtenirEdatMitjana() const;
-        //añadir clase: Resumestudis; CONTENIDOR resumEstudis() const;
+        set<string> resumEstudis() const; //devuelve un set con los estudios de la población
         //añadir clase: ResumNacionalitat; CONTENIDOR resumNacionalitats() const;
         //long comptaEdatNacionalitat(int anyNaixement, int codiNacionalitat) const;
 

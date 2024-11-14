@@ -105,10 +105,20 @@ map<int, long> Padro::obtenirNumHabitantsPerSeccio(int any, int districte) const
     return itPadro->second.obtenirNumHabitantsPerSeccio(districte);
 }
 
-//Función para obtener los títulos de los estudios de la población de cada año del padrón
-//ResumEstudis Padro::resumEstudis() const{
-//
-//}
+//Función para obtener los estudios de la población de cada año del padrón, por su nombre
+ResumEstudis Padro::resumEstudis() const{
+    ResumEstudis resum;
+
+    //recorrer los años de padrón
+    map<int, Any>::const_iterator itPadro = padroAnys.begin();
+    while(itPadro!=padroAnys.end()){
+        resum->first = itPadro->first; //guardar el año
+    }
+
+    //guardar el año como clave del map de resumestudis
+    //guardar en la lista de resum los estudios diferentes de los habitantes en la lista de habitantes de cada distrito
+
+}
 
 //void Padro::mostraPadro(int any, int districte){
 //    cout << any << " - " << districte << " - ";

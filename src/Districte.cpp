@@ -19,7 +19,7 @@ long Districte::obtenirNumHabitants() const{
     map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
     while(itSeccio!=habitantsSeccio.end()){
         nHabitants += itSeccio->second.size();
-        itSeccio++;
+        ++itSeccio;
     }
     return nHabitants;
 }
@@ -31,9 +31,26 @@ map<int, long> Districte::obtenirNumHabitantsSeccio() const{
     map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
     while(itSeccio!=habitantsSeccio.end()){
         habitants[itSeccio->first] = itSeccio->second.size();
-        itSeccio++;
+        ++itSeccio;
     }
     return habitants;
+}
+
+//Función
+set<string> Districte::resumEstudis() const{
+    set<string> estudisDistricte;
+    //para cada sección del distrito, recorrer lista de habitantes e insertar estudios en el set
+    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
+    while(itSeccio!=habitantsSeccio.end()){
+        list<Persona>::const_iterator itPersona = itSeccio->second.begin(); //iterador al inicio de la lista de personas del distrito
+        while(itPersona!=itSeccio->second.end()){
+            //guardar estudios en el set
+            estudisDistricte.insert(itPersona->obtNivellEstudis());
+            ++itPersona;
+        }
+        ++itSeccio;
+    }
+    return estudisDistricte;
 }
 
 //void Districte::mostraDistr(){
