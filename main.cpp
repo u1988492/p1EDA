@@ -64,7 +64,7 @@ void numHabitants(const Padro &p){
         long total = itHab->second;
         cout << itHab->first << " habitants: " << itHab->second << endl;
         totalPadro += total;
-        itHab++;
+        ++itHab;
     }
     long promig = (habitants.size()>0) ? totalPadro/habitants.size(): 0; //comprobar si habitants>0 antes de operar para evitar errores
     cout << "PROMIG: " << setprecision(2) << promig << endl;
@@ -114,7 +114,7 @@ void numHabitantsAnyDistricte(Padro &p){
             while(itHabitants!=habitants.end()){
                 cout << "Seccio: " << itHabitants->first << " Habitants: " << itHabitants->second << endl;
                 total += itHabitants->second;
-                itHabitants++;
+                ++itHabitants;
             }
             cout << "TOTAL: " << total << endl;
         }
@@ -126,23 +126,33 @@ void numHabitantsAnyDistricte(Padro &p){
 //06: RESUMEN DE ESTUDIOS DE LA POBLACIÓN POR AÑO
 void resumEstudisPoblacio(Padro &p){
     mostraTitol("06. Resum per estudis");
-    //una variable de tipo resum, resumestudis para guardar el resultado de la funcion de padro
+    //guardar el resultado de la funcion de padro
     ResumEstudis res = p.resumEstudis();
-
-    //un iterador para recorrer el resultado y mostrarlo
-    ResumEstudis::const_iterator itResum = res.begin();
-    while(itResum!=res.end()){
-        //mostrar
-        cout << itResum->first << " ";
-        //iterador para recorrer la lista de estudios
-
-        itResum++;
-    }
+    res.mostrar();
 }
 
-//07: NÚMERO DE ESTUDIOS POR DISTRITO
+//07: NÚMERO DE ESTUDIOS DE UN DISTRITO, POR AÑO
+void numEstudisDistricte(Padro &p){
+    mostraTitol("07. Nombre d'estudis per districte");
+    cout << "Districte: ";
+    int districte; cin >> districte;
+
+    if(districte>0 && districte<=6){
+        map<int, int> nEstudis = p.nombreEstudisDistricte(districte);
+        map<int, int>::const_iterator itEstudis = nEstudis.begin();
+        while(itEstudis!=nEstudis.end()){
+            cout << "Any " << itEstudis->first << " Num Estudis: " << itEstudis->second << endl;
+            ++itEstudis;
+        }
+    }
+    else{cerr << "ERROR: Disrticte " << districte << " invalid";}
+
+}
 
 //08: RESUMEN DE NIVEL DE ESTUDIOS, POR AÑO Y DISTRITO
+void promigNivellEstudis(Padro &p){
+    mostraTitol("08. Resum nivell d'estudis");
+}
 
 //09: RESUMEN DE NACIONALIDADES, POR AÑO
 
@@ -166,6 +176,9 @@ void menu(){
     cout << "03. CONSULTAR NUMERO DE HABITANTES POR AÑO" << endl;
     cout << "04. CONSULTAR NUMERO DE HABITANTES DE UN AÑO" << endl;
     cout << "05. CONSULTAR NUMERO DE HABITANTES DE UN AÑO Y UN DISTRITO" << endl;
+    cout << "06. RESUMEN DE ESTUDIOS DE LA POBLACIÓN POR AÑO" << endl;
+    cout << "07. NUMERO DE ESTUDIOS POR DISTRITO" << endl;
+    cout << "08. RESUMEN DEL NIVEL DE ESTUDIOS" << endl;
     cout << "15. MENU" << endl;
     lineaChar('-');
 }
@@ -192,8 +205,10 @@ void gestioOpcio(int opcio, Padro &p){
             resumEstudisPoblacio(p);
             break;
         case 7:
+            numEstudisDistricte(p);
             break;
         case 8:
+            promigNivellEstudis(p);
             break;
         case 9:
             break;

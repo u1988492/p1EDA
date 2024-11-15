@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1730654222 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\any.cpp
+1731696998 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\any.cpp
 	"Any.h"
 	"Districte.h"
 
-1731514798 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\any.h
+1731696975 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\any.h
 	<vector>
 	<map>
 	<list>
@@ -13,17 +13,19 @@
 	<iostream>
 	"Districte.h"
 
-1731514783 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\districte.h
+1731696320 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\districte.h
 	<vector>
 	<map>
 	<list>
 	<string>
+	<set>
 	<fstream>
 	<iomanip>
 	<iostream>
 	"Persona.h"
+	"Resums.h"
 
-1730476303 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\persona.h
+1731589567 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\persona.h
 	<vector>
 	<map>
 	<list>
@@ -53,7 +55,7 @@
 	<string>
 	<vector>
 
-1731513749 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\main.cpp
+1731696940 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\main.cpp
 	<vector>
 	<map>
 	<list>
@@ -61,8 +63,9 @@
 	<iostream>
 	<iomanip>
 	"Padro.h"
+	"Resums.h"
 
-1731513317 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\padro.h
+1731696184 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\padro.h
 	<vector>
 	<map>
 	<list>
@@ -73,6 +76,7 @@
 	"Any.h"
 	"Districte.h"
 	"eines.h"
+	"Resums.h"
 
 1730475691 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\estudi.cpp
 	"Estudi.h"
@@ -85,11 +89,20 @@
 	"Estudi.h"
 	"Nacionalitat.h"
 
-1731513674 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\padro.cpp
+1731696922 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\padro.cpp
 	"Padro.h"
 	"Any.h"
 
-1731514786 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\districte.cpp
+1731686763 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\districte.cpp
 	"Districte.h"
 	"Persona.h"
+
+1731686747 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\resums.h
+	<vector>
+	<map>
+	<list>
+	<string>
+	<fstream>
+	<iomanip>
+	<iostream>
 

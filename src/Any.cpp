@@ -27,13 +27,32 @@ vector<long> Any::obtenirNumHabitantsPerDistricte() const{
 
 //Función para consultar el total de habitantes por sección, de un distrito
 map<int, long> Any::obtenirNumHabitantsPerSeccio(int districte) const{
-    //acceder a distrito del objeto
-    //guardar en un map los habitantes de cada seccion del distrito mediante funcion
     return vecDistrictes[districte].obtenirNumHabitantsSeccio();
 }
 
-vector<string> Any::resumEstudis() const{
-    //guardar vector de sets de los estudios de cada distrito en un unico string sin estudios repetidos
+//Función para obtener el resumen de estudios de la población de un año
+set<string> Any::resumEstudis() const{
+    //guardar set de strings con los estudios únicos del año
+    set<string> resum;
+
+    for(int i=1; i<vecDistrictes.size(); i++){
+        set<string> resumDistricte = vecDistrictes[i].resumEstudis(); //resumen estudios del distrito
+
+        //recorrer set del distrito y guardar
+        set<string>::const_iterator itResDis = resumDistricte.begin();
+        while(itResDis!=resumDistricte.end()){
+            resum.insert(*itResDis);
+            ++itResDis;
+        }
+    }
+
+    return resum;
+}
+
+//Función para obtener el resumen de estudios para un único distrito
+set<string> Any::resumEstudisDistricte(int districte)const{
+
+    return vecDistrictes[districte].resumEstudis(); //resumen estudios del distrito;
 }
 
 //void Any::mostraAny(int districte){

@@ -44,7 +44,11 @@ public:
     //Pre:
     //Post: Devuelve un ResumEstudis que contiene los estudios de los habitantes de cada año en padroAnys
 
-//    map<int,int> nombreEstudisDistricte(int districte) const;
+    map<int,int> nombreEstudisDistricte(int districte) const;
+    //Pre: districte > 0 y districte <= 6
+    //Post: devuelve un map con el año y el número de estudios del distrito en ese año
+
+
 //    ResumNivellEstudis resumNivellEstudis() const;
 //    ResumNacionalitats resumNacionalitats() const;
 //    map<int,string> movimentsComunitat(int codiNacionalitat) const;
@@ -56,17 +60,6 @@ public:
 private:
     map<int, Any> padroAnys;
 
-
-//public:
-//    class ResumEstudis{
-//        public:
-//            ResumEstudis(){};
-//        private:
-//            map<int, list<string>> estudisAny;
-//    };
-//
-//    class ResumNacionalitats{
-//    };
 };
 
 #endif //PADRO_H

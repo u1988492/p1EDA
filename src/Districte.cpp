@@ -36,7 +36,7 @@ map<int, long> Districte::obtenirNumHabitantsSeccio() const{
     return habitants;
 }
 
-//Función
+//Función para obtener un set que almacena los estudios únicos de los habitantes del distrito
 set<string> Districte::resumEstudis() const{
     set<string> estudisDistricte;
     //para cada sección del distrito, recorrer lista de habitantes e insertar estudios en el set
@@ -44,8 +44,8 @@ set<string> Districte::resumEstudis() const{
     while(itSeccio!=habitantsSeccio.end()){
         list<Persona>::const_iterator itPersona = itSeccio->second.begin(); //iterador al inicio de la lista de personas del distrito
         while(itPersona!=itSeccio->second.end()){
-            //guardar estudios en el set
-            estudisDistricte.insert(itPersona->obtNivellEstudis());
+            //guardar nombre del nivel de estudios en el set
+            estudisDistricte.insert(itPersona->obtenirNivellEstudis());
             ++itPersona;
         }
         ++itSeccio;

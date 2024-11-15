@@ -53,10 +53,6 @@ int Padro::llegirDades(const string &path){
 
             //comprobar que los datos sean válidos antes de cargarlos
             if(validarDades(any, districte, codiNivellEstudis, nivellEstudis, anyNaixement, codiNacionalitat, nomNacionalitat, seccio)){
-                if(!existeixAny(any)){
-                    //si no existe el año en el mapa de Padro, crear nuevo objeto vacío de año y añadir a nueva posición en padroAnys
-                    padroAnys[any] = Any();
-                }
                 padroAnys[any].afegirAny(districte, codiNivellEstudis, nivellEstudis, anyNaixement, codiNacionalitat, nomNacionalitat, seccio); //cargar los datos leídos
                 nDades++;
             }
@@ -85,7 +81,7 @@ map<int, long> Padro::obtenirNumHabitantsPerAny() const{
             totalAny += districtesTotal[i];
         }
         habitants[itPadro->first] = totalAny;
-        itPadro++;
+        ++itPadro;
     }
     return habitants;
 }
@@ -112,12 +108,29 @@ ResumEstudis Padro::resumEstudis() const{
     //recorrer los años de padrón
     map<int, Any>::const_iterator itPadro = padroAnys.begin();
     while(itPadro!=padroAnys.end()){
-        resum->first = itPadro->first; //guardar el año
+        set<string> resumAny = itPadro->second.resumEstudis(); //resumen de estudios de cada distrito del año
+        //recorrer set de resumen año y guardar a resum
+        set<string>::const_iterator itResAny = resumAny.begin();
+        while(itResAny!=resumAny.end()){
+            resum.afegirResumEstudis(itPadro->first, resumAny); //guardar el año y el resumen del año
+            ++itResAny;
+        }
+        ++itPadro;
     }
+    return resum;
+}
 
-    //guardar el año como clave del map de resumestudis
-    //guardar en la lista de resum los estudios diferentes de los habitantes en la lista de habitantes de cada distrito
-
+//Función para obtener el número de estudios por año de un distrito
+map<int,int> Padro::nombreEstudisDistricte(int districte) const{
+    map<int, int> nEstudis;
+    //para cada año del padrón, acceder al distrito y obtener el numero de estudios únicos
+    map<int, Any>::const_iterator itPadro = padroAnys.begin();
+    while(itPadro!=padroAnys.end()){
+        set<string> resDistricte = itPadro->second.resumEstudisDistricte(districte);
+        nEstudis[itPadro->first] = resDistricte.size();
+        ++itPadro;
+    }
+    return nEstudis;
 }
 
 //void Padro::mostraPadro(int any, int districte){
