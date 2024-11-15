@@ -157,6 +157,11 @@ void promigNivellEstudis(Padro &p){
 }
 
 //09: RESUMEN DE NACIONALIDADES, POR AÑO
+void resumenNacionalitats(Padro &p){
+    mostraTitol("9. Resum de nacionalitats");
+    ResumNacionalitats res = p.resumNacionalitats();
+    res.mostrarResumNacionalitats();
+}
 
 //10: MOVIMIENTOS DE UNA COMUNIDAD
 

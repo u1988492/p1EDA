@@ -53,7 +53,11 @@ public:
     //Pre: --
     //Post: devuelve un map con un pair de distrito y promedio del distrito por cada año
 
-//    ResumNacionalitats resumNacionalitats() const;
+    ResumNacionalitats resumNacionalitats() const;
+    //Pre: --
+    //Post: devuelve un map con un set de pairs de nombre de la nacionalidad y número de habitantes de esa nacionalidad, ordenados descendientemente
+
+
 //    map<int,string> movimentsComunitat(int codiNacionalitat) const;
 //    ResumEdats resumEdat() const;
 //    map<int, string> movimentVells() const;

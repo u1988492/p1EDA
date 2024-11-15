@@ -19,7 +19,7 @@ void Any::afegirAny(int districte, int codiNivellEstudis, const string &nivellEs
 //Función para consultar el total de habitantes por distrito en un año
 vector<long> Any::obtenirNumHabitantsPerDistricte() const{
     vector<long> habitants;
-    for(int i = 1; i<vecDistrictes.size(); i++){
+    for(size_t i = 1; i<vecDistrictes.size(); i++){
         habitants.push_back(vecDistrictes[i].obtenirNumHabitants());
     }
     return habitants;
@@ -35,7 +35,7 @@ set<string> Any::resumEstudis() const{
     //guardar set de strings con los estudios únicos del año
     set<string> resum;
 
-    for(int i=1; i<vecDistrictes.size(); i++){
+    for(size_t i=1; i<vecDistrictes.size(); i++){
         set<string> resumDistricte = vecDistrictes[i].resumEstudis(); //resumen estudios del distrito
 
         //recorrer set del distrito y guardar
@@ -59,12 +59,30 @@ set<string> Any::resumEstudisDistricte(int districte)const{
 vector<double> Any::resumNivellEstudis() const{
     vector<double> promigDistrictes(vecDistrictes.size()); //vector para guardar el promedio de cada distrito
 
-    for(int i=1; i<vecDistrictes.size(); i++){
+    for(size_t i=1; i<vecDistrictes.size(); i++){
         double promig = vecDistrictes[i].resumNivellEstudis();
         promigDistrictes[i] = promig;
     }
     return promigDistrictes;
 }
+
+//Función para obtener el resumen de nacionalidades de un año
+map<pair<string, int>, long> Any::resumNacionalitats() const{
+    map<string, long> res; //set para guardar resumen
+    //para cada distrito, guardar el resumen de nacionalidades
+    for(size_t i=1; i<vecDistrictes.size(); i++){
+        //obtener mapas de nacionalidades de cada distrito y unirlos en uno único
+        map<pair<string, int>, long> resumDistricte = vecDistrictes[i].resumNacionalitats();
+
+        map<pair<string, int> long>::const_iterator itResDis = resumDistricte.begin();
+        while(itResDis!=resumDistricte.end()){
+            res[itResDis->first] += itResDis->second; //si existe la nacionalidad, actualizar contador; si no, añade nueva
+            itResDis++;
+        }
+    }
+    return res;
+}
+
 
 //void Any::mostraAny(int districte){
 //    vecDistrictes[districte].mostraDistr();

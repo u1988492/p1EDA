@@ -81,6 +81,29 @@ double Districte::resumNivellEstudis() const{
     return promigDistricte;
 }
 
+//Función para obtener el resumen de las nacionalidades de un distrito
+map<pair<string, int>, long> Districte::resumNacionalitats() const{
+    map<pair<string, int>, long> res;
+
+    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
+    //para cada sección, obtener las nacionalidades de sus habitantes
+    while(itSeccio!=habitantsSeccio.end()){
+        list<Persona>::const_iterator itPersona = itSeccio->second.begin(); //iterador al inicio de la lista de personas del distrito
+        //recorrer lista de personas
+        while(itPersona!=itSeccio->second.end()){
+            string nacio = itPersona->obtenirNacionalitat();
+            int codiNacio = itPersona->obtenirCodiNacionalitat();
+            pair<string, int> nacionalitat = {nacio, codiNacio};
+            res[nacionalitat] += 1; //aumentar contador de nacionalidad o añadir nueva
+            ++itPersona;
+        }
+        ++itSeccio;
+    }
+    return res;
+}
+
+
+
 //void Districte::mostraDistr(){
 //    int counter = 0;
 //    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();

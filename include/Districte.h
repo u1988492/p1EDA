@@ -25,7 +25,7 @@ class Districte
         //double obtenirEdatMitjana() const;
         set<string> resumEstudis() const; //devuelve un set con los estudios de la población
         double resumNivellEstudis() const;
-        //añadir clase: ResumNacionalitat; CONTENIDOR resumNacionalitats() const;
+        map<pair<string, int>, long> resumNacionalitats() const;
         //long comptaEdatNacionalitat(int anyNaixement, int codiNacionalitat) const;
 
     private:

@@ -143,6 +143,7 @@ map<int,int> Padro::nombreEstudisDistricte(int districte) const{
     return nEstudis;
 }
 
+//Función para obtener los promedios de nivel de estudios de cada distrito en cada año del padrón
 ResumNivellEstudis Padro::resumNivellEstudis() const{
     ResumNivellEstudis res;
     //para cada año del padrón, obtener el promedio de estudios de cada distrito
@@ -154,6 +155,21 @@ ResumNivellEstudis Padro::resumNivellEstudis() const{
     }
     return res;
 }
+
+//Función para obtener las nacionalidades de los habitantes de cada año del padrón, con el número de habitantes de esa nacionalidad
+ResumNacionalitats Padro::resumNacionalitats() const{
+    ResumNacionalitats res;
+    //para cada año, obtener el resumen de nacionalidades
+    map<int, Any>::const_iterator itPadro = padroAnys.begin();
+    while(itPadro!=padroAnys.end()){
+        map<pair<string, int>, long> resumAny = itPadro->second.resumNacionalitats();
+        res.afegirNacionalitatAny(itPadro->first, resumAny);
+        ++itPadro;
+    }
+    return res;
+}
+
+
 
 //void Padro::mostraPadro(int any, int districte){
 //    cout << any << " - " << districte << " - ";

@@ -44,8 +44,16 @@ class Any {
         //Post: devuelve un vector de strings con los estudios únicos de los habitantes en ese año del padrón
 
         set<string> resumEstudisDistricte(int districte) const;
+        //Pre: districte > 0 && districte <=6
+        //Post: devuelve un set con los niveles de estudios únicos del distrito introducido
 
         vector<double> resumNivellEstudis() const;
+        //Pre: --
+        //Post: devuelve un vector con los promedios de nivel de estudios de cada distrito de un año
+
+        map<pair<string, int>, long> resumNacionalitats() const;
+        //Pre: --
+        //Post: devuelve un set con las nacionalidades de los distritos de un año
 
         //vector<pair<int, int>> edatNacioPerDistricte(int edat, int codiNacionalitat) const;
 

@@ -45,12 +45,6 @@ struct ResumEstudis{
     }
 };
 
-struct ResumEdats{
-};
-
-struct ResumNacionalitats{
-};
-
 //nivel promedio de estudios de cada distrito por año
 struct ResumNivellEstudis{
     map<int, vector<double>> promig;
@@ -100,5 +94,48 @@ struct ResumNivellEstudis{
         }
     }
 };
+
+//tipos de nacionalidad y numero de habitantes de esa nacionalidad por cada año, ordenadas por número de habitantes descendiente
+struct ResumNacionalitats{
+    map<int, map<pair<string, int>, long>> nacionalitats;
+
+    void afegirNacionalitatAny(int any, const map<pair<string, int>, long>>& nacio){
+        map<pair<string, int>, long>>::const_iterator itNacio = nacio.begin();
+        while(itNacio!=nacio.end()){
+            nacionalitats[any][itNacio->first] += itNacio->second;
+            ++itNacio;
+        }
+    }
+
+    void mostrarResumNacionalitats(){
+        for(const auto&any: nacionalitats){
+            cout << any.first << endl;
+
+            vector<pair<pair<string, int> long>> nacionalitatsOrdenadas(any.second.begin(), any.second.end());
+
+            //ordenar poblacion
+            sort(sortedNacionalitats.begin(), sortedNacionalitats.end(),
+             [](const pair<pair<string, int>, long>& a, const pair<pair<string, int>, long>& b) {
+                 return a.second > b.second;
+             });
+
+            for (const auto& nacio : sortedNacionalitats) {
+                const string& nacionalitat = nacio.first.first;  // Nationality name
+                int codiNacio = nacio.first.second;  // Country code
+                long poblacion = nacio.second;  // Population count
+
+                cout << nacionalitat << " (" << codiNacio << "): " << poblacion << endl;
+            }
+        }
+
+    }
+};
+
+struct ResumEdats{
+};
+
+
+
+
 
 #endif // RESUMS_H
