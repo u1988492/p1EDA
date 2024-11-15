@@ -53,6 +53,34 @@ set<string> Districte::resumEstudis() const{
     return estudisDistricte;
 }
 
+//Función para obtener el promedio de nivel de estudios de la población en un distrito
+double Districte::resumNivellEstudis() const{
+    double promigDistricte = 0.0;
+    double totalDistricte = 0.0;
+    //para cada sección del distrito, recorrer lista de habitantes y calcular promedio de nivel de estudios
+    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
+    while(itSeccio!=habitantsSeccio.end()){
+        double promigSeccio = 0.0;
+        double totalNivell = 0.0;
+        list<Persona>::const_iterator itPersona = itSeccio->second.begin(); //iterador al inicio de la lista de personas del distrito
+        while(itPersona!=itSeccio->second.end()){
+            totalNivell += itPersona->obtenirCodiNivellEstudis();
+            ++itPersona;
+        }
+        if(!itSeccio->second.empty()){ //evitar divisón por 0
+            promigSeccio = totalNivell/itSeccio->second.size(); //promedio de la sección según el número de habitantes
+            totalDistricte += promigSeccio;
+        }
+        ++itSeccio;
+    }
+
+    if(!habitantsSeccio.empty()){ //evitar división por 0
+        promigDistricte = totalDistricte/habitantsSeccio.size(); //promedio del distrito según el número de secciones
+    }
+
+    return promigDistricte;
+}
+
 //void Districte::mostraDistr(){
 //    int counter = 0;
 //    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();

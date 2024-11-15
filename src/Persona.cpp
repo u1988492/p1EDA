@@ -16,6 +16,11 @@ string Persona::obtenirNivellEstudis() const{
     return a_estudis.obtenirNom();
 }
 
+//Función para obtener el código del nivel de estudios de la persona
+int Persona::obtenirCodiNivellEstudis() const{
+    return a_estudis.obtenirId();
+}
+
 //Función para obtener el codigo de nacionalidad de la persona
 int Persona::obtenirCodiPaisNaixement() const{
     return a_nacionalitat.obtenirId();

@@ -20,6 +20,7 @@ class Persona
         void mostraPersona() const;
         int obtenirAnyNaixement() const;
         string obtenirNivellEstudis() const;
+        int obtenirCodiNivellEstudis() const;
         int obtenirCodiPaisNaixement() const;
 
     private:

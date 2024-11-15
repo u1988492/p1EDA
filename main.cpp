@@ -128,7 +128,7 @@ void resumEstudisPoblacio(Padro &p){
     mostraTitol("06. Resum per estudis");
     //guardar el resultado de la funcion de padro
     ResumEstudis res = p.resumEstudis();
-    res.mostrar();
+    res.mostrarResumEstudis();
 }
 
 //07: NÚMERO DE ESTUDIOS DE UN DISTRITO, POR AÑO
@@ -152,6 +152,8 @@ void numEstudisDistricte(Padro &p){
 //08: RESUMEN DE NIVEL DE ESTUDIOS, POR AÑO Y DISTRITO
 void promigNivellEstudis(Padro &p){
     mostraTitol("08. Resum nivell d'estudis");
+    ResumNivellEstudis res = p.resumNivellEstudis();
+    res.mostrarResumNivellEstudis();
 }
 
 //09: RESUMEN DE NACIONALIDADES, POR AÑO

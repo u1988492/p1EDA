@@ -40,6 +40,7 @@
 		<Unit filename="include/Nacionalitat.h" />
 		<Unit filename="include/Padro.h" />
 		<Unit filename="include/Persona.h" />
+		<Unit filename="include/Resums.h" />
 		<Unit filename="include/eines.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Any.cpp" />

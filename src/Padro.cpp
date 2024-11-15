@@ -1,6 +1,16 @@
 #include "Padro.h"
 #include "Any.h"
 
+vector<string> nomsDistrictes = {
+    "",
+    "Carme, Vila-roja",
+    "Eixample, Montilivi",
+    "Santa Eugenia, Mas Xirgu",
+    "Casc Antic",
+    "Montjuic, Pont major",
+    "Sant Ponc, Domeny, Taiala"
+};
+
 int stringToInt(string s) {
     if (s.length()==0) return -1;
         for(char c: s ) {
@@ -131,6 +141,18 @@ map<int,int> Padro::nombreEstudisDistricte(int districte) const{
         ++itPadro;
     }
     return nEstudis;
+}
+
+ResumNivellEstudis Padro::resumNivellEstudis() const{
+    ResumNivellEstudis res;
+    //para cada año del padrón, obtener el promedio de estudios de cada distrito
+    map<int, Any>::const_iterator itPadro = padroAnys.begin();
+    while(itPadro!=padroAnys.end()){
+        vector<double> promigAny = itPadro->second.resumNivellEstudis(); //vector con el promedio de cada distrito ese año
+        res.afegirPromig(itPadro->first, promigAny);
+        ++itPadro;
+    }
+    return res;
 }
 
 //void Padro::mostraPadro(int any, int districte){

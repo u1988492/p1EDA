@@ -49,7 +49,10 @@ public:
     //Post: devuelve un map con el año y el número de estudios del distrito en ese año
 
 
-//    ResumNivellEstudis resumNivellEstudis() const;
+    ResumNivellEstudis resumNivellEstudis() const;
+    //Pre: --
+    //Post: devuelve un map con un pair de distrito y promedio del distrito por cada año
+
 //    ResumNacionalitats resumNacionalitats() const;
 //    map<int,string> movimentsComunitat(int codiNacionalitat) const;
 //    ResumEdats resumEdat() const;

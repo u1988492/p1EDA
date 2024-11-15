@@ -55,6 +55,17 @@ set<string> Any::resumEstudisDistricte(int districte)const{
     return vecDistrictes[districte].resumEstudis(); //resumen estudios del distrito;
 }
 
+//Función para obtener el promedio de nivel de un año
+vector<double> Any::resumNivellEstudis() const{
+    vector<double> promigDistrictes(vecDistrictes.size()); //vector para guardar el promedio de cada distrito
+
+    for(int i=1; i<vecDistrictes.size(); i++){
+        double promig = vecDistrictes[i].resumNivellEstudis();
+        promigDistrictes[i] = promig;
+    }
+    return promigDistrictes;
+}
+
 //void Any::mostraAny(int districte){
 //    vecDistrictes[districte].mostraDistr();
 //}

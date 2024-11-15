@@ -45,6 +45,8 @@ class Any {
 
         set<string> resumEstudisDistricte(int districte) const;
 
+        vector<double> resumNivellEstudis() const;
+
         //vector<pair<int, int>> edatNacioPerDistricte(int edat, int codiNacionalitat) const;
 
 
