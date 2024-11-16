@@ -68,13 +68,13 @@ vector<double> Any::resumNivellEstudis() const{
 
 //Función para obtener el resumen de nacionalidades de un año
 map<pair<string, int>, long> Any::resumNacionalitats() const{
-    map<string, long> res; //set para guardar resumen
+    map<pair<string, long>> res; //map para guardar resumen
     //para cada distrito, guardar el resumen de nacionalidades
     for(size_t i=1; i<vecDistrictes.size(); i++){
         //obtener mapas de nacionalidades de cada distrito y unirlos en uno único
         map<pair<string, int>, long> resumDistricte = vecDistrictes[i].resumNacionalitats();
 
-        map<pair<string, int> long>::const_iterator itResDis = resumDistricte.begin();
+        map<pair<string, int>, long>::const_iterator itResDis = resumDistricte.begin();
         while(itResDis!=resumDistricte.end()){
             res[itResDis->first] += itResDis->second; //si existe la nacionalidad, actualizar contador; si no, añade nueva
             itResDis++;

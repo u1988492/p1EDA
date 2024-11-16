@@ -9,6 +9,7 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -56,7 +57,7 @@ struct ResumNivellEstudis{
     int mesEstudios(const vector<double>& vec){
         double maxNivell = vec[1];
         int vecMax = 1;
-        for(unsigned i=2; i<vec.size(); i++){
+        for(size_t i=2; i<vec.size(); i++){
             if(vec[i]>maxNivell){
                 maxNivell = vec[i];
                 vecMax = i;
@@ -68,7 +69,7 @@ struct ResumNivellEstudis{
     int menysEstudios(const vector<double>& vec){
         double minNivell = vec[1];
         int vecMin = 1;
-        for(unsigned i=2; i<vec.size(); i++){
+        for(size_t i=2; i<vec.size(); i++){
             if(vec[i]<minNivell){
                 minNivell = vec[i];
                 vecMin = i;
@@ -83,7 +84,7 @@ struct ResumNivellEstudis{
             int mesEst = mesEstudios(itRes->second);
             int menysEst = menysEstudios(itRes->second);
             cout << itRes->first << ":" << endl;
-            for(unsigned i=1; i<itRes->second.size(); i++){
+            for(size_t i=1; i<itRes->second.size(); i++){
                 if(i==mesEst) cout << "- ";
                 else if(i==menysEst) cout << "+ ";
                 cout << " " << nomsDistrictes[i];
@@ -99,35 +100,42 @@ struct ResumNivellEstudis{
 struct ResumNacionalitats{
     map<int, map<pair<string, int>, long>> nacionalitats;
 
-    void afegirNacionalitatAny(int any, const map<pair<string, int>, long>>& nacio){
-        map<pair<string, int>, long>>::const_iterator itNacio = nacio.begin();
-        while(itNacio!=nacio.end()){
-            nacionalitats[any][itNacio->first] += itNacio->second;
-            ++itNacio;
-        }
+    void afegirNacionalitats(int any, const map<pair<string, int>, long>& mapResum){
+        nacionalitats[any] = mapResum;
     }
 
-    void mostrarResumNacionalitats(){
-        for(const auto&any: nacionalitats){
-            cout << any.first << endl;
+    //ordenar nacionalidades por numero de habitantes usando un vector y sort de la libreria algorithm
+    vector<pair<pair<string, int>, long>> ordenaResumNacionalitats(int any) const{
+        vector<pair<pair<string, int>, long>> vecResum; //vector resultado
 
-            vector<pair<pair<string, int> long>> nacionalitatsOrdenadas(any.second.begin(), any.second.end());
+        const auto& mapResum = nacionalitats.at(any); //referencia al mapa en nacionalitats del año en concreto
 
-            //ordenar poblacion
-            sort(sortedNacionalitats.begin(), sortedNacionalitats.end(),
-             [](const pair<pair<string, int>, long>& a, const pair<pair<string, int>, long>& b) {
-                 return a.second > b.second;
-             });
-
-            for (const auto& nacio : sortedNacionalitats) {
-                const string& nacionalitat = nacio.first.first;  // Nationality name
-                int codiNacio = nacio.first.second;  // Country code
-                long poblacion = nacio.second;  // Population count
-
-                cout << nacionalitat << " (" << codiNacio << "): " << poblacion << endl;
-            }
+        vecResum.reserve(mapResum.size()); //guardar espacio en el vector
+        for(const auto&it: mapResum){
+            vecResum.emplace_back(it); //guardar el pair del mapa en el vector
         }
 
+        sort(vecResum.begin(), vecResum.end(), //ordenar vector segun habitantes
+             [](const pair<pair<string, int>, long>& a, const pair<pair<string, int>, long>&b){
+                return a.second > b.second;
+             });
+
+        return vecResum;
+    }
+
+    void mostrarResumNacionalitats() const{
+        for(const auto& elem: nacionalitats){
+            int any = elem.first;
+            cout << any << endl;//mostrar año
+            //obtener vector de resumen año ordenado
+                auto nacOrdenadas = ordenaResumNacionalitats(any.first);
+            //mostrar nombres y codigo de nacionalidad ordenados por habitantes descendiente
+            for(const auto&nacion: nacOrdenadas){
+                const auto& nacio = nacion.first;
+                cout << nacio.first << "(" << nacio.second << ")" << setw(20) << ":" << setw(20) << nacion.second << endl;
+            }
+            cout << endl;
+        }
     }
 };
 

@@ -162,8 +162,10 @@ ResumNacionalitats Padro::resumNacionalitats() const{
     //para cada año, obtener el resumen de nacionalidades
     map<int, Any>::const_iterator itPadro = padroAnys.begin();
     while(itPadro!=padroAnys.end()){
-        map<pair<string, int>, long> resumAny = itPadro->second.resumNacionalitats();
-        res.afegirNacionalitatAny(itPadro->first, resumAny);
+        map<pair<string, int>, long> resAny = itPadro->second.resumNacionalitats();
+
+        res.afegirNacionalitats(itPadro->first, resAny);
+
         ++itPadro;
     }
     return res;

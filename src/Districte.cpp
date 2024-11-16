@@ -91,9 +91,7 @@ map<pair<string, int>, long> Districte::resumNacionalitats() const{
         list<Persona>::const_iterator itPersona = itSeccio->second.begin(); //iterador al inicio de la lista de personas del distrito
         //recorrer lista de personas
         while(itPersona!=itSeccio->second.end()){
-            string nacio = itPersona->obtenirNacionalitat();
-            int codiNacio = itPersona->obtenirCodiNacionalitat();
-            pair<string, int> nacionalitat = {nacio, codiNacio};
+            pair<string, int> nacionalitat = {itPersona->obtenirNacionalitat(), itPersona->obtenirCodiPaisNaixement()}; //obtener nombre y codi nacionalitat
             res[nacionalitat] += 1; //aumentar contador de nacionalidad o añadir nueva
             ++itPersona;
         }

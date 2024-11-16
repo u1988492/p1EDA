@@ -160,7 +160,7 @@ void promigNivellEstudis(Padro &p){
 void resumenNacionalitats(Padro &p){
     mostraTitol("9. Resum de nacionalitats");
     ResumNacionalitats res = p.resumNacionalitats();
-    res.mostrarResumNacionalitats();
+//    res.mostrarResumNacionalitats();
 }
 
 //10: MOVIMIENTOS DE UNA COMUNIDAD
