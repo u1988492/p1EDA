@@ -58,7 +58,11 @@ public:
     //Post: devuelve un map con un set de pairs de nombre de la nacionalidad y número de habitantes de esa nacionalidad, ordenados descendientemente
 
 
-//    map<int,string> movimentsComunitat(int codiNacionalitat) const;
+    map<int,string> movimentsComunitat(int codiNacionalitat) const;
+    //Pre: codiNacionalitat es un código de nacionalides del padrón
+    //Post: devuelve un map con el año y el nombre del distrito con más habitantes de esa nacionalidad en ese año
+
+
 //    ResumEdats resumEdat() const;
 //    map<int, string> movimentVells() const;
 //    pair<string,long> mesJoves(int anyInicial, int anyFinal) const;

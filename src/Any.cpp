@@ -19,6 +19,7 @@ void Any::afegirAny(int districte, int codiNivellEstudis, const string &nivellEs
 //Función para consultar el total de habitantes por distrito en un año
 vector<long> Any::obtenirNumHabitantsPerDistricte() const{
     vector<long> habitants;
+    habitants.reserve(vecDistrictes.size());
     for(size_t i = 1; i<vecDistrictes.size(); i++){
         habitants.push_back(vecDistrictes[i].obtenirNumHabitants());
     }
@@ -68,7 +69,7 @@ vector<double> Any::resumNivellEstudis() const{
 
 //Función para obtener el resumen de nacionalidades de un año
 map<pair<string, int>, long> Any::resumNacionalitats() const{
-    map<pair<string, long>> res; //map para guardar resumen
+    map<pair<string, int>, long> res; //map para guardar resumen
     //para cada distrito, guardar el resumen de nacionalidades
     for(size_t i=1; i<vecDistrictes.size(); i++){
         //obtener mapas de nacionalidades de cada distrito y unirlos en uno único
@@ -81,6 +82,30 @@ map<pair<string, int>, long> Any::resumNacionalitats() const{
         }
     }
     return res;
+}
+
+int Any::maxNacionalitat(int codiNacionalitat) const{
+
+    int maxDistricte;
+    vector<long>nacionalitatDistricte;
+    nacionalitatDistricte.reserve(vecDistrictes.size()-1); //6 posiciones
+    //para cada distrito, guardar el número de habitantes de esa nacionalidad
+    for(size_t i=1; i<vecDistrictes.size(); i++){
+        long numHabitants = vecDistrictes[i].obtenirNumHabitantsNacionalitat(codiNacionalitat);
+        nacionalitatDistricte.push_back(numHabitants);
+    }
+
+    //obtener posición del distrito con el máximo
+    auto itMaxDistricte = max_element(nacionalitatDistricte.begin(), nacionalitatDistricte.end());
+    if(itMaxDistricte!=nacionalitatDistricte.end()){
+        size_t indexDistricte = distance(nacionalitatDistricte.begin(), itMaxDistricte); //es 0 si no hay habitantes de esa nacionalidad en ese año
+        if(indexDistricte==0){
+            maxDistricte = -1;
+        }
+
+        else maxDistricte = static_cast<int>(indexDistricte)+1; //static cast para poder devolver un int de la posición
+    }
+    return maxDistricte;
 }
 
 

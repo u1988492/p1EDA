@@ -171,6 +171,19 @@ ResumNacionalitats Padro::resumNacionalitats() const{
     return res;
 }
 
+//Función para obtener el nombre del distrito con más habitantes de una nacionalidad en cada año
+map<int, string> Padro::movimentsComunitat(int codiNacionalitat) const{
+    map<int, string> moviments;
+    //para cada año, obtener distrito con mayor concentración de habitantes de esa nacionalidad
+    map<int, Any>::const_iterator itPadro = padroAnys.begin();
+    while(itPadro!=padroAnys.end()){
+        int districte = itPadro->second.maxNacionalitat(codiNacionalitat); //guardar el distrito con mayor concentración
+        if(districte==-1) moviments[itPadro->first] = "No té habitants"; //si no se ha encontrado el distrito con el maximo
+        else moviments[itPadro->first] = nomsDistrictes[districte]; //asignar valor de nomsDistrictes correspondiente
+        ++itPadro;
+    }
+    return moviments;
+}
 
 
 //void Padro::mostraPadro(int any, int districte){

@@ -30,7 +30,7 @@ struct ResumEstudis{
         map<int, set<string>>::const_iterator itResum = res.begin();
         while(itResum!=res.end()){
         //mostrar
-        cout << itResum->first << " Estudis: ";
+        cout << itResum->first << setw(2) << "Estudis: ";
         //iterador para recorrer el set de estudios
         set<string>::const_iterator itEstudi = itResum->second.begin();
         while(itEstudi!=itResum->second.end()){
@@ -81,14 +81,14 @@ struct ResumNivellEstudis{
     void mostrarResumNivellEstudis(){
         map<int, vector<double>>::const_iterator itRes = promig.begin();
         while(itRes!=promig.end()){
-            int mesEst = mesEstudios(itRes->second);
-            int menysEst = menysEstudios(itRes->second);
+            size_t mesEst = mesEstudios(itRes->second);
+            size_t menysEst = menysEstudios(itRes->second);
             cout << itRes->first << ":" << endl;
             for(size_t i=1; i<itRes->second.size(); i++){
                 if(i==mesEst) cout << "- ";
                 else if(i==menysEst) cout << "+ ";
-                cout << " " << nomsDistrictes[i];
-                cout << " Promig Estudis:" << itRes->second[i] << endl;
+                cout << " " << nomsDistrictes[i] << setw(7);
+                cout << " Promig Estudis:" << setw(7) << itRes->second[i] << endl;
             }
             cout << "seguent any" << endl;
             ++itRes;
@@ -104,35 +104,37 @@ struct ResumNacionalitats{
         nacionalitats[any] = mapResum;
     }
 
-    //ordenar nacionalidades por numero de habitantes usando un vector y sort de la libreria algorithm
+     //ordenar nacionalidades por numero de habitantes usando un vector y sort de la libreria algorithm
     vector<pair<pair<string, int>, long>> ordenaResumNacionalitats(int any) const{
-        vector<pair<pair<string, int>, long>> vecResum; //vector resultado
+        vector<pair<pair<string, int>, long>> vecResum;
 
-        const auto& mapResum = nacionalitats.at(any); //referencia al mapa en nacionalitats del año en concreto
+        const auto& mapResum = nacionalitats.at(any);
 
-        vecResum.reserve(mapResum.size()); //guardar espacio en el vector
-        for(const auto&it: mapResum){
-            vecResum.emplace_back(it); //guardar el pair del mapa en el vector
+        vecResum.reserve(mapResum.size());
+        map<pair<string, int>, long>::const_iterator it = mapResum.begin();
+        while(it!=mapResum.end()){
+            vecResum.emplace_back(*it);
+            ++it;
         }
 
-        sort(vecResum.begin(), vecResum.end(), //ordenar vector segun habitantes
+        sort(vecResum.begin(), vecResum.end(),
              [](const pair<pair<string, int>, long>& a, const pair<pair<string, int>, long>&b){
-                return a.second > b.second;
+                if(a.second!=b.second) return a.second > b.second; //ordenar por num habitantes
+                return a.first.first < b.first.first; //en el caso de nacionalidades con mismo num habitantes, ordenar alfabeticamente
              });
 
         return vecResum;
     }
 
     void mostrarResumNacionalitats() const{
-        for(const auto& elem: nacionalitats){
-            int any = elem.first;
-            cout << any << endl;//mostrar año
+        for(const auto& any: nacionalitats){
+            cout << any.first << endl; //mostrar año
             //obtener vector de resumen año ordenado
-                auto nacOrdenadas = ordenaResumNacionalitats(any.first);
+            auto nacOrdenadas = ordenaResumNacionalitats(any.first);
             //mostrar nombres y codigo de nacionalidad ordenados por habitantes descendiente
             for(const auto&nacion: nacOrdenadas){
                 const auto& nacio = nacion.first;
-                cout << nacio.first << "(" << nacio.second << ")" << setw(20) << ":" << setw(20) << nacion.second << endl;
+                cout << nacio.first << "(" << nacio.second << ")" << setw(20) << ":" << setw(5) << nacion.second << endl;
             }
             cout << endl;
         }

@@ -100,7 +100,19 @@ map<pair<string, int>, long> Districte::resumNacionalitats() const{
     return res;
 }
 
-
+long Districte::obtenirNumHabitantsNacionalitat(int codiNacionalitat) const{
+    long nHabitants = 0;
+    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
+    while(itSeccio!=habitantsSeccio.end()){
+        list<Persona>::const_iterator itPersona = itSeccio->second.begin();
+        while(itPersona!=itSeccio->second.end()){
+            if(itPersona->obtenirCodiPaisNaixement() == codiNacionalitat) nHabitants++;
+            ++itPersona;
+        }
+        ++itSeccio;
+    }
+    return nHabitants;
+}
 
 //void Districte::mostraDistr(){
 //    int counter = 0;
