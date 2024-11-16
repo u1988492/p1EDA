@@ -197,7 +197,56 @@ ResumEdats Padro::resumEdat() const{
     return res;
 }
 
-//void Padro::mostraPadro(int any, int districte){
-//    cout << any << " - " << districte << " - ";
-//    padroAnys[any].mostraAny(districte);
-//}
+//Función para obtener el distrito con mayor media de edad de cada año
+map<int, string> Padro::movimentVells() const{
+    map<int, string> moviments;
+    //para cada año, obtener distrito con mayor media de edad
+    map<int, Any>::const_iterator itPadro = padroAnys.begin();
+    while(itPadro!=padroAnys.end()){
+        int mesVell = itPadro->second.maxEdat(itPadro->first); //resumen de edades de los distritos, de menor a mayor media
+
+
+        if(mesVell==-1) cout << "No hay distrito" <<endl;
+        else moviments[itPadro->first] = nomsDistrictes[mesVell]; //guardar nombre del distrito y año
+        ++itPadro;
+    }
+    return moviments;
+}
+
+//Función para obtener el distrito con mayor incremento de jóvenes
+pair<string, long> Padro::mesJoves(int anyInicial, int anyFinal) const{
+    pair<string, long> joves;
+
+    vector<long> totalJoves(7);
+
+    map<int, Any>::const_iterator itPadro = padroAnys.lower_bound(anyInicial); //iterador de padro en el año inicial o el más cercano
+    map<int, Any>::const_iterator itPadroFinal = padroAnys.upper_bound(anyFinal);
+    while(itPadro!=itPadroFinal){
+        //para cada año a partir del año inicial, obtener incremento de población de los distritos
+        vector<long> incrementAny = itPadro->second.incrementJoves(itPadro->first); //recuento de jóvenes del año
+
+        for(size_t i = 1; i<incrementAny.size(); i++){
+            totalJoves[i-1] += incrementAny[i]; //sumar incremento de jóvenes
+        }
+        ++itPadro;
+    }
+
+    //obtener posición maxima
+    auto maxDistricte = max_element(totalJoves.begin(), totalJoves.end()); //iterador a max
+    int indexMax = static_cast<int>(distance(totalJoves.begin(), maxDistricte));
+
+    joves = {nomsDistrictes[indexMax+1], *maxDistricte};
+    return joves;
+}
+
+//Función para obtener la lista de estudios de los habitantes que cumplen las condiciones introducidas
+list<string> Padro::estudisEdat(int any, int districte, int edat, int CodiNacionalitat) const{
+    auto itAny = padroAnys.find(any);
+
+    if(itAny!=padroAnys.end()){
+        return itAny->second.estudisEdat(any, districte, edat, CodiNacionalitat);
+    }
+    else{
+        return {}; //devolver vacío si no existe el año
+    }
+}

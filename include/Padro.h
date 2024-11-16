@@ -67,9 +67,18 @@ public:
     //Pre: --
     //Post: devuelve un map con el promedio de edad de cada distrito, para cada año del padrón
 
-//    map<int, string> movimentVells() const;
-//    pair<string,long> mesJoves(int anyInicial, int anyFinal) const;
-//    list<string> estudisEdat(int any, int districte, int edat, int codiNacionalitat) const;
+    map<int, string> movimentVells() const;
+    //Pre: --
+    //Post: devuelve un map con el nombre del distrito de mayor edad promedia de cada año
+
+    pair<string,long> mesJoves(int anyInicial, int anyFinal) const;
+    //Pre: anyInicial y anyFinal > 0
+    //Post: devuelve un pair con el nombre del distrito con mayor incremento de jóvenes entre los dos años, y el incremento
+
+
+    list<string> estudisEdat(int any, int districte, int edat, int codiNacionalitat) const;
+    //Pre: any > 0, 0<districte<=6, edat>0, codiNacionalitat>0
+    //Post: devuelve una list con los nombres de los estudios de los habitantes que cumplen las condiciones
 
 private:
     map<int, Any> padroAnys;

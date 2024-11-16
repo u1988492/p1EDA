@@ -127,4 +127,41 @@ double Districte::obtenirEdatMitjana(int any) const{
     return totalPersonas > 0? double(edatTotal)/totalPersonas : 0.0; //si totalPersonas>0, devuelve el promedio de edad del distrito; si no, devuelve 0.0
 }
 
+//Función para obtener la cantidad de jóvenes del distrito
+long Districte::obtenirNumJoves(int any) const{
+    long nJoves = 0;
 
+    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
+    while(itSeccio!=habitantsSeccio.end()){
+        //recorrer lista de personas
+        list<Persona>::const_iterator itPersona = itSeccio->second.begin();
+        while(itPersona!=itSeccio->second.end()){
+            //comprobar si es "joven" (20<=edad<=30)
+            int edat = any - itPersona->obtenirAnyNaixement();
+            if(edat>= 20 && edat <=30) nJoves++;
+            ++itPersona;
+        }
+        ++itSeccio;
+    }
+    return nJoves;
+}
+
+set<string> Districte::estudisEdat(int any, int edat, int codiNacionalitat) const{
+    set<string> estudis;
+    //recorrer secciones
+    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
+    while(itSeccio!=habitantsSeccio.end()){
+        //recorrer lista de personas
+        list<Persona>::const_iterator itPersona = itSeccio->second.begin();
+        while(itPersona!=itSeccio->second.end()){
+            int edatPersona = any - itPersona->obtenirAnyNaixement();
+            int codiNacio = itPersona->obtenirCodiPaisNaixement();
+            if(edatPersona==edat && codiNacio==codiNacionalitat){
+                 estudis.insert(itPersona->obtenirNivellEstudis()); //añadir estudios al set la persona cumple los requisitos
+            }
+            ++itPersona;
+        }
+        ++itSeccio;
+    }
+    return estudis;
+}

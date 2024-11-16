@@ -201,11 +201,46 @@ void resumenEdats(Padro& p){
 }
 
 //12: MOVIMIENTOS DE LOS MAYORES
+void movimentsMesVells(Padro &p){
+    mostraTitol("Moviments dels vells");
 
+    map<int, string> moviments = p.movimentVells();
+    for(const auto& any: moviments){
+        cout << any.first << setw(5) << any.second << endl;
+    }
+}
 
-//12: MÁS JÓVENES
+//13: MÁS JÓVENES
+void mesJoves(Padro &p){
+    mostraTitol("13. Més joves");
+
+    int anyInicial, anyFinal;
+    cin >> anyInicial;
+    cin >> anyFinal;
+
+    pair<string, long> districte = p.mesJoves(anyInicial, anyFinal);
+
+    cout << "Any Inicial: " << anyInicial << " Any Final: " << anyFinal << endl;
+    cout << districte.first << setw(5) << districte.second << endl;
+}
 
 //14: ESTUDIOS DE UN AÑO, DISRTITO, EDAD Y NACIONALIDAD
+void estudisFiltre(Padro &p){
+    mostraTitol("14. Estudis any, districte, edat i nació");
+
+    int any, districte, edat, codiNacionalitat;
+    cin >> any >> districte >> edat >> codiNacionalitat;
+
+    list<string> estudis = p.estudisEdat(any, districte, edat, codiNacionalitat);
+
+    cout << "Any: " << any << "Districte: " << districte << "Edat: " << edat << " Nacionalitat: " << codiNacionalitat << endl;
+    if(!estudis.empty()){
+        for(const string& estudi: estudis){
+        cout << estudi << endl;
+        }
+    }
+    else cout << "No se han encontrado estudios para estos criterios." << endl;
+}
 
 //15: MENÚ
 void menu(){
@@ -223,6 +258,9 @@ void menu(){
     cout << "09. RESUMEN DE NACIONALIDADES" << endl;
     cout << "10. MOVIMIENTOS DE COMUNIDADES" << endl;
     cout << "11. RESUMEN DE EDADES" << endl;
+    cout << "12. MOVIMIENTOS DE LOS MAYORES" << endl;
+    cout << "13. DISTRITO CON MÁS JÓVENES" << endl;
+    cout << "14. ESTUDIOS DE UN AÑO, DISTRITO, EDAD Y NACIONALIDAD" << endl;
     cout << "15. MENU" << endl;
     lineaChar('-');
 }
@@ -264,10 +302,13 @@ void gestioOpcio(int opcio, Padro &p){
             resumenEdats(p);
             break;
         case 12:
+            movimentsMesVells(p);
             break;
         case 13:
+            mesJoves(p);
             break;
         case 14:
+            estudisFiltre(p);
             break;
         case 15:
             menu();

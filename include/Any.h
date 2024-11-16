@@ -58,11 +58,13 @@ class Any {
         //Pre: codiNacionalitat es un código de nacionalidad del padrón
         //Post: devuelve un int con el número del distrito con mayor concentración de habitantes de esa nacionalidad
 
+        int maxEdat(int any) const;
+        //Pre: --
+        //Post: devuelve el índice del distrito con mayor media de edad de ese año
 
-        //vector<pair<int, int>> edatNacioPerDistricte(int edat, int codiNacionalitat) const;
+        vector<long> incrementJoves(int any) const;
 
-
-        //pair<vector<string>, vector<string>> diferentsNacionalitats(int districte1, int districte2) const;
+        list<string> estudisEdat(int any, int districte, int edat, int CodiNacionalitat) const;
 
     private:
         vector<Districte> vecDistrictes;  //Almacena los distritos

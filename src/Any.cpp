@@ -109,11 +109,47 @@ int Any::maxNacionalitat(int codiNacionalitat) const{
 
 //Función para obtener el promedio de edades de cada distrito del año
 vector<double> Any::resumEdat(int any) const{
-    vector<double> resumDistrictes(vecDistrictes.size());
+    vector<double> resumDistrictes(vecDistrictes.size()-1);
     //para cada distrito, calcular promedio
     for(size_t i=1; i<vecDistrictes.size(); i++){
-        resumDistrictes[i] = vecDistrictes[i].obtenirEdatMitjana(any);
+        resumDistrictes[i-1] = vecDistrictes[i].obtenirEdatMitjana(any);
     }
+
     return resumDistrictes;
 }
 
+//Función para obtener el distrito con mayor media de edad del año
+int Any::maxEdat(int any) const{
+    const vector<double> resumEdats = resumEdat(any); //vector de promedios de edad por distrito
+
+    if(resumEdats.empty()){
+        return -1;
+    }
+    auto maxDistricte = max_element(resumEdats.begin(), resumEdats.end()); //iterador al elemento maximo
+
+    int indexMax = static_cast<int>(distance(resumEdats.begin(), maxDistricte));
+
+    return indexMax+1;
+}
+
+//Función para obtener el incremento de jóvenes de cada distrito de un año
+vector<long> Any::incrementJoves(int any) const{
+    vector<long> joves(vecDistrictes.size());
+
+    for(size_t i=1; i<vecDistrictes.size(); i++){
+        joves[i] = vecDistrictes[i].obtenirNumJoves(any);
+    }
+    return joves;
+}
+
+//Función para obtener la lista de estudios de los habitantes que cumplan las condiciones introducidas
+list<string> Any::estudisEdat(int any, int districte, int edat, int CodiNacionalitat) const{
+    if(districte < 0 || districte>=vecDistrictes.size()){
+        return {}; //devolver vacío si los datos no son válidos
+    }
+
+    set<string> estudisUnics = vecDistrictes[districte].estudisEdat(any, edat, CodiNacionalitat);
+    list<string> estudis(estudisUnics.begin(), estudisUnics.end());
+
+    return estudis;
+}

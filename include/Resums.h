@@ -147,15 +147,17 @@ struct ResumEdats{
     map<int, vector<double>> promigEdats;
 
     void afegirEdats(int any, const vector<double>& promigEdatsDistrictes){
-        promigEdats[any] = promigEdatsDistrictes;
+        vector<double> edatsOrdenats = promigEdatsDistrictes;
+        sort(edatsOrdenats.begin(), edatsOrdenats.end()); //ordenar por edad ascendiente
+        promigEdats[any] = edatsOrdenats;
     }
 
     void mostrarResumEdats(){
         map<int, vector<double>>::const_iterator itRes = promigEdats.begin();
         while(itRes!=promigEdats.end()){
             cout << itRes->first << ":" << endl;
-            for(size_t i=1; i<itRes->second.size(); i++){
-                cout << left << setw(8) << nomsDistrictes[i]
+            for(size_t i=0; i<itRes->second.size(); i++){
+                cout << left << setw(8) << nomsDistrictes[i+1]
                 << setw(8) << "Promig Edat: "  << right  << fixed << setprecision(2) << itRes->second[i] << endl;
             }
             ++itRes;

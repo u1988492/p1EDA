@@ -27,7 +27,8 @@ class Districte
         double resumNivellEstudis() const;
         map<pair<string, int>, long> resumNacionalitats() const;
         long obtenirNumHabitantsNacionalitat(int codiNacionalitat) const;
-        //long comptaEdatNacionalitat(int anyNaixement, int codiNacionalitat) const;
+        long obtenirNumJoves(int any) const;
+        set<string> estudisEdat(int any, int edat, int codiNacionalitat) const;
 
     private:
         map<int, list<Persona>> habitantsSeccio;
