@@ -63,7 +63,10 @@ public:
     //Post: devuelve un map con el año y el nombre del distrito con más habitantes de esa nacionalidad en ese año
 
 
-//    ResumEdats resumEdat() const;
+    ResumEdats resumEdat() const;
+    //Pre: --
+    //Post: devuelve un map con el promedio de edad de cada distrito, para cada año del padrón
+
 //    map<int, string> movimentVells() const;
 //    pair<string,long> mesJoves(int anyInicial, int anyFinal) const;
 //    list<string> estudisEdat(int any, int districte, int edat, int codiNacionalitat) const;

@@ -22,7 +22,7 @@ class Districte
         bool existeixSeccio(int seccio);
         long obtenirNumHabitants() const;
         map<int, long> obtenirNumHabitantsSeccio() const;
-        //double obtenirEdatMitjana() const;
+        double obtenirEdatMitjana(int any) const;
         set<string> resumEstudis() const; //devuelve un set con los estudios de la población
         double resumNivellEstudis() const;
         map<pair<string, int>, long> resumNacionalitats() const;

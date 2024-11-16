@@ -30,7 +30,8 @@ void lineaChar(char c){
 //01: CARGAR DATOS
 void cargarDatos(Padro &p){
     mostraTitol("01. Llegir dades");
-    string fitxer = "/u/prof/dfiguls/Public/padroLlarg.csv";
+//    string fitxer = "/u/prof/dfiguls/Public/padroLlarg.csv";
+    string fitxer = "padroCurt.csv";
     int lectura = p.llegirDades(fitxer);
     if(lectura==-1){
         cerr << "No se ha leido el archivo correctamente." << endl;
@@ -56,17 +57,22 @@ void existeixAny(Padro &p){
 //03: NÚMERO DE HABITANTES DEL PADRÓN, POR AÑO, Y PROMEDIO
 void numHabitants(const Padro &p){
     mostraTitol("03. Obtenir nombre d'habitants");
+
     map<int, long>habitants = p.obtenirNumHabitantsPerAny();
     double totalPadro = 0.0;
 
     map<int, long>::const_iterator itHab = habitants.begin();
     while(itHab!=habitants.end()){
+
         long total = itHab->second;
-        cout << itHab->first << setw(3) <<"habitants: " << setw(4) <<itHab->second << endl;
+
+        cout << setw(3) << itHab->first << setw(6) << "habitants: " <<itHab->second << endl;
+
         totalPadro += total;
         ++itHab;
     }
-    double promig = (habitants.size()>0) ? totalPadro/habitants.size(): 0; //comprobar si habitants>0 antes de operar para evitar errores
+
+    double promig = (habitants.size()>0) ? double(totalPadro)/habitants.size(): 0; //comprobar si habitants>0 antes de operar para evitar errores
     cout << "PROMIG : " << setprecision(2) << promig << endl;
 }
 
@@ -77,7 +83,9 @@ void numHabitantsAny(Padro &p){
     cin >> any;
 
     if(p.existeixAny(any)){
+
         cout << "Any: " << any << endl;
+
         vector<long> habitants = p.obtenirNumHabitantsPerDistricte(any); //vector de 0 a 6 con los habitantes de cada distrito
         long total = 0;
 
@@ -108,9 +116,12 @@ void numHabitantsAnyDistricte(Padro &p){
     //validar año y distrito
     if(p.existeixAny(any)){
         if(districte>0 && districte<=6){
-            cout << "Any: " << any << setw(2) << "Districte: " << districte << endl;
+
+            cout << "Any: " << any << setw(4) << "Districte: " << districte << endl;
+
             map<int, long> habitants = p.obtenirNumHabitantsPerSeccio(any, districte);
             long total = 0;
+
             //recorrer map y mostrar
             map<int, long>::const_iterator itHabitants = habitants.begin();
             while(itHabitants!=habitants.end()){
@@ -118,7 +129,7 @@ void numHabitantsAnyDistricte(Padro &p){
                 total += itHabitants->second;
                 ++itHabitants;
             }
-            cout << "TOTAL: " << total << endl;
+            cout << "TOTAL : " << total << endl;
         }
        else cerr << "ERROR: Districte " << districte  << " invalid" << endl;
     }
@@ -141,10 +152,12 @@ void numEstudisDistricte(Padro &p){
 
     if(districte>0 && districte<=6){
         cout << "Districte: " << districte << endl;
+
         map<int, int> nEstudis = p.nombreEstudisDistricte(districte);
+        //recorrer resultado y mostrar
         map<int, int>::const_iterator itEstudis = nEstudis.begin();
         while(itEstudis!=nEstudis.end()){
-            cout << "Any " << itEstudis->first << " Num Estudis: " << itEstudis->second << endl;
+            cout << "Any " << itEstudis->first << setw(3) << "Num Estudis: " << itEstudis->second << endl;
             ++itEstudis;
         }
     }
@@ -175,14 +188,20 @@ void movimentsComunitat(Padro &p){
     //mostrar movimientos
     map<int,string>::const_iterator itMoviments = moviments.begin();
     while(itMoviments!=moviments.end()){
-        cout << itMoviments->first << " " << setw(7) << right << itMoviments->second << endl;
+        cout << setw(10) << itMoviments->first << setw(7) << right << itMoviments->second << endl;
         ++itMoviments;
     }
 }
 
 //11: RESUMEN DE EDADES
+void resumenEdats(Padro& p){
+    mostraTitol("11. Resum d'edats");
+    ResumEdats resum = p.resumEdat();
+    resum.mostrarResumEdats();
+}
 
 //12: MOVIMIENTOS DE LOS MAYORES
+
 
 //12: MÁS JÓVENES
 
@@ -203,6 +222,7 @@ void menu(){
     cout << "08. RESUMEN DEL NIVEL DE ESTUDIOS" << endl;
     cout << "09. RESUMEN DE NACIONALIDADES" << endl;
     cout << "10. MOVIMIENTOS DE COMUNIDADES" << endl;
+    cout << "11. RESUMEN DE EDADES" << endl;
     cout << "15. MENU" << endl;
     lineaChar('-');
 }
@@ -241,6 +261,7 @@ void gestioOpcio(int opcio, Padro &p){
             movimentsComunitat(p);
             break;
         case 11:
+            resumenEdats(p);
             break;
         case 12:
             break;

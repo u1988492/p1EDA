@@ -55,30 +55,22 @@ set<string> Districte::resumEstudis() const{
 
 //Función para obtener el promedio de nivel de estudios de la población en un distrito
 double Districte::resumNivellEstudis() const{
-    double promigDistricte = 0.0;
-    double totalDistricte = 0.0;
+    double totalNivell = 0.0;
+    size_t totalPersonas = 0;
     //para cada sección del distrito, recorrer lista de habitantes y calcular promedio de nivel de estudios
     map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
     while(itSeccio!=habitantsSeccio.end()){
-        double promigSeccio = 0.0;
-        double totalNivell = 0.0;
-        list<Persona>::const_iterator itPersona = itSeccio->second.begin(); //iterador al inicio de la lista de personas del distrito
+        list<Persona>::const_iterator itPersona = itSeccio->second.begin();
+        //recorrer lista de personas
         while(itPersona!=itSeccio->second.end()){
             totalNivell += itPersona->obtenirCodiNivellEstudis();
             ++itPersona;
         }
-        if(!itSeccio->second.empty()){ //evitar divisón por 0
-            promigSeccio = totalNivell/itSeccio->second.size(); //promedio de la sección según el número de habitantes
-            totalDistricte += promigSeccio;
-        }
+        totalPersonas += itSeccio->second.size();
         ++itSeccio;
     }
 
-    if(!habitantsSeccio.empty()){ //evitar división por 0
-        promigDistricte = totalDistricte/habitantsSeccio.size(); //promedio del distrito según el número de secciones
-    }
-
-    return promigDistricte;
+    return totalPersonas > 0? double(totalNivell)/totalPersonas : 0.0;
 }
 
 //Función para obtener el resumen de las nacionalidades de un distrito
@@ -100,6 +92,7 @@ map<pair<string, int>, long> Districte::resumNacionalitats() const{
     return res;
 }
 
+//Función para obtener el número de habitantes de una nacionalidad que hay en el distrito
 long Districte::obtenirNumHabitantsNacionalitat(int codiNacionalitat) const{
     long nHabitants = 0;
     map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
@@ -114,29 +107,24 @@ long Districte::obtenirNumHabitantsNacionalitat(int codiNacionalitat) const{
     return nHabitants;
 }
 
-//void Districte::mostraDistr(){
-//    int counter = 0;
-//    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
-//    while(itSeccio!=habitantsSeccio.end()){
-//        list<Persona>const_iterator itPersona = itSeccio->second.begin();
-//        while(itPersona!=itSeccio->second.end()){
-//            cout << itSeccio->first << " - ";
-//            itPersona.mostraPersona();
-//            counter++
-//            it(counter>=20) return; //limite para que no se me raye esto
-//
-//        }
-//    }
-//
-//
-//    for(const auto &elem: habitantsSeccio){
-//        int seccio = elem.first;
-//        const auto &personaList = elem.second;
-//        for(const Persona &persona: personaList){
-//            cout << seccio << " - ";
-//            persona.mostraPersona();
-//            count++;
-//            if(count>=20) return;
-//        }
-//    }
-//}
+//Función para obtener la media de edad de los habitantes del distrito
+double Districte::obtenirEdatMitjana(int any) const{
+    double edatTotal = 0.0;
+    size_t totalPersonas = 0;
+    map<int, list<Persona>>::const_iterator itSeccio = habitantsSeccio.begin();
+    while(itSeccio!=habitantsSeccio.end()){
+        //recorrer lista de personas
+        list<Persona>::const_iterator itPersona = itSeccio->second.begin();
+        while(itPersona!=itSeccio->second.end()){
+            int edat = any - itPersona->obtenirAnyNaixement();
+            edatTotal += edat;
+            ++itPersona;
+        }
+        totalPersonas += itSeccio->second.size();
+        ++itSeccio;
+    }
+
+    return totalPersonas > 0? double(edatTotal)/totalPersonas : 0.0; //si totalPersonas>0, devuelve el promedio de edad del distrito; si no, devuelve 0.0
+}
+
+

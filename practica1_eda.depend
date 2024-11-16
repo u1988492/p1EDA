@@ -1,19 +1,18 @@
 # depslib dependency file v1.0
-1731755686 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\any.cpp
+1731764127 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\any.cpp
 	"Any.h"
 	"Districte.h"
 
-1731752857 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\any.h
+1731764102 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\any.h
 	<vector>
 	<map>
 	<list>
 	<string>
-	<fstream>
 	<iomanip>
 	<iostream>
 	"Districte.h"
 
-1731752604 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\districte.h
+1731761163 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\districte.h
 	<vector>
 	<map>
 	<list>
@@ -55,7 +54,7 @@
 	<string>
 	<vector>
 
-1731755755 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\main.cpp
+1731766061 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\main.cpp
 	<vector>
 	<map>
 	<list>
@@ -65,7 +64,7 @@
 	"Padro.h"
 	"Resums.h"
 
-1731752709 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\padro.h
+1731760151 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\padro.h
 	<vector>
 	<map>
 	<list>
@@ -89,15 +88,15 @@
 	"Estudi.h"
 	"Nacionalitat.h"
 
-1731755801 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\padro.cpp
+1731766368 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\padro.cpp
 	"Padro.h"
 	"Any.h"
 
-1731753897 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\districte.cpp
+1731764997 source:c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\src\districte.cpp
 	"Districte.h"
 	"Persona.h"
 
-1731750871 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\resums.h
+1731766468 c:\users\claud\desktop\cosas de la uni\tercero_gddv\eda\hodorogaclaudia_p1\p1eda\include\resums.h
 	<vector>
 	<map>
 	<list>

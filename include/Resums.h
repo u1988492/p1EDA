@@ -87,8 +87,8 @@ struct ResumNivellEstudis{
             for(size_t i=1; i<itRes->second.size(); i++){
                 if(i==mesEst) cout << "- ";
                 else if(i==menysEst) cout << "+ ";
-                cout << " " << nomsDistrictes[i] << setw(7);
-                cout << " Promig Estudis:" << setw(7) << setprecision(2) << itRes->second[i] << endl;
+                cout << "" << setw(7) << nomsDistrictes[i]
+                << setw(7) << " Promig Estudis:" << right << setprecision(2) << itRes->second[i] << endl;
             }
             cout << "seguent any" << endl;
             ++itRes;
@@ -134,7 +134,8 @@ struct ResumNacionalitats{
             //mostrar nombres y codigo de nacionalidad ordenados por habitantes descendiente
             for(const auto&nacion: nacOrdenadas){
                 const auto& nacio = nacion.first;
-                cout << nacio.first << "(" << nacio.second << ")" << setw(20) << ":" << setw(5) << nacion.second << endl;
+                cout << setw(10) << left << nacio.first << "(" << nacio.second << ")" <<
+                setw(20) << ":" << setw(8) << nacion.second << endl;
             }
             cout << endl;
         }
@@ -142,6 +143,24 @@ struct ResumNacionalitats{
 };
 
 struct ResumEdats{
+
+    map<int, vector<double>> promigEdats;
+
+    void afegirEdats(int any, const vector<double>& promigEdatsDistrictes){
+        promigEdats[any] = promigEdatsDistrictes;
+    }
+
+    void mostrarResumEdats(){
+        map<int, vector<double>>::const_iterator itRes = promigEdats.begin();
+        while(itRes!=promigEdats.end()){
+            cout << itRes->first << ":" << endl;
+            for(size_t i=1; i<itRes->second.size(); i++){
+                cout << left << setw(8) << nomsDistrictes[i]
+                << setw(8) << "Promig Edat: "  << right  << fixed << setprecision(2) << itRes->second[i] << endl;
+            }
+            ++itRes;
+        }
+    }
 };
 
 

@@ -1,0 +1,808 @@
+MENU
+---------------
+00. FINALIZAR PROGRAMA
+01. LEER DATOS
+02. CONSULTAR SI EXISTE UN AÑO
+03. CONSULTAR NUMERO DE HABITANTES POR AÑO
+04. CONSULTAR NUMERO DE HABITANTES DE UN AÑO
+05. CONSULTAR NUMERO DE HABITANTES DE UN AÑO Y UN DISTRITO
+06. RESUMEN DE ESTUDIOS DE LA POBLACIÓN POR AÑO
+07. NUMERO DE ESTUDIOS POR DISTRITO
+08. RESUMEN DEL NIVEL DE ESTUDIOS
+09. RESUMEN DE NACIONALIDADES
+10. MOVIMIENTOS DE COMUNIDADES
+15. MENU
+---------------
+********************
+* 01. Llegir dades *
+********************
+Numero de linies: 1008794
+********************
+* 02. Existeix any *
+********************
+Any: 2020
+Any inexistent
+**********************************
+* 03. Obtenir nombre d'habitants *
+**********************************
+2013habitants: 98009
+2014habitants: 98322
+2015habitants: 98119
+2016habitants: 99831
+2017habitants: 100187
+2018habitants: 101740
+2019habitants: 103314
+2021habitants: 102508
+2022habitants: 102542
+2023habitants: 104222
+PROMIG : 100879
+*******************************************
+* 04: Obtenir nombre d'habitants d'un any *
+*******************************************
+*******************************************
+* 04: Obtenir nombre d'habitants d'un any *
+*******************************************
+Any: 2013
+Districte: 0habitants:    8014
+Districte: 1habitants:   33828
+Districte: 2habitants:   37402
+Districte: 3habitants:    2223
+Districte: 4habitants:    7418
+Districte: 5habitants:    9124
+TOTAL: 98009
+*******************************************************
+* 05: Obtenir nombre d'habitants d'un any i districte *
+*******************************************************
+Any: 2013Districte: 2
+Seccio: 1habitants:     796
+Seccio: 2habitants:     928
+Seccio: 3habitants:    1265
+Seccio: 4habitants:    1643
+Seccio: 5habitants:    1012
+Seccio: 6habitants:    2064
+Seccio: 7habitants:    1834
+Seccio: 8habitants:    2006
+Seccio: 9habitants:    1408
+Seccio: 10habitants:    2358
+Seccio: 11habitants:    2207
+Seccio: 12habitants:    1360
+Seccio: 13habitants:    1186
+Seccio: 14habitants:     932
+Seccio: 15habitants:    2414
+Seccio: 16habitants:    1178
+Seccio: 17habitants:    1321
+Seccio: 18habitants:    1505
+Seccio: 19habitants:    2442
+Seccio: 20habitants:    1143
+Seccio: 21habitants:    1486
+Seccio: 22habitants:    1340
+TOTAL: 33828
+*************************
+* 06. Resum per estudis *
+*************************
+2013Estudis: ALTRES TÍTOLS DE GRAU MIG -- ARQUITECTE,ENGINYER TÈCNI -- BATX. ELEM., GRADUAT, ESO -- BATXILLER SUPERIOR, BUP -- BATXILLER,FPII O SUPERIOR -- DIPLOMAT ESCOLA UNIVERS. -- DOCTORAT I POST-GRAU -- FORMACIÓ PROFESS 1ER GRAU -- FORMACIÓ PROFESS 2ON GRAU -- LLICENCIAT O GRAU UNIVER. -- NI LLEGIR NI ESCRIURE -- NO APLICABLE MENOR 16 -- PRIMÀRIA INCOMPLETA -- SENSE ESTUDIS -- TÍTOL SUP NO UNIVERSITARI
+2014Estudis: ALTRES TÍTOLS DE GRAU MIG -- ARQUITECTE,ENGINYER TÈCNI -- BATXILLER SUPERIOR, BUP -- BATXILLER,FPII O SUPERIOR -- DIPLOMAT ESCOLA UNIVERS. -- DOCTORAT I POST-GRAU -- ESO, PRIMÀRIA O EQUIV. -- FP 1ER GRAU O MITJÀ -- FP 2ON GRAU O SUPERIOR -- LLICENCIAT O GRAU UNIVER. -- NI LLEGIR NI ESCRIURE -- NO APLICABLE MENOR 16 -- PRIMÀRIA INCOMPLETA -- SENSE ESTUDIS -- TÍTOL SUP NO UNIVERSITARI
+2015Estudis: ALTRES TÍTOLS DE GRAU MIG -- ARQUITECTE,ENGINYER TÈCNI -- BATXILLER SUPERIOR, BUP -- BATXILLER,FPII O SUPERIOR -- DIPLOMAT ESCOLA UNIVERS. -- DOCTORAT I POST-GRAU -- ESO, PRIMÀRIA O EQUIV. -- FP 1ER GRAU O MITJÀ -- FP 2ON GRAU O SUPERIOR -- LLICENCIAT O GRAU UNIVER. -- NI LLEGIR NI ESCRIURE -- NO APLICABLE MENOR 16 -- PRIMÀRIA INCOMPLETA -- SENSE ESTUDIS -- TÍTOL SUP NO UNIVERSITARI
+2016Estudis: ALTRES TÍTOLS DE GRAU MIG -- ARQUITECTE,ENGINYER TÈCNI -- BATXILLER SUPERIOR, BUP -- BATXILLER,FPII O SUPERIOR -- DIPLOMAT ESCOLA UNIVERS. -- DOCTORAT I POST-GRAU -- ESO, PRIMÀRIA O EQUIV. -- FP 1ER GRAU O MITJÀ -- FP 2ON GRAU O SUPERIOR -- LLICENCIAT O GRAU UNIVER. -- NI LLEGIR NI ESCRIURE -- NO APLICABLE MENOR 16 -- PRIMÀRIA INCOMPLETA -- SENSE ESTUDIS -- TÍTOL SUP NO UNIVERSITARI
+2017Estudis: ALTRES TÍTOLS DE GRAU MIG -- ARQUITECTE,ENGINYER TÈCNI -- BATXILLER SUPERIOR, BUP -- BATXILLER,FPII O SUPERIOR -- DIPLOMAT ESCOLA UNIVERS. -- DOCTORAT I POST-GRAU -- ESO, PRIMÀRIA O EQUIV. -- FP 1ER GRAU O MITJÀ -- FP 2ON GRAU O SUPERIOR -- LLICENCIAT O GRAU UNIVER. -- NI LLEGIR NI ESCRIURE -- NO APLICABLE MENOR 16 -- PRIMÀRIA INCOMPLETA -- SENSE ESTUDIS -- TÍTOL SUP NO UNIVERSITARI
+2018Estudis: ALTRES TÍTOLS DE GRAU MIG -- ARQUITECTE,ENGINYER TÈCNI -- BATXILLER SUPERIOR, BUP -- BATXILLER,FPII O SUPERIOR -- DIPLOMAT ESCOLA UNIVERS. -- DOCTORAT I POST-GRAU -- ESO, PRIMÀRIA O EQUIV. -- FP 1ER GRAU O MITJÀ -- FP 2ON GRAU O SUPERIOR -- LLICENCIAT O GRAU UNIVER. -- NI LLEGIR NI ESCRIURE -- NO APLICABLE MENOR 16 -- PRIMÀRIA INCOMPLETA -- SENSE ESTUDIS -- TÍTOL SUP NO UNIVERSITARI
+2019Estudis: ALTRES TÍTOLS DE GRAU MIG -- ARQUITECTE,ENGINYER TÈCNI -- BATXILLER SUPERIOR, BUP -- BATXILLER,FPII O SUPERIOR -- DIPLOMAT ESCOLA UNIVERS. -- DOCTORAT I POST-GRAU -- ESO, PRIMÀRIA O EQUIV. -- FP 1ER GRAU O MITJÀ -- FP 2ON GRAU O SUPERIOR -- LLICENCIAT O GRAU UNIVER. -- NI LLEGIR NI ESCRIURE -- NO APLICABLE MENOR 16 -- PRIMÀRIA INCOMPLETA -- SENSE ESTUDIS -- TÍTOL SUP NO UNIVERSITARI
+2021Estudis: ALTRES TÍTOLS DE GRAU MIG -- ARQUITECTE,ENGINYER TÈCNI -- BATXILLER SUPERIOR, BUP -- BATXILLER,FPII O SUPERIOR -- DIPLOMAT ESCOLA UNIVERS. -- DOCTORAT I POST-GRAU -- ESO, PRIMÀRIA O EQUIV. -- FP 1ER GRAU O MITJÀ -- FP 2ON GRAU O SUPERIOR -- LLICENCIAT O GRAU UNIVER. -- NI LLEGIR NI ESCRIURE -- NO APLICABLE MENOR 16 -- PRIMÀRIA INCOMPLETA -- SENSE ESTUDIS -- TÍTOL SUP NO UNIVERSITARI
+2022Estudis: ALTRES TÍTOLS DE GRAU MIG -- ARQUITECTE,ENGINYER TÈCNI -- BATXILLER SUPERIOR, BUP -- BATXILLER,FPII O SUPERIOR -- DIPLOMAT ESCOLA UNIVERS. -- DOCTORAT I POST-GRAU -- ESO, PRIMÀRIA O EQUIV. -- FP 1ER GRAU O MITJÀ -- FP 2ON GRAU O SUPERIOR -- LLICENCIAT O GRAU UNIVER. -- NI LLEGIR NI ESCRIURE -- NO APLICABLE MENOR 16 -- PRIMÀRIA INCOMPLETA -- SENSE ESTUDIS -- TÍTOL SUP NO UNIVERSITARI
+2023Estudis: ALTRES TÍTOLS DE GRAU MIG -- ARQUITECTE,ENGINYER TÈCNI -- BATXILLER SUPERIOR, BUP -- BATXILLER,FPII O SUPERIOR -- DIPLOMAT ESCOLA UNIVERS. -- DOCTORAT I POST-GRAU -- ESO, PRIMÀRIA O EQUIV. -- FP 1ER GRAU O MITJÀ -- FP 2ON GRAU O SUPERIOR -- LLICENCIAT O GRAU UNIVER. -- NI LLEGIR NI ESCRIURE -- NO APLICABLE MENOR 16 -- PRIMÀRIA INCOMPLETA -- SENSE ESTUDIS -- TÍTOL SUP NO UNIVERSITARI
+**************************************
+* 07. Nombre d'estudis per districte *
+**************************************
+Districte: Any 2013 Num Estudis: 15
+Any 2014 Num Estudis: 15
+Any 2015 Num Estudis: 15
+Any 2016 Num Estudis: 15
+Any 2017 Num Estudis: 15
+Any 2018 Num Estudis: 15
+Any 2019 Num Estudis: 15
+Any 2021 Num Estudis: 15
+Any 2022 Num Estudis: 15
+Any 2023 Num Estudis: 15
+******************************
+* 08. Resum nivell d'estudis *
+******************************
+2013:
+ Carme, Vila-roja Promig Estudis:     29
+-  Eixample, Montilivi Promig Estudis:     33
+ Santa Eugenia, Mas Xirgu Promig Estudis:     31
+ Casc Antic Promig Estudis:     29
+ Montjuic, Pont major Promig Estudis:     30
++  Sant Ponc, Domeny, Taiala Promig Estudis:     28
+seguent any
+2014:
+ Carme, Vila-roja Promig Estudis:     26
+-  Eixample, Montilivi Promig Estudis:     31
+ Santa Eugenia, Mas Xirgu Promig Estudis:     29
+ Casc Antic Promig Estudis:     28
+ Montjuic, Pont major Promig Estudis:     28
++  Sant Ponc, Domeny, Taiala Promig Estudis:     26
+seguent any
+2015:
+ Carme, Vila-roja Promig Estudis:     27
+-  Eixample, Montilivi Promig Estudis:     31
+ Santa Eugenia, Mas Xirgu Promig Estudis:     29
+ Casc Antic Promig Estudis:     28
+ Montjuic, Pont major Promig Estudis:     28
++  Sant Ponc, Domeny, Taiala Promig Estudis:     26
+seguent any
+2016:
+ Carme, Vila-roja Promig Estudis:     27
+-  Eixample, Montilivi Promig Estudis:     31
+ Santa Eugenia, Mas Xirgu Promig Estudis:     29
+ Casc Antic Promig Estudis:     28
+ Montjuic, Pont major Promig Estudis:     28
++  Sant Ponc, Domeny, Taiala Promig Estudis:     27
+seguent any
+2017:
+ Carme, Vila-roja Promig Estudis:     27
+-  Eixample, Montilivi Promig Estudis:     31
+ Santa Eugenia, Mas Xirgu Promig Estudis:     29
+ Casc Antic Promig Estudis:     28
+ Montjuic, Pont major Promig Estudis:     28
++  Sant Ponc, Domeny, Taiala Promig Estudis:     27
+seguent any
+2018:
+ Carme, Vila-roja Promig Estudis:     27
+-  Eixample, Montilivi Promig Estudis:     31
+ Santa Eugenia, Mas Xirgu Promig Estudis:     29
+ Casc Antic Promig Estudis:     28
+ Montjuic, Pont major Promig Estudis:     29
++  Sant Ponc, Domeny, Taiala Promig Estudis:     27
+seguent any
+2019:
+ Carme, Vila-roja Promig Estudis:     27
+-  Eixample, Montilivi Promig Estudis:     31
+ Santa Eugenia, Mas Xirgu Promig Estudis:     29
+ Casc Antic Promig Estudis:     28
+ Montjuic, Pont major Promig Estudis:     29
++  Sant Ponc, Domeny, Taiala Promig Estudis:     27
+seguent any
+2021:
+ Carme, Vila-roja Promig Estudis:     28
+-  Eixample, Montilivi Promig Estudis:     32
+ Santa Eugenia, Mas Xirgu Promig Estudis:     30
+ Casc Antic Promig Estudis:     29
+ Montjuic, Pont major Promig Estudis:     29
++  Sant Ponc, Domeny, Taiala Promig Estudis:     27
+seguent any
+2022:
+ Carme, Vila-roja Promig Estudis:     28
+-  Eixample, Montilivi Promig Estudis:     32
+ Santa Eugenia, Mas Xirgu Promig Estudis:     30
+ Casc Antic Promig Estudis:     29
+ Montjuic, Pont major Promig Estudis:     30
++  Sant Ponc, Domeny, Taiala Promig Estudis:     28
+seguent any
+2023:
+ Carme, Vila-roja Promig Estudis:     28
+-  Eixample, Montilivi Promig Estudis:     32
+ Santa Eugenia, Mas Xirgu Promig Estudis:     30
+ Casc Antic Promig Estudis:     29
+ Montjuic, Pont major Promig Estudis:     30
++  Sant Ponc, Domeny, Taiala Promig Estudis:     28
+seguent any
+*****************************
+* 9. Resum de nacionalitats *
+*****************************
+2013
+ESPAÑA(108)                   :80133
+MARRUECOS(228)                   : 3668
+HONDURAS(321)                   : 3560
+RUMANIA(128)                   : 1609
+GAMBIA(216)                   :  690
+CHINA(407)                   :  668
+COLOMBIA(343)                   :  592
+BRASIL(342)                   :  485
+ITALIA(115)                   :  475
+UCRANIA(135)                   :  431
+RUSIA(154)                   :  404
+INDIA(410)                   :  343
+ECUADOR(345)                   :  303
+SENEGAL(239)                   :  303
+BOLIVIA(341)                   :  296
+ARGENTINA(340)                   :  279
+FRANCIA(110)                   :  269
+PORTUGAL(123)                   :  264
+REPÚBLICA DOMINICANA(326)                   :  191
+PERÚ(348)                   :  174
+ARGELIA(203)                   :  162
+CHILE(344)                   :  156
+PAKISTÁN(426)                   :  156
+REINO UNIDO(125)                   :  148
+BULGARIA(104)                   :  146
+MOLDAVIA(137)                   :  146
+GEORGIA(139)                   :  144
+CUBA(315)                   :  129
+VENEZUELA(351)                   :  114
+ALEMANIA(126)                   :  113
+MALI(227)                   :  112
+POLONIA(122)                   :  111
+GUINEA(218)                   :  107
+URUGUAY(350)                   :  107
+GHANA(217)                   :  102
+NIGERIA(234)                   :  102
+ESTADOS UNIDOS DE AMÉRICA(302)                   :   95
+MÉXICO(303)                   :   90
+CAMERÚN(208)                   :   66
+PAISES BAJOS(121)                   :   60
+SALVADOR (EL)(317)                   :   48
+BELGICA(103)                   :   38
+IRLANDA(113)                   :   38
+PARAGUAY(347)                   :   36
+BANGLADESH(404)                   :   34
+NICARAGUA(323)                   :   33
+REPÚBLICA ESLOVACA(144)                   :   33
+LITUANIA(142)                   :   32
+FILIPINAS(409)                   :   30
+BELARÚS(138)                   :   29
+MAURITANIA(230)                   :   28
+COSTA DE MARFIL(211)                   :   24
+HUNGRIA(112)                   :   22
+REPÚBLICA CHECA(143)                   :   21
+ARMENIA(148)                   :   20
+GRECIA(111)                   :   20
+GUATEMALA(319)                   :   20
+
+2014
+ESPAÑA(108)                   :80879
+HONDURAS(321)                   : 3604
+MARRUECOS(228)                   : 3507
+RUMANIA(128)                   : 1661
+CHINA(407)                   :  693
+GAMBIA(216)                   :  649
+COLOMBIA(343)                   :  525
+BRASIL(342)                   :  463
+UCRANIA(135)                   :  440
+ITALIA(115)                   :  437
+RUSIA(154)                   :  408
+INDIA(410)                   :  333
+SENEGAL(239)                   :  312
+ECUADOR(345)                   :  272
+BOLIVIA(341)                   :  268
+FRANCIA(110)                   :  268
+ARGENTINA(340)                   :  246
+PORTUGAL(123)                   :  231
+REPÚBLICA DOMINICANA(326)                   :  195
+PAKISTÁN(426)                   :  160
+ARGELIA(203)                   :  157
+REINO UNIDO(125)                   :  155
+PERÚ(348)                   :  154
+BULGARIA(104)                   :  153
+MOLDAVIA(137)                   :  149
+CHILE(344)                   :  147
+CUBA(315)                   :  133
+GEORGIA(139)                   :  132
+GUINEA(218)                   :  119
+ALEMANIA(126)                   :  112
+MALI(227)                   :  112
+POLONIA(122)                   :  109
+ESTADOS UNIDOS DE AMÉRICA(302)                   :  107
+VENEZUELA(351)                   :  106
+URUGUAY(350)                   :  101
+GHANA(217)                   :  100
+NIGERIA(234)                   :   94
+MÉXICO(303)                   :   80
+PAISES BAJOS(121)                   :   60
+CAMERÚN(208)                   :   53
+SALVADOR (EL)(317)                   :   53
+PARAGUAY(347)                   :   39
+IRLANDA(113)                   :   36
+COSTA DE MARFIL(211)                   :   31
+LITUANIA(142)                   :   31
+BELGICA(103)                   :   30
+BANGLADESH(404)                   :   28
+FILIPINAS(409)                   :   28
+REPÚBLICA ESLOVACA(144)                   :   26
+BELARÚS(138)                   :   25
+MAURITANIA(230)                   :   25
+NICARAGUA(323)                   :   25
+HUNGRIA(112)                   :   21
+AUSTRALIA(501)                   :   20
+GRECIA(111)                   :   20
+
+2015
+ESPAÑA(108)                   :80532
+HONDURAS(321)                   : 3800
+MARRUECOS(228)                   : 3403
+RUMANIA(128)                   : 1716
+CHINA(407)                   :  727
+GAMBIA(216)                   :  651
+COLOMBIA(343)                   :  507
+ITALIA(115)                   :  478
+UCRANIA(135)                   :  445
+BRASIL(342)                   :  433
+RUSIA(154)                   :  421
+INDIA(410)                   :  352
+SENEGAL(239)                   :  297
+FRANCIA(110)                   :  286
+BOLIVIA(341)                   :  258
+ECUADOR(345)                   :  251
+ARGENTINA(340)                   :  227
+PORTUGAL(123)                   :  227
+REPÚBLICA DOMINICANA(326)                   :  194
+REINO UNIDO(125)                   :  174
+BULGARIA(104)                   :  168
+CHILE(344)                   :  159
+MOLDAVIA(137)                   :  148
+ARGELIA(203)                   :  145
+PERÚ(348)                   :  138
+PAKISTÁN(426)                   :  136
+GEORGIA(139)                   :  134
+CUBA(315)                   :  129
+GUINEA(218)                   :  118
+MALI(227)                   :  116
+ESTADOS UNIDOS DE AMÉRICA(302)                   :  114
+ALEMANIA(126)                   :  107
+POLONIA(122)                   :  102
+URUGUAY(350)                   :   99
+NIGERIA(234)                   :   98
+VENEZUELA(351)                   :   94
+GHANA(217)                   :   89
+MÉXICO(303)                   :   74
+PAÍSES BAJOS(121)                   :   66
+SALVADOR (EL)(317)                   :   64
+CAMERÚN(208)                   :   46
+IRLANDA(113)                   :   40
+PARAGUAY(347)                   :   35
+COSTA DE MARFIL(211)                   :   33
+BELGICA(103)                   :   31
+FILIPINAS(409)                   :   31
+LITUANIA(142)                   :   25
+MAURITANIA(230)                   :   25
+REPÚBLICA ESLOVACA(144)                   :   25
+BANGLADESH(404)                   :   24
+GRECIA(111)                   :   22
+NICARAGUA(323)                   :   22
+BELARÚS(138)                   :   21
+CANADÁ(301)                   :   21
+HUNGRIA(112)                   :   21
+REPÚBLICA CHECA(143)                   :   20
+
+2016
+ESPAÑA(108)                   :81712
+HONDURAS(321)                   : 4035
+MARRUECOS(228)                   : 3389
+RUMANIA(128)                   : 1818
+CHINA(407)                   :  785
+GAMBIA(216)                   :  657
+COLOMBIA(343)                   :  530
+ITALIA(115)                   :  530
+UCRANIA(135)                   :  465
+BRASIL(342)                   :  452
+RUSIA(154)                   :  402
+INDIA(410)                   :  337
+SENEGAL(239)                   :  304
+FRANCIA(110)                   :  289
+ECUADOR(345)                   :  277
+ARGENTINA(340)                   :  260
+BOLIVIA(341)                   :  254
+PORTUGAL(123)                   :  216
+REPÚBLICA DOMINICANA(326)                   :  185
+REINO UNIDO(125)                   :  178
+BULGARIA(104)                   :  170
+ARGELIA(203)                   :  166
+CHILE(344)                   :  155
+MOLDAVIA(137)                   :  155
+PAKISTÁN(426)                   :  146
+GEORGIA(139)                   :  145
+PERÚ(348)                   :  145
+CUBA(315)                   :  124
+VENEZUELA(351)                   :  122
+ESTADOS UNIDOS DE AMÉRICA(302)                   :  121
+ALEMANIA(126)                   :  116
+MALI(227)                   :  116
+GUINEA(218)                   :  112
+POLONIA(122)                   :  108
+GHANA(217)                   :  100
+URUGUAY(350)                   :   93
+NIGERIA(234)                   :   92
+PAISES BAJOS(121)                   :   70
+SALVADOR (EL)(317)                   :   69
+MÉXICO(303)                   :   63
+IRLANDA(113)                   :   40
+CAMERÚN(208)                   :   35
+PARAGUAY(347)                   :   35
+BELGICA(103)                   :   32
+FILIPINAS(409)                   :   31
+LITUANIA(142)                   :   29
+COSTA DE MARFIL(211)                   :   28
+NICARAGUA(323)                   :   25
+BANGLADESH(404)                   :   24
+MAURITANIA(230)                   :   24
+REPÚBLICA ESLOVACA(144)                   :   23
+REPÚBLICA CHECA(143)                   :   22
+CANADÁ(301)                   :   20
+
+2017
+ESPAÑA(108)                   :81521
+HONDURAS(321)                   : 4317
+MARRUECOS(228)                   : 3400
+RUMANIA(128)                   : 1709
+CHINA(407)                   :  799
+GAMBIA(216)                   :  618
+COLOMBIA(343)                   :  591
+ITALIA(115)                   :  551
+BRASIL(342)                   :  473
+UCRANIA(135)                   :  473
+RUSIA(154)                   :  403
+INDIA(410)                   :  392
+SENEGAL(239)                   :  323
+FRANCIA(110)                   :  303
+ECUADOR(345)                   :  286
+BOLIVIA(341)                   :  261
+ARGENTINA(340)                   :  254
+REINO UNIDO(125)                   :  206
+PORTUGAL(123)                   :  199
+ARGELIA(203)                   :  184
+REPÚBLICA DOMINICANA(326)                   :  174
+PERÚ(348)                   :  168
+MOLDAVIA(137)                   :  158
+GEORGIA(139)                   :  155
+VENEZUELA(351)                   :  153
+PAKISTÁN(426)                   :  145
+CHILE(344)                   :  141
+BULGARIA(104)                   :  134
+ESTADOS UNIDOS DE AMÉRICA(302)                   :  123
+GUINEA(218)                   :  116
+MALI(227)                   :  114
+POLONIA(122)                   :  113
+GHANA(217)                   :  112
+ALEMANIA(126)                   :  110
+CUBA(315)                   :  104
+URUGUAY(350)                   :   99
+NIGERIA(234)                   :   97
+MÉXICO(303)                   :   85
+SALVADOR (EL)(317)                   :   72
+PAÍSES BAJOS(121)                   :   61
+IRLANDA(113)                   :   46
+CAMERÚN(208)                   :   39
+FILIPINAS(409)                   :   39
+PARAGUAY(347)                   :   37
+BANGLADESH(404)                   :   33
+BELGICA(103)                   :   33
+AUSTRALIA(501)                   :   30
+COSTA DE MARFIL(211)                   :   30
+LITUANIA(142)                   :   28
+CANADÁ(301)                   :   24
+EGIPTO(213)                   :   24
+ISRAEL(414)                   :   22
+MAURITANIA(230)                   :   22
+NICARAGUA(323)                   :   21
+REPÚBLICA CHECA(143)                   :   21
+REPÚBLICA ESLOVACA(144)                   :   21
+GRECIA(111)                   :   20
+
+2018
+ESPAÑA(108)                   :81569
+HONDURAS(321)                   : 4848
+MARRUECOS(228)                   : 3900
+RUMANIA(128)                   : 1699
+CHINA(407)                   :  832
+COLOMBIA(343)                   :  653
+GAMBIA(216)                   :  615
+ITALIA(115)                   :  600
+BRASIL(342)                   :  488
+UCRANIA(135)                   :  470
+INDIA(410)                   :  441
+RUSIA(154)                   :  441
+SENEGAL(239)                   :  360
+FRANCIA(110)                   :  300
+ARGENTINA(340)                   :  265
+BOLIVIA(341)                   :  261
+ECUADOR(345)                   :  260
+VENEZUELA(351)                   :  217
+REINO UNIDO(125)                   :  206
+PORTUGAL(123)                   :  202
+PERÚ(348)                   :  200
+ARGELIA(203)                   :  192
+GEORGIA(139)                   :  178
+REPÚBLICA DOMINICANA(326)                   :  170
+CHILE(344)                   :  160
+PAKISTÁN(426)                   :  160
+MOLDAVIA(137)                   :  152
+GHANA(217)                   :  141
+ESTADOS UNIDOS DE AMÉRICA(302)                   :  136
+BULGARIA(104)                   :  128
+MALI(227)                   :  120
+GUINEA(218)                   :  117
+NIGERIA(234)                   :  117
+POLONIA(122)                   :  109
+ALEMANIA(126)                   :  108
+CUBA(315)                   :  108
+URUGUAY(350)                   :   95
+MÉXICO(303)                   :   75
+PAÍSES BAJOS(121)                   :   72
+SALVADOR (EL)(317)                   :   65
+IRLANDA(113)                   :   45
+BANGLADESH(404)                   :   44
+CAMERÚN(208)                   :   44
+FILIPINAS(409)                   :   40
+PARAGUAY(347)                   :   40
+BELGICA(103)                   :   35
+CANADÁ(301)                   :   34
+AUSTRALIA(501)                   :   32
+COSTA DE MARFIL(211)                   :   30
+MAURITANIA(230)                   :   27
+EGIPTO(213)                   :   26
+LITUANIA(142)                   :   26
+SIRIA(433)                   :   24
+NICARAGUA(323)                   :   22
+REPÚBLICA CHECA(143)                   :   21
+ISRAEL(414)                   :   20
+
+2019
+ESPAÑA(108)                   :81748
+HONDURAS(321)                   : 5181
+MARRUECOS(228)                   : 4380
+RUMANIA(128)                   : 1634
+CHINA(407)                   :  878
+COLOMBIA(343)                   :  833
+GAMBIA(216)                   :  665
+ITALIA(115)                   :  628
+BRASIL(342)                   :  516
+INDIA(410)                   :  494
+RUSIA(154)                   :  453
+UCRANIA(135)                   :  445
+SENEGAL(239)                   :  386
+FRANCIA(110)                   :  324
+ARGENTINA(340)                   :  284
+VENEZUELA(351)                   :  279
+BOLIVIA(341)                   :  256
+ECUADOR(345)                   :  245
+GEORGIA(139)                   :  226
+ARGELIA(203)                   :  218
+REINO UNIDO(125)                   :  217
+PERÚ(348)                   :  209
+PORTUGAL(123)                   :  204
+CHILE(344)                   :  189
+REPÚBLICA DOMINICANA(326)                   :  169
+PAKISTÁN(426)                   :  163
+ESTADOS UNIDOS DE AMÉRICA(302)                   :  150
+MALI(227)                   :  146
+GHANA(217)                   :  141
+MOLDAVIA(137)                   :  141
+BULGARIA(104)                   :  122
+GUINEA(218)                   :  117
+ALEMANIA(126)                   :  114
+NIGERIA(234)                   :  113
+CUBA(315)                   :  103
+URUGUAY(350)                   :  103
+POLONIA(122)                   :   99
+MÉXICO(303)                   :   83
+SALVADOR (EL)(317)                   :   82
+PAÍSES BAJOS(121)                   :   75
+IRLANDA(113)                   :   51
+BANGLADESH(404)                   :   50
+PARAGUAY(347)                   :   44
+CAMERÚN(208)                   :   42
+FILIPINAS(409)                   :   36
+AUSTRALIA(501)                   :   35
+BELGICA(103)                   :   33
+COSTA DE MARFIL(211)                   :   33
+MAURITANIA(230)                   :   32
+CANADÁ(301)                   :   29
+NICARAGUA(323)                   :   27
+IRÁN(413)                   :   24
+SIRIA(433)                   :   24
+GRECIA(111)                   :   21
+EGIPTO(213)                   :   20
+
+2021
+ESPAÑA(108)                   :81405
+HONDURAS(321)                   : 5005
+MARRUECOS(228)                   : 4104
+RUMANIA(128)                   : 1646
+COLOMBIA(343)                   :  877
+CHINA(407)                   :  871
+ITALIA(115)                   :  647
+GAMBIA(216)                   :  641
+INDIA(410)                   :  492
+BRASIL(342)                   :  480
+UCRANIA(135)                   :  442
+RUSIA(154)                   :  430
+SENEGAL(239)                   :  404
+FRANCIA(110)                   :  321
+VENEZUELA(351)                   :  306
+ARGENTINA(340)                   :  273
+REINO UNIDO(125)                   :  270
+BOLIVIA(341)                   :  236
+ECUADOR(345)                   :  221
+GEORGIA(139)                   :  219
+PORTUGAL(123)                   :  207
+PERÚ(348)                   :  203
+PAKISTÁN(426)                   :  175
+ARGELIA(203)                   :  169
+GHANA(217)                   :  169
+CHILE(344)                   :  163
+ESTADOS UNIDOS DE AMÉRICA(302)                   :  156
+REPÚBLICA DOMINICANA(326)                   :  153
+MALI(227)                   :  144
+BULGARIA(104)                   :  128
+ALEMANIA(126)                   :  123
+MOLDAVIA(137)                   :  120
+GUINEA(218)                   :  109
+NIGERIA(234)                   :  101
+POLONIA(122)                   :   99
+URUGUAY(350)                   :   95
+CUBA(315)                   :   84
+SALVADOR (EL)(317)                   :   84
+MÉXICO(303)                   :   80
+PAÍSES BAJOS(121)                   :   74
+IRLANDA(113)                   :   51
+BANGLADESH(404)                   :   50
+CAMERÚN(208)                   :   41
+PARAGUAY(347)                   :   39
+AUSTRALIA(501)                   :   37
+BELGICA(103)                   :   36
+MAURITANIA(230)                   :   33
+NICARAGUA(323)                   :   33
+FILIPINAS(409)                   :   32
+COSTA DE MARFIL(211)                   :   31
+CANADÁ(301)                   :   30
+SIRIA(433)                   :   24
+GRECIA(111)                   :   22
+SUDÁFRICA(236)                   :   22
+SUECIA(131)                   :   21
+EGIPTO(213)                   :   20
+HUNGRIA(112)                   :   20
+IRÁN(413)                   :   20
+TÚNEZ(248)                   :   20
+
+2022
+ESPAÑA(108)                   :81681
+HONDURAS(321)                   : 4964
+MARRUECOS(228)                   : 3918
+RUMANIA(128)                   : 1565
+COLOMBIA(343)                   :  980
+CHINA(407)                   :  849
+GAMBIA(216)                   :  672
+ITALIA(115)                   :  638
+INDIA(410)                   :  481
+BRASIL(342)                   :  426
+UCRANIA(135)                   :  405
+SENEGAL(239)                   :  397
+RUSIA(154)                   :  376
+VENEZUELA(351)                   :  344
+FRANCIA(110)                   :  336
+REINO UNIDO(125)                   :  309
+ARGENTINA(340)                   :  277
+BOLIVIA(341)                   :  233
+ECUADOR(345)                   :  214
+PERÚ(348)                   :  197
+GEORGIA(139)                   :  196
+PORTUGAL(123)                   :  190
+ESTADOS UNIDOS DE AMÉRICA(302)                   :  177
+GHANA(217)                   :  171
+CHILE(344)                   :  162
+PAKISTÁN(426)                   :  162
+MALI(227)                   :  152
+REPÚBLICA DOMINICANA(326)                   :  147
+ARGELIA(203)                   :  146
+ALEMANIA(126)                   :  125
+GUINEA(218)                   :  121
+BULGARIA(104)                   :  120
+MOLDAVIA(137)                   :  113
+NIGERIA(234)                   :  108
+POLONIA(122)                   :  103
+CUBA(315)                   :   97
+URUGUAY(350)                   :   96
+MÉXICO(303)                   :   87
+SALVADOR (EL)(317)                   :   78
+PAÍSES BAJOS(121)                   :   71
+BANGLADESH(404)                   :   62
+IRLANDA(113)                   :   61
+AFGANISTÁN(401)                   :   46
+CAMERÚN(208)                   :   42
+PARAGUAY(347)                   :   42
+CANADÁ(301)                   :   41
+BELGICA(103)                   :   37
+FILIPINAS(409)                   :   37
+MAURITANIA(230)                   :   36
+NICARAGUA(323)                   :   30
+AUSTRALIA(501)                   :   29
+SUDÁFRICA(236)                   :   29
+COSTA DE MARFIL(211)                   :   28
+IRÁN(413)                   :   28
+SIRIA(433)                   :   25
+TÚNEZ(248)                   :   24
+SUECIA(131)                   :   21
+GRECIA(111)                   :   20
+REPÚBLICA ESLOVACA(144)                   :   20
+
+2023
+ESPAÑA(108)                   :82559
+HONDURAS(321)                   : 5073
+MARRUECOS(228)                   : 3855
+RUMANIA(128)                   : 1483
+COLOMBIA(343)                   : 1213
+CHINA(407)                   :  819
+GAMBIA(216)                   :  721
+ITALIA(115)                   :  653
+UCRANIA(135)                   :  636
+INDIA(410)                   :  458
+BRASIL(342)                   :  442
+VENEZUELA(351)                   :  411
+SENEGAL(239)                   :  408
+RUSIA(154)                   :  369
+FRANCIA(110)                   :  335
+ARGENTINA(340)                   :  323
+REINO UNIDO(125)                   :  312
+PERÚ(348)                   :  245
+BOLIVIA(341)                   :  229
+ECUADOR(345)                   :  210
+ESTADOS UNIDOS DE AMÉRICA(302)                   :  209
+GEORGIA(139)                   :  201
+GHANA(217)                   :  198
+PORTUGAL(123)                   :  184
+CHILE(344)                   :  175
+PAKISTÁN(426)                   :  174
+MALI(227)                   :  159
+ARGELIA(203)                   :  148
+ALEMANIA(126)                   :  134
+REPÚBLICA DOMINICANA(326)                   :  127
+GUINEA(218)                   :  119
+NIGERIA(234)                   :  119
+POLONIA(122)                   :  107
+CUBA(315)                   :  105
+BULGARIA(104)                   :  104
+MOLDAVIA(137)                   :   99
+MÉXICO(303)                   :   96
+SALVADOR (EL)(317)                   :   85
+URUGUAY(350)                   :   80
+PAÍSES BAJOS(121)                   :   72
+AFGANISTÁN(401)                   :   71
+IRLANDA(113)                   :   67
+BANGLADESH(404)                   :   56
+CAMERÚN(208)                   :   51
+PARAGUAY(347)                   :   48
+AUSTRALIA(501)                   :   42
+BELGICA(103)                   :   41
+NICARAGUA(323)                   :   41
+CANADÁ(301)                   :   40
+FILIPINAS(409)                   :   37
+MAURITANIA(230)                   :   33
+SUDÁFRICA(236)                   :   33
+COSTA DE MARFIL(211)                   :   32
+IRÁN(413)                   :   29
+TÚNEZ(248)                   :   26
+DINAMARCA(107)                   :   22
+GRECIA(111)                   :   22
+HUNGRIA(112)                   :   21
+SIRIA(433)                   :   21
+JAPÓN(415)                   :   20
+REPÚBLICA CHECA(143)                   :   20
+
+*********************************
+* 10. Moviments d'una comunitat *
+*********************************
+Codi Nacionalitat:108
+2013 Eixample, Montilivi
+2014 Eixample, Montilivi
+2015 Eixample, Montilivi
+2016 Eixample, Montilivi
+2017 Eixample, Montilivi
+2018 Eixample, Montilivi
+2019 Eixample, Montilivi
+2021 Eixample, Montilivi
+2022 Eixample, Montilivi
+2023 Eixample, Montilivi
+*********************************
+* 10. Moviments d'una comunitat *
+*********************************
+Codi Nacionalitat:112
+2013 Eixample, Montilivi
+2014 Eixample, Montilivi
+2015 Santa Eugenia, Mas Xirgu
+2016 No t� habitants
+2017 No t� habitants
+2018 No t� habitants
+2019 No t� habitants
+2021 Santa Eugenia, Mas Xirgu
+2022 No t� habitants
+2023 Santa Eugenia, Mas Xirgu
+Finalizando el programa.

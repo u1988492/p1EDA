@@ -1,7 +1,7 @@
 #include "Padro.h"
 #include "Any.h"
 
-vector<string> nomsDistrictes = {
+vector<string> nomsDistrictes{
     "",
     "Carme, Vila-roja",
     "Eixample, Montilivi",
@@ -185,6 +185,17 @@ map<int, string> Padro::movimentsComunitat(int codiNacionalitat) const{
     return moviments;
 }
 
+ResumEdats Padro::resumEdat() const{
+    ResumEdats res;
+    //para cada año, obtener promedio de edad de sus distritos
+    map<int, Any>::const_iterator itPadro = padroAnys.begin();
+    while(itPadro!=padroAnys.end()){
+        vector<double> resAny = itPadro->second.resumEdat(itPadro->first); //obtener resumen de edades del año
+        res.afegirEdats(itPadro->first, resAny); //guardar el resumen de edades del año
+        ++itPadro;
+    }
+    return res;
+}
 
 //void Padro::mostraPadro(int any, int districte){
 //    cout << any << " - " << districte << " - ";

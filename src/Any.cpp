@@ -59,7 +59,6 @@ set<string> Any::resumEstudisDistricte(int districte)const{
 //Función para obtener el promedio de nivel de un año
 vector<double> Any::resumNivellEstudis() const{
     vector<double> promigDistrictes(vecDistrictes.size()); //vector para guardar el promedio de cada distrito
-
     for(size_t i=1; i<vecDistrictes.size(); i++){
         double promig = vecDistrictes[i].resumNivellEstudis();
         promigDistrictes[i] = promig;
@@ -84,8 +83,8 @@ map<pair<string, int>, long> Any::resumNacionalitats() const{
     return res;
 }
 
+//Función para obtener el índice del distrito con la mayor concentración de habitantes de una nacionalidad
 int Any::maxNacionalitat(int codiNacionalitat) const{
-
     int maxDistricte;
     vector<long>nacionalitatDistricte;
     nacionalitatDistricte.reserve(vecDistrictes.size()-1); //6 posiciones
@@ -98,7 +97,7 @@ int Any::maxNacionalitat(int codiNacionalitat) const{
     //obtener posición del distrito con el máximo
     auto itMaxDistricte = max_element(nacionalitatDistricte.begin(), nacionalitatDistricte.end());
     if(itMaxDistricte!=nacionalitatDistricte.end()){
-        size_t indexDistricte = distance(nacionalitatDistricte.begin(), itMaxDistricte); //es 0 si no hay habitantes de esa nacionalidad en ese año
+        size_t indexDistricte = distance(nacionalitatDistricte.begin(), itMaxDistricte); //es 0 si el maximo en ese año es 0
         if(indexDistricte==0){
             maxDistricte = -1;
         }
@@ -108,7 +107,13 @@ int Any::maxNacionalitat(int codiNacionalitat) const{
     return maxDistricte;
 }
 
+//Función para obtener el promedio de edades de cada distrito del año
+vector<double> Any::resumEdat(int any) const{
+    vector<double> resumDistrictes(vecDistrictes.size());
+    //para cada distrito, calcular promedio
+    for(size_t i=1; i<vecDistrictes.size(); i++){
+        resumDistrictes[i] = vecDistrictes[i].obtenirEdatMitjana(any);
+    }
+    return resumDistrictes;
+}
 
-//void Any::mostraAny(int districte){
-//    vecDistrictes[districte].mostraDistr();
-//}

@@ -5,7 +5,6 @@
 #include <map>
 #include <list>
 #include <string>
-#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include "Districte.h"
@@ -35,9 +34,9 @@ class Any {
         //Post: devuelve un map con la sección y el número de habitantes de esa sección, de un distrito introducido
 
 
-        //vector<pair<int, double>> resumEdat() const;
-        //Pre:
-        //Post: devuelve un vector con pairs de
+        vector<double> resumEdat(int any) const;
+        //Pre: --
+        //Post: devuelve un vector con los promedios de edad de los distritos de ese año
 
         set<string> resumEstudis() const;
         //Pre: --
