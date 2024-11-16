@@ -217,25 +217,26 @@ map<int, string> Padro::movimentVells() const{
 pair<string, long> Padro::mesJoves(int anyInicial, int anyFinal) const{
     pair<string, long> joves;
 
-    vector<long> totalJoves(7);
+    map<int, Any>::const_iterator itPadroInici = padroAnys.lower_bound(anyInicial); //iterador de padro en el año inicial o el más cercano
+    map<int, Any>::const_iterator itPadroFinal = padroAnys.lower_bound(anyFinal);
 
-    map<int, Any>::const_iterator itPadro = padroAnys.lower_bound(anyInicial); //iterador de padro en el año inicial o el más cercano
-    map<int, Any>::const_iterator itPadroFinal = padroAnys.upper_bound(anyFinal);
-    while(itPadro!=itPadroFinal){
-        //para cada año a partir del año inicial, obtener incremento de población de los distritos
-        vector<long> incrementAny = itPadro->second.incrementJoves(itPadro->first); //recuento de jóvenes del año
+    vector<long> jovesInici = itPadroInici->second.incrementJoves(itPadroInici->first); //numero de jovenes en el año inicial por distrito
+    vector<long> jovesFinal = itPadroFinal->second.incrementJoves(itPadroFinal->first); //numero de jovenes en el año final por distrito
+    vector<long> increment(jovesFinal.begin(), jovesFinal.end()); //guardar numero final de jovenes
 
-        for(size_t i = 1; i<incrementAny.size(); i++){
-            totalJoves[i-1] += incrementAny[i]; //sumar incremento de jóvenes
-        }
-        ++itPadro;
+    for(size_t i=1; i<increment.size(); i++){
+        increment[i-1] -= jovesInici[i];
     }
 
     //obtener posición maxima
-    auto maxDistricte = max_element(totalJoves.begin(), totalJoves.end()); //iterador a max
-    int indexMax = static_cast<int>(distance(totalJoves.begin(), maxDistricte));
+    auto maxDistricte = max_element(increment.begin(), increment.end()); //iterador a max
+    int indexMax = static_cast<int>(distance(increment.begin(), maxDistricte));
 
-    joves = {nomsDistrictes[indexMax+1], *maxDistricte};
+    if(indexMax>=0 && indexMax<nomsDistrictes.size()){
+        joves = {nomsDistrictes[indexMax], *maxDistricte};
+    }
+    else joves = {"Distrito desconocido", 0};
+
     return joves;
 }
 

@@ -30,8 +30,9 @@ void lineaChar(char c){
 //01: CARGAR DATOS
 void cargarDatos(Padro &p){
     mostraTitol("01. Llegir dades");
-//    string fitxer = "/u/prof/dfiguls/Public/padroLlarg.csv";
-    string fitxer = "padroCurt.csv";
+    string fitxer;
+    cin >> fitxer;
+//    string fitxer = "padroCurt.csv";
     int lectura = p.llegirDades(fitxer);
     if(lectura==-1){
         cerr << "No se ha leido el archivo correctamente." << endl;
