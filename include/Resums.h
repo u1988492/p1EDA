@@ -88,7 +88,7 @@ struct ResumNivellEstudis{
                 if(i==mesEst) cout << "- ";
                 else if(i==menysEst) cout << "+ ";
                 cout << " " << nomsDistrictes[i] << setw(7);
-                cout << " Promig Estudis:" << setw(7) << itRes->second[i] << endl;
+                cout << " Promig Estudis:" << setw(7) << setprecision(2) << itRes->second[i] << endl;
             }
             cout << "seguent any" << endl;
             ++itRes;

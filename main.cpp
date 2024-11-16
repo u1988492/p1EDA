@@ -30,7 +30,7 @@ void lineaChar(char c){
 //01: CARGAR DATOS
 void cargarDatos(Padro &p){
     mostraTitol("01. Llegir dades");
-    string fitxer = "padroCurt.csv";
+    string fitxer = "/u/prof/dfiguls/Public/padroLlarg.csv";
     int lectura = p.llegirDades(fitxer);
     if(lectura==-1){
         cerr << "No se ha leido el archivo correctamente." << endl;
@@ -57,7 +57,7 @@ void existeixAny(Padro &p){
 void numHabitants(const Padro &p){
     mostraTitol("03. Obtenir nombre d'habitants");
     map<int, long>habitants = p.obtenirNumHabitantsPerAny();
-    int totalPadro = 0;
+    double totalPadro = 0.0;
 
     map<int, long>::const_iterator itHab = habitants.begin();
     while(itHab!=habitants.end()){
@@ -66,7 +66,7 @@ void numHabitants(const Padro &p){
         totalPadro += total;
         ++itHab;
     }
-    long promig = (habitants.size()>0) ? totalPadro/habitants.size(): 0; //comprobar si habitants>0 antes de operar para evitar errores
+    double promig = (habitants.size()>0) ? totalPadro/habitants.size(): 0; //comprobar si habitants>0 antes de operar para evitar errores
     cout << "PROMIG : " << setprecision(2) << promig << endl;
 }
 
@@ -84,7 +84,7 @@ void numHabitantsAny(Padro &p){
         if(!habitants.empty()){
             //mostrar si hay elementos
             for(size_t i=0; i<habitants.size(); i++){
-                cout << "Districte: " << i << setw(3) << "habitants: " << setw(7) << habitants[i] << endl;
+                cout << "Districte: " << i+1 << setw(3) << "habitants: " << setw(7) << habitants[i] << endl;
                 total += habitants[i];
             }
         }
@@ -114,7 +114,7 @@ void numHabitantsAnyDistricte(Padro &p){
             //recorrer map y mostrar
             map<int, long>::const_iterator itHabitants = habitants.begin();
             while(itHabitants!=habitants.end()){
-                cout << "Seccio: " << itHabitants->first << setw(3) << "habitants: " << setw(7) << itHabitants->second << endl;
+                cout << "Seccio " << itHabitants->first << setw(3) << " habitants: " << setw(7) << itHabitants->second << endl;
                 total += itHabitants->second;
                 ++itHabitants;
             }
@@ -136,10 +136,11 @@ void resumEstudisPoblacio(Padro &p){
 //07: NÚMERO DE ESTUDIOS DE UN DISTRITO, POR AÑO
 void numEstudisDistricte(Padro &p){
     mostraTitol("07. Nombre d'estudis per districte");
-    cout << "Districte: ";
+
     int districte; cin >> districte;
 
     if(districte>0 && districte<=6){
+        cout << "Districte: " << districte << endl;
         map<int, int> nEstudis = p.nombreEstudisDistricte(districte);
         map<int, int>::const_iterator itEstudis = nEstudis.begin();
         while(itEstudis!=nEstudis.end()){
