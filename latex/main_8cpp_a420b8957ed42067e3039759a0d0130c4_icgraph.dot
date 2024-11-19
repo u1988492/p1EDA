@@ -1,0 +1,54 @@
+digraph "mostraTitol"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="mostraTitol",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Muestra el título de una sección con un formato especial."];
+  Node1 -> Node2 [id="edge30_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="cargarDatos",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a71ee28124b09566e95a0780a85dcc53b",tooltip="Carga los datos del padrón desde un archivo."];
+  Node2 -> Node3 [id="edge31_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="gestioOpcio",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a5289933794b2beb79f44578f8d07af19",tooltip="Gestiona las opciones seleccionadas por el usuario."];
+  Node1 -> Node4 [id="edge32_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="estudisFiltre",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a1c3d6c8fc2337b733ae2cd3fc0a4ed11",tooltip="Muestra los estudios correspondientes a un año, distrito, edad y nacionalidad específicos."];
+  Node4 -> Node3 [id="edge33_Node000004_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge34_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="existeixAny",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#ad118e24aa397b8a664206958c3f68b71",tooltip="Consulta si existe un año en los datos cargados."];
+  Node5 -> Node3 [id="edge35_Node000005_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge36_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="mesJoves",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a894463629f9f901ab3c12ccd02a787df",tooltip="Muestra el distrito con más jóvenes entre un rango de años."];
+  Node6 -> Node3 [id="edge37_Node000006_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge38_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="movimentsComunitat",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a912a5bc4435ccdb414f10d829676a498",tooltip="Muestra los movimientos de una comunidad por código de nacionalidad."];
+  Node7 -> Node3 [id="edge39_Node000007_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node8 [id="edge40_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="movimentsMesVells",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a844a6bfba37ee782f41de4c59651ff57",tooltip="Muestra los movimientos de los mayores de edad."];
+  Node8 -> Node3 [id="edge41_Node000008_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node9 [id="edge42_Node000001_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="numEstudisDistricte",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#acfb319f83e3b28cd43da7ccabdb2cfe5",tooltip="Consulta el número de estudios de un distrito por año."];
+  Node9 -> Node3 [id="edge43_Node000009_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node10 [id="edge44_Node000001_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="numHabitants",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a89fb7d343810cf36ac51a28ad9a52577",tooltip="Obtiene el número de habitantes por año y muestra el promedio."];
+  Node10 -> Node3 [id="edge45_Node000010_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node11 [id="edge46_Node000010_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="Any::maxNacionalitat",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_any.html#ac4be61ce671e5b50f6cb0c2f05cd46be",tooltip="Obtiene el distrito con la mayor concentración de una nacionalidad."];
+  Node1 -> Node12 [id="edge47_Node000001_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="numHabitantsAny",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a68c5f813ee540c41425442ef8d279295",tooltip="Obtiene el número de habitantes de un año específico."];
+  Node12 -> Node3 [id="edge48_Node000012_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node13 [id="edge49_Node000001_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="numHabitantsAnyDistricte",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a100fb390dc1e2f30d563345a7e8ffae7",tooltip="Obtiene el número de habitantes de un año y un distrito."];
+  Node13 -> Node3 [id="edge50_Node000013_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node14 [id="edge51_Node000001_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="promigNivellEstudis",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#ac0820cbfdc3be0336e62fd7f91295345",tooltip="Muestra el resumen del nivel de estudios por año y distrito."];
+  Node14 -> Node3 [id="edge52_Node000014_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node15 [id="edge53_Node000001_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="resumenEdats",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#ad0002dad68f3a8d1478d481af3d691ea",tooltip="Muestra un resumen de las edades de la población."];
+  Node15 -> Node3 [id="edge54_Node000015_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node16 [id="edge55_Node000001_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="resumenNacionalitats",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a31126fbd7bea18915c3efcd1d3cc3a33",tooltip="Muestra un resumen de las nacionalidades por año."];
+  Node16 -> Node3 [id="edge56_Node000016_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node17 [id="edge57_Node000001_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="resumEstudisPoblacio",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#a4230886114a1d36362657336b7a078bf",tooltip="Muestra un resumen de los estudios de la población por año."];
+  Node17 -> Node3 [id="edge58_Node000017_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

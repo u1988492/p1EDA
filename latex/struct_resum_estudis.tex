@@ -1,0 +1,90 @@
+\doxysection{Resum\+Estudis Struct Reference}
+\hypertarget{struct_resum_estudis}{}\label{struct_resum_estudis}\index{ResumEstudis@{ResumEstudis}}
+
+
+Resumen de tipos de estudios de la población para cada año.  
+
+
+
+
+{\ttfamily \#include $<$Resums.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_resum_estudis_aea02e5def78843544b34187dcb79c110}{afegir\+Resum\+Estudis}} (int any, const set$<$ string $>$ \&estudis)
+\begin{DoxyCompactList}\small\item\em Añadir un conjunto de estudios al resumen de un año. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_resum_estudis_a8b2e48250ffc22ff92a3d45e2c110dbe}{mostrar\+Resum\+Estudis}} () const
+\begin{DoxyCompactList}\small\item\em Mostrar el resumen de estudios por cada año. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ int, set$<$ string $>$ $>$ \mbox{\hyperlink{struct_resum_estudis_ad2f4b5aeedc563f34e05631e801f0bdb}{res}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resumen de tipos de estudios de la población para cada año. 
+
+Esta estructura almacena, por cada año, un conjunto de niveles de estudios presentes en la población. 
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00040}{40}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_resum_estudis_aea02e5def78843544b34187dcb79c110}\index{ResumEstudis@{ResumEstudis}!afegirResumEstudis@{afegirResumEstudis}}
+\index{afegirResumEstudis@{afegirResumEstudis}!ResumEstudis@{ResumEstudis}}
+\doxysubsubsection{\texorpdfstring{afegirResumEstudis()}{afegirResumEstudis()}}
+{\footnotesize\ttfamily \label{struct_resum_estudis_aea02e5def78843544b34187dcb79c110} 
+void Resum\+Estudis\+::afegir\+Resum\+Estudis (\begin{DoxyParamCaption}\item[{int}]{any}{, }\item[{const set$<$ string $>$ \&}]{estudis}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Añadir un conjunto de estudios al resumen de un año. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año al que se asocian los estudios. \\
+\hline
+{\em estudis} & Conjunto de estudios a añadir. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00048}{48}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\Hypertarget{struct_resum_estudis_a8b2e48250ffc22ff92a3d45e2c110dbe}\index{ResumEstudis@{ResumEstudis}!mostrarResumEstudis@{mostrarResumEstudis}}
+\index{mostrarResumEstudis@{mostrarResumEstudis}!ResumEstudis@{ResumEstudis}}
+\doxysubsubsection{\texorpdfstring{mostrarResumEstudis()}{mostrarResumEstudis()}}
+{\footnotesize\ttfamily \label{struct_resum_estudis_a8b2e48250ffc22ff92a3d45e2c110dbe} 
+void Resum\+Estudis\+::mostrar\+Resum\+Estudis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mostrar el resumen de estudios por cada año. 
+
+
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00055}{55}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_resum_estudis_ad2f4b5aeedc563f34e05631e801f0bdb}\index{ResumEstudis@{ResumEstudis}!res@{res}}
+\index{res@{res}!ResumEstudis@{ResumEstudis}}
+\doxysubsubsection{\texorpdfstring{res}{res}}
+{\footnotesize\ttfamily \label{struct_resum_estudis_ad2f4b5aeedc563f34e05631e801f0bdb} 
+map$<$int, set$<$string$>$ $>$ Resum\+Estudis\+::res}
+
+Mapa que asocia cada año con un conjunto de estudios. 
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00041}{41}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_resums_8h}{Resums.\+h}}\end{DoxyCompactItemize}

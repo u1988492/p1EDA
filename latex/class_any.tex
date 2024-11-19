@@ -1,0 +1,364 @@
+\doxysection{Any Class Reference}
+\hypertarget{class_any}{}\label{class_any}\index{Any@{Any}}
+
+
+Clase que gestiona los datos de los habitantes de un año específico.  
+
+
+
+
+{\ttfamily \#include $<$Any.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_any_adde1510a848d26d7d19f940c508ab24a}{Any}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_any}{Any}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_any_aa4f47442695b9a2afb547c64fdde64bd}{afegir\+Any}} (int districte, int codi\+Nivell\+Estudis, const string \&nivell\+Estudis, int any\+Naixement, int codi\+Nacionalitat, const string \&nom\+Nacionalitat, int seccio)
+\begin{DoxyCompactList}\small\item\em Añade una persona a los datos del distrito en un año específico. \end{DoxyCompactList}\item 
+vector$<$ long $>$ \mbox{\hyperlink{class_any_a44257b25797d2fac17a0ac7b3545b605}{obtenir\+Num\+Habitants\+Per\+Districte}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el número de habitantes por distrito. \end{DoxyCompactList}\item 
+map$<$ int, long $>$ \mbox{\hyperlink{class_any_a7cdd86ebeec19b5b1e2a66308e02658f}{obtenir\+Num\+Habitants\+Per\+Seccio}} (int districte) const
+\begin{DoxyCompactList}\small\item\em Obtiene el número de habitantes por sección dentro de un distrito. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_any_ab311bec819677504523fbefdc26e9824}{resum\+Edat}} (int any) const
+\begin{DoxyCompactList}\small\item\em Obtiene los promedios de edad de los distritos en un año específico. \end{DoxyCompactList}\item 
+set$<$ string $>$ \mbox{\hyperlink{class_any_a0bd7040c79faa392c0e3390f8ece6a8c}{resum\+Estudis}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene los estudios únicos de los habitantes de un año. \end{DoxyCompactList}\item 
+set$<$ string $>$ \mbox{\hyperlink{class_any_a437a7e36c5461e77e02b07dd204f8c21}{resum\+Estudis\+Districte}} (int districte) const
+\begin{DoxyCompactList}\small\item\em Obtiene los estudios únicos de los habitantes de un distrito específico. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_any_a8330313b2b55da18efc621d0bfc95e37}{resum\+Nivell\+Estudis}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene los promedios de nivel de estudios por distrito en un año específico. \end{DoxyCompactList}\item 
+map$<$ pair$<$ string, int $>$, long $>$ \mbox{\hyperlink{class_any_aee477ac576a34718476c57f34357ba1c}{resum\+Nacionalitats}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene un resumen de las nacionalidades por distrito en un año. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_any_ac4be61ce671e5b50f6cb0c2f05cd46be}{max\+Nacionalitat}} (int codi\+Nacionalitat) const
+\begin{DoxyCompactList}\small\item\em Obtiene el distrito con la mayor concentración de una nacionalidad. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_any_a15447edcb20d709a09eeed57a2c0a755}{max\+Edat}} (int any) const
+\begin{DoxyCompactList}\small\item\em Obtiene el distrito con la mayor media de edad en un año específico. \end{DoxyCompactList}\item 
+vector$<$ long $>$ \mbox{\hyperlink{class_any_a2572daeb322732ef30a0a4bcd414e893}{increment\+Joves}} (int any) const
+\begin{DoxyCompactList}\small\item\em Obtiene los incrementos en el número de jóvenes entre años. \end{DoxyCompactList}\item 
+list$<$ string $>$ \mbox{\hyperlink{class_any_a8910885c14747139f2d849f60f5c3abe}{estudis\+Edat}} (int any, int districte, int edat, int Codi\+Nacionalitat) const
+\begin{DoxyCompactList}\small\item\em Obtiene los estudios de habitantes en un año, distrito, edad y nacionalidad específicos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que gestiona los datos de los habitantes de un año específico. 
+
+La clase {\ttfamily \doxylink{class_any}{Any}} contiene y organiza los datos de los habitantes en un año determinado, permitiendo consultar estadísticas sobre la población en cada distrito, como edad, nivel de estudios, nacionalidad, y más. 
+
+Definition at line \mbox{\hyperlink{_any_8h_source_l00033}{33}} of file \mbox{\hyperlink{_any_8h_source}{Any.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_any_adde1510a848d26d7d19f940c508ab24a}\index{Any@{Any}!Any@{Any}}
+\index{Any@{Any}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{Any()}{Any()}}
+{\footnotesize\ttfamily \label{class_any_adde1510a848d26d7d19f940c508ab24a} 
+Any\+::\+Any (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_any}{Any}. 
+
+Este constructor inicializa un objeto {\ttfamily \doxylink{class_any}{Any}} con un vector de 7 posiciones para almacenar la información de los distritos. 
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_any_aa4f47442695b9a2afb547c64fdde64bd}\index{Any@{Any}!afegirAny@{afegirAny}}
+\index{afegirAny@{afegirAny}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{afegirAny()}{afegirAny()}}
+{\footnotesize\ttfamily \label{class_any_aa4f47442695b9a2afb547c64fdde64bd} 
+void Any\+::afegir\+Any (\begin{DoxyParamCaption}\item[{int}]{districte}{, }\item[{int}]{codi\+Nivell\+Estudis}{, }\item[{const string \&}]{nivell\+Estudis}{, }\item[{int}]{any\+Naixement}{, }\item[{int}]{codi\+Nacionalitat}{, }\item[{const string \&}]{nom\+Nacionalitat}{, }\item[{int}]{seccio}{}\end{DoxyParamCaption})}
+
+
+
+Añade una persona a los datos del distrito en un año específico. 
+
+Este método agrega una nueva persona a la lista de habitantes, en el distrito y sección especificados, con la información relacionada como el nivel de estudios, la edad y la nacionalidad.
+
+
+\begin{DoxyParams}{Parameters}
+{\em districte} & El distrito al que se agregará la persona. \\
+\hline
+{\em codi\+Nivell\+Estudis} & El código del nivel de estudios de la persona. \\
+\hline
+{\em nivell\+Estudis} & El nombre del nivel de estudios de la persona. \\
+\hline
+{\em any\+Naixement} & El año de nacimiento de la persona. \\
+\hline
+{\em codi\+Nacionalitat} & El código de la nacionalidad de la persona. \\
+\hline
+{\em nom\+Nacionalitat} & El nombre de la nacionalidad de la persona. \\
+\hline
+{\em seccio} & La sección dentro del distrito en la que se encuentra la persona. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+\Hypertarget{class_any_a8910885c14747139f2d849f60f5c3abe}\index{Any@{Any}!estudisEdat@{estudisEdat}}
+\index{estudisEdat@{estudisEdat}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{estudisEdat()}{estudisEdat()}}
+{\footnotesize\ttfamily \label{class_any_a8910885c14747139f2d849f60f5c3abe} 
+list$<$ string $>$ Any\+::estudis\+Edat (\begin{DoxyParamCaption}\item[{int}]{any}{, }\item[{int}]{districte}{, }\item[{int}]{edat}{, }\item[{int}]{Codi\+Nacionalitat}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene los estudios de habitantes en un año, distrito, edad y nacionalidad específicos. 
+
+Este método devuelve una lista de los estudios de los habitantes que cumplen las condiciones especificadas (año, distrito, edad y nacionalidad).
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & El año de los habitantes. \\
+\hline
+{\em districte} & El código del distrito de los habitantes. \\
+\hline
+{\em edat} & La edad de los habitantes. \\
+\hline
+{\em Codi\+Nacionalitat} & El código de la nacionalidad de los habitantes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una lista de los estudios de los habitantes que cumplen las condiciones. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00146}{146}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+\Hypertarget{class_any_a2572daeb322732ef30a0a4bcd414e893}\index{Any@{Any}!incrementJoves@{incrementJoves}}
+\index{incrementJoves@{incrementJoves}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{incrementJoves()}{incrementJoves()}}
+{\footnotesize\ttfamily \label{class_any_a2572daeb322732ef30a0a4bcd414e893} 
+vector$<$ long $>$ Any\+::increment\+Joves (\begin{DoxyParamCaption}\item[{int}]{any}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene los incrementos en el número de jóvenes entre años. 
+
+Este método devuelve un vector con los incrementos en el número de jóvenes en cada distrito, comparando dos años consecutivos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & El año para el cual se desea calcular el incremento de jóvenes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vector de tipo {\ttfamily long} con el incremento en el número de jóvenes por distrito. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00136}{136}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+\Hypertarget{class_any_a15447edcb20d709a09eeed57a2c0a755}\index{Any@{Any}!maxEdat@{maxEdat}}
+\index{maxEdat@{maxEdat}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{maxEdat()}{maxEdat()}}
+{\footnotesize\ttfamily \label{class_any_a15447edcb20d709a09eeed57a2c0a755} 
+int Any\+::max\+Edat (\begin{DoxyParamCaption}\item[{int}]{any}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el distrito con la mayor media de edad en un año específico. 
+
+Este método devuelve el índice del distrito con la mayor media de edad de la población en el año especificado.
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & El año para el cual se desea obtener el distrito con la mayor media de edad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El índice del distrito con la mayor media de edad en el año. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 0
+\Hypertarget{class_any_ac4be61ce671e5b50f6cb0c2f05cd46be}\index{Any@{Any}!maxNacionalitat@{maxNacionalitat}}
+\index{maxNacionalitat@{maxNacionalitat}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{maxNacionalitat()}{maxNacionalitat()}}
+{\footnotesize\ttfamily \label{class_any_ac4be61ce671e5b50f6cb0c2f05cd46be} 
+int Any\+::max\+Nacionalitat (\begin{DoxyParamCaption}\item[{int}]{codi\+Nacionalitat}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el distrito con la mayor concentración de una nacionalidad. 
+
+Este método devuelve el distrito con la mayor concentración de habitantes de una nacionalidad específica.
+
+
+\begin{DoxyParams}{Parameters}
+{\em codi\+Nacionalitat} & El código de la nacionalidad a consultar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El código del distrito con la mayor concentración de habitantes de esa nacionalidad. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\Hypertarget{class_any_a44257b25797d2fac17a0ac7b3545b605}\index{Any@{Any}!obtenirNumHabitantsPerDistricte@{obtenirNumHabitantsPerDistricte}}
+\index{obtenirNumHabitantsPerDistricte@{obtenirNumHabitantsPerDistricte}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{obtenirNumHabitantsPerDistricte()}{obtenirNumHabitantsPerDistricte()}}
+{\footnotesize\ttfamily \label{class_any_a44257b25797d2fac17a0ac7b3545b605} 
+vector$<$ long $>$ Any\+::obtenir\+Num\+Habitants\+Per\+Districte (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el número de habitantes por distrito. 
+
+Este método devuelve un vector que contiene el número de habitantes de cada uno de los 7 distritos del año actual.
+
+\begin{DoxyReturn}{Returns}
+Un vector de tipo {\ttfamily long} con el número de habitantes por distrito. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+\Hypertarget{class_any_a7cdd86ebeec19b5b1e2a66308e02658f}\index{Any@{Any}!obtenirNumHabitantsPerSeccio@{obtenirNumHabitantsPerSeccio}}
+\index{obtenirNumHabitantsPerSeccio@{obtenirNumHabitantsPerSeccio}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{obtenirNumHabitantsPerSeccio()}{obtenirNumHabitantsPerSeccio()}}
+{\footnotesize\ttfamily \label{class_any_a7cdd86ebeec19b5b1e2a66308e02658f} 
+map$<$ int, long $>$ Any\+::obtenir\+Num\+Habitants\+Per\+Seccio (\begin{DoxyParamCaption}\item[{int}]{districte}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el número de habitantes por sección dentro de un distrito. 
+
+Este método devuelve un mapa que asocia cada sección de un distrito con el número de habitantes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em districte} & El código del distrito cuyo número de habitantes por sección se desea obtener. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mapa donde la clave es la sección y el valor es el número de habitantes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+\Hypertarget{class_any_ab311bec819677504523fbefdc26e9824}\index{Any@{Any}!resumEdat@{resumEdat}}
+\index{resumEdat@{resumEdat}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{resumEdat()}{resumEdat()}}
+{\footnotesize\ttfamily \label{class_any_ab311bec819677504523fbefdc26e9824} 
+vector$<$ double $>$ Any\+::resum\+Edat (\begin{DoxyParamCaption}\item[{int}]{any}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene los promedios de edad de los distritos en un año específico. 
+
+Este método devuelve un vector con los promedios de edad de los habitantes en cada uno de los distritos, para el año actual.
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & El año para el cual se desea obtener los promedios de edad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vector de tipo {\ttfamily double} con los promedios de edad de los distritos en el año especificado. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{class_any_a0bd7040c79faa392c0e3390f8ece6a8c}\index{Any@{Any}!resumEstudis@{resumEstudis}}
+\index{resumEstudis@{resumEstudis}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{resumEstudis()}{resumEstudis()}}
+{\footnotesize\ttfamily \label{class_any_a0bd7040c79faa392c0e3390f8ece6a8c} 
+set$<$ string $>$ Any\+::resum\+Estudis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene los estudios únicos de los habitantes de un año. 
+
+Este método devuelve un conjunto con los niveles de estudios únicos de los habitantes en el año actual.
+
+\begin{DoxyReturn}{Returns}
+Un conjunto de {\ttfamily string} con los niveles de estudios únicos de la población del año. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+\Hypertarget{class_any_a437a7e36c5461e77e02b07dd204f8c21}\index{Any@{Any}!resumEstudisDistricte@{resumEstudisDistricte}}
+\index{resumEstudisDistricte@{resumEstudisDistricte}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{resumEstudisDistricte()}{resumEstudisDistricte()}}
+{\footnotesize\ttfamily \label{class_any_a437a7e36c5461e77e02b07dd204f8c21} 
+set$<$ string $>$ Any\+::resum\+Estudis\+Districte (\begin{DoxyParamCaption}\item[{int}]{districte}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene los estudios únicos de los habitantes de un distrito específico. 
+
+Este método devuelve un conjunto con los niveles de estudios únicos de los habitantes de un distrito.
+
+
+\begin{DoxyParams}{Parameters}
+{\em districte} & El código del distrito cuyo nivel de estudios se desea consultar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un conjunto de {\ttfamily string} con los niveles de estudios únicos del distrito. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+\Hypertarget{class_any_aee477ac576a34718476c57f34357ba1c}\index{Any@{Any}!resumNacionalitats@{resumNacionalitats}}
+\index{resumNacionalitats@{resumNacionalitats}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{resumNacionalitats()}{resumNacionalitats()}}
+{\footnotesize\ttfamily \label{class_any_aee477ac576a34718476c57f34357ba1c} 
+map$<$ pair$<$ string, int $>$, long $>$ Any\+::resum\+Nacionalitats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene un resumen de las nacionalidades por distrito en un año. 
+
+Este método devuelve un mapa con las nacionalidades de los habitantes, donde cada clave es una tupla de la nacionalidad y el distrito, y el valor es el número de habitantes de esa nacionalidad en ese distrito.
+
+\begin{DoxyReturn}{Returns}
+Un mapa con las nacionalidades de los habitantes en un año determinado. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+\Hypertarget{class_any_a8330313b2b55da18efc621d0bfc95e37}\index{Any@{Any}!resumNivellEstudis@{resumNivellEstudis}}
+\index{resumNivellEstudis@{resumNivellEstudis}!Any@{Any}}
+\doxysubsubsection{\texorpdfstring{resumNivellEstudis()}{resumNivellEstudis()}}
+{\footnotesize\ttfamily \label{class_any_a8330313b2b55da18efc621d0bfc95e37} 
+vector$<$ double $>$ Any\+::resum\+Nivell\+Estudis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene los promedios de nivel de estudios por distrito en un año específico. 
+
+Este método devuelve un vector con los promedios de nivel de estudios por distrito.
+
+\begin{DoxyReturn}{Returns}
+Un vector de tipo {\ttfamily double} con los promedios de nivel de estudios por distrito. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_any_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{_any_8cpp_source}{Any.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_any_8h}{Any.\+h}}\item 
+\mbox{\hyperlink{_any_8cpp}{Any.\+cpp}}\end{DoxyCompactItemize}

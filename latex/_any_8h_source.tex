@@ -1,0 +1,77 @@
+\doxysection{Any.\+h}
+\hypertarget{_any_8h_source}{}\label{_any_8h_source}\mbox{\hyperlink{_any_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ ANY\_H}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00011}00011\ \textcolor{preprocessor}{\#define\ ANY\_H}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_districte_8h}{Districte.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00022}00022\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00033}\mbox{\hyperlink{class_any}{00033}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_any}{Any}}\ \{}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_any_adde1510a848d26d7d19f940c508ab24a}{Any}}();}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ -\/-\/}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ se\ ha\ construido\ el\ objeto\ Any\ con\ un\ vector\ de\ 7\ posiciones}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_any_aa4f47442695b9a2afb547c64fdde64bd}{afegirAny}}(\textcolor{keywordtype}{int}\ districte,\ \textcolor{keywordtype}{int}\ codiNivellEstudis,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&nivellEstudis,\ \textcolor{keywordtype}{int}\ anyNaixement,\ \textcolor{keywordtype}{int}\ codiNacionalitat,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&nomNacionalitat,\ \textcolor{keywordtype}{int}\ seccio);}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ parámetros\ válidos\ (según\ la\ función\ validarDades\ en\ Padro)}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ se\ ha\ añadido\ al\ objeto\ Any,\ en\ el\ distrito\ y\ sección\ correspondientes,\ una\ nueva\ persona\ a\ la\ lista\ de\ habitantes}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ vector<long>\ \mbox{\hyperlink{class_any_a44257b25797d2fac17a0ac7b3545b605}{obtenirNumHabitantsPerDistricte}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ -\/-\/}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ se\ devuelve\ un\ vector\ de\ longs\ con\ el\ número\ de\ habitantes\ que\ tiene\ cada\ distrito}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00087}00087\ \ \ \ \ \ \ \ \ map<int,\ long>\ \mbox{\hyperlink{class_any_a7cdd86ebeec19b5b1e2a66308e02658f}{obtenirNumHabitantsPerSeccio}}(\textcolor{keywordtype}{int}\ districte)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ districte\ >\ 0\ y\ districte\ <=6}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ devuelve\ un\ map\ con\ la\ sección\ y\ el\ número\ de\ habitantes\ de\ esa\ sección,\ de\ un\ distrito\ introducido}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00101}00101\ \ \ \ \ \ \ \ \ vector<double>\ \mbox{\hyperlink{class_any_ab311bec819677504523fbefdc26e9824}{resumEdat}}(\textcolor{keywordtype}{int}\ any)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ -\/-\/}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ devuelve\ un\ vector\ con\ los\ promedios\ de\ edad\ de\ los\ distritos\ de\ ese\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00113}00113\ \ \ \ \ \ \ \ \ set<string>\ \mbox{\hyperlink{class_any_a0bd7040c79faa392c0e3390f8ece6a8c}{resumEstudis}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ -\/-\/}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ devuelve\ un\ vector\ de\ strings\ con\ los\ estudios\ únicos\ de\ los\ habitantes\ en\ ese\ año\ del\ padrón}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00126}00126\ \ \ \ \ \ \ \ \ set<string>\ \mbox{\hyperlink{class_any_a437a7e36c5461e77e02b07dd204f8c21}{resumEstudisDistricte}}(\textcolor{keywordtype}{int}\ districte)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ districte\ >\ 0\ \&\&\ districte\ <=6}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ devuelve\ un\ set\ con\ los\ niveles\ de\ estudios\ únicos\ del\ distrito\ introducido}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00138}00138\ \ \ \ \ \ \ \ \ vector<double>\ \mbox{\hyperlink{class_any_a8330313b2b55da18efc621d0bfc95e37}{resumNivellEstudis}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ -\/-\/}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ devuelve\ un\ vector\ con\ los\ promedios\ de\ nivel\ de\ estudios\ de\ cada\ distrito\ de\ un\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00151}00151\ \ \ \ \ \ \ \ \ map<pair<string,\ int>,\ \textcolor{keywordtype}{long}>\ \mbox{\hyperlink{class_any_aee477ac576a34718476c57f34357ba1c}{resumNacionalitats}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ -\/-\/}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ devuelve\ un\ set\ con\ las\ nacionalidades\ de\ los\ distritos\ de\ un\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00164}00164\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_any_ac4be61ce671e5b50f6cb0c2f05cd46be}{maxNacionalitat}}(\textcolor{keywordtype}{int}\ codiNacionalitat)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ codiNacionalitat\ es\ un\ código\ de\ nacionalidad\ del\ padrón}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ devuelve\ un\ int\ con\ el\ número\ del\ distrito\ con\ mayor\ concentración\ de\ habitantes\ de\ esa\ nacionalidad}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00177}00177\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_any_a15447edcb20d709a09eeed57a2c0a755}{maxEdat}}(\textcolor{keywordtype}{int}\ any)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00178}00178\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pre:\ -\/-\/}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Post:\ devuelve\ el\ índice\ del\ distrito\ con\ mayor\ media\ de\ edad\ de\ ese\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00191}00191\ \ \ \ \ \ \ \ \ vector<long>\ \mbox{\hyperlink{class_any_a2572daeb322732ef30a0a4bcd414e893}{incrementJoves}}(\textcolor{keywordtype}{int}\ any)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00206}00206\ \ \ \ \ \ \ \ \ list<string>\ \mbox{\hyperlink{class_any_a8910885c14747139f2d849f60f5c3abe}{estudisEdat}}(\textcolor{keywordtype}{int}\ any,\ \textcolor{keywordtype}{int}\ districte,\ \textcolor{keywordtype}{int}\ edat,\ \textcolor{keywordtype}{int}\ CodiNacionalitat)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00208}00208\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00216}00216\ \ \ \ \ \ \ \ \ vector<Districte>\ vecDistrictes;\ \ \textcolor{comment}{//Almacena\ los\ distritos}}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00217}00217\ \};}
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{_any_8h_source_l00219}00219\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ANY\_H}}
+
+\end{DoxyCode}

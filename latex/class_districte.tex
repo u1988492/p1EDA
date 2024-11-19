@@ -1,0 +1,309 @@
+\doxysection{Districte Class Reference}
+\hypertarget{class_districte}{}\label{class_districte}\index{Districte@{Districte}}
+
+
+Clase que gestiona los datos de los habitantes en las secciones de un distrito.  
+
+
+
+
+{\ttfamily \#include $<$Districte.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_districte_a90130914220b5a689c48f54271d0c1df}{Districte}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto de la clase \doxylink{class_districte}{Districte}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_districte_a2787ac441cfe9afeb6eb5d68ef41395e}{afegir\+Districte}} (int codi\+Nivell\+Estudis, const string \&nivell\+Estudis, int any\+Naixement, int codi\+Nacionalitat, const string \&nom\+Nacionalitat, int seccio)
+\begin{DoxyCompactList}\small\item\em Añade un habitante a una sección del distrito. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_districte_a42965351e862e18778d413d03ee2ab62}{existeix\+Seccio}} (int seccio)
+\begin{DoxyCompactList}\small\item\em Verifica si una sección existe en el distrito. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{class_districte_aaef2cc9632a7f78934e77d4f6852e6f9}{obtenir\+Num\+Habitants}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el número total de habitantes en el distrito. \end{DoxyCompactList}\item 
+map$<$ int, long $>$ \mbox{\hyperlink{class_districte_ad6ee5b117f0d10a73050085d8a8310ec}{obtenir\+Num\+Habitants\+Seccio}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el número de habitantes por sección. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_districte_abd701b9fdab0749b9d880b0138e2bb16}{obtenir\+Edat\+Mitjana}} (int any) const
+\begin{DoxyCompactList}\small\item\em Calcula la edad media de los habitantes en el distrito para un año específico. \end{DoxyCompactList}\item 
+set$<$ string $>$ \mbox{\hyperlink{class_districte_a3e3f2232421a3c23679feda35b6b0262}{resum\+Estudis}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene un conjunto de estudios presentes en la población del distrito. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_districte_abaf744b1134f19d7ba6c6007f5c25971}{resum\+Nivell\+Estudis}} () const
+\begin{DoxyCompactList}\small\item\em Calcula el nivel medio de estudios en el distrito. \end{DoxyCompactList}\item 
+map$<$ pair$<$ string, int $>$, long $>$ \mbox{\hyperlink{class_districte_a27260f90eaafd146d9bb21e1d048ea9b}{resum\+Nacionalitats}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene un resumen de las nacionalidades en el distrito. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{class_districte_a259fb9cd3d119c3b4b6de5f8a1ad98ad}{obtenir\+Num\+Habitants\+Nacionalitat}} (int codi\+Nacionalitat) const
+\begin{DoxyCompactList}\small\item\em Obtiene el número de habitantes de una nacionalidad específica en el distrito. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{class_districte_aac4d1ac5d97f7c81ef5dd9c63698e182}{obtenir\+Num\+Joves}} (int any) const
+\begin{DoxyCompactList}\small\item\em Calcula el número de jóvenes (habitantes menores de una edad determinada) en un año dado. \end{DoxyCompactList}\item 
+set$<$ string $>$ \mbox{\hyperlink{class_districte_a4c41010a878fc49b7adf8d39c4550e22}{estudis\+Edat}} (int any, int edat, int codi\+Nacionalitat) const
+\begin{DoxyCompactList}\small\item\em Obtiene un conjunto de estudios según la edad, año y nacionalidad especificados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que gestiona los datos de los habitantes en las secciones de un distrito. 
+
+La clase {\ttfamily \doxylink{class_districte}{Districte}} organiza y permite el acceso a información demográfica de los habitantes, incluyendo estudios, edades, y nacionalidades, organizados por secciones dentro del distrito. 
+
+Definition at line \mbox{\hyperlink{_districte_8h_source_l00033}{33}} of file \mbox{\hyperlink{_districte_8h_source}{Districte.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_districte_a90130914220b5a689c48f54271d0c1df}\index{Districte@{Districte}!Districte@{Districte}}
+\index{Districte@{Districte}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{Districte()}{Districte()}}
+{\footnotesize\ttfamily \label{class_districte_a90130914220b5a689c48f54271d0c1df} 
+Districte\+::\+Districte (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto de la clase \doxylink{class_districte}{Districte}. 
+
+Inicializa un objeto {\ttfamily \doxylink{class_districte}{Districte}} vacío sin habitantes. 
+
+Definition at line \mbox{\hyperlink{_districte_8h_source_l00042}{42}} of file \mbox{\hyperlink{_districte_8h_source}{Districte.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_districte_a2787ac441cfe9afeb6eb5d68ef41395e}\index{Districte@{Districte}!afegirDistricte@{afegirDistricte}}
+\index{afegirDistricte@{afegirDistricte}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{afegirDistricte()}{afegirDistricte()}}
+{\footnotesize\ttfamily \label{class_districte_a2787ac441cfe9afeb6eb5d68ef41395e} 
+void Districte\+::afegir\+Districte (\begin{DoxyParamCaption}\item[{int}]{codi\+Nivell\+Estudis}{, }\item[{const string \&}]{nivell\+Estudis}{, }\item[{int}]{any\+Naixement}{, }\item[{int}]{codi\+Nacionalitat}{, }\item[{const string \&}]{nom\+Nacionalitat}{, }\item[{int}]{seccio}{}\end{DoxyParamCaption})}
+
+
+
+Añade un habitante a una sección del distrito. 
+
+Este método añade una nueva persona a la sección indicada dentro del distrito, utilizando la información proporcionada sobre su nivel de estudios, año de nacimiento, y nacionalidad.
+
+
+\begin{DoxyParams}{Parameters}
+{\em codi\+Nivell\+Estudis} & Código del nivel de estudios de la persona. \\
+\hline
+{\em nivell\+Estudis} & Nombre del nivel de estudios de la persona. \\
+\hline
+{\em any\+Naixement} & Año de nacimiento de la persona. \\
+\hline
+{\em codi\+Nacionalitat} & Código de la nacionalidad de la persona. \\
+\hline
+{\em nom\+Nacionalitat} & Nombre de la nacionalidad de la persona. \\
+\hline
+{\em seccio} & Sección dentro del distrito en la que reside la persona. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+\Hypertarget{class_districte_a4c41010a878fc49b7adf8d39c4550e22}\index{Districte@{Districte}!estudisEdat@{estudisEdat}}
+\index{estudisEdat@{estudisEdat}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{estudisEdat()}{estudisEdat()}}
+{\footnotesize\ttfamily \label{class_districte_a4c41010a878fc49b7adf8d39c4550e22} 
+set$<$ string $>$ Districte\+::estudis\+Edat (\begin{DoxyParamCaption}\item[{int}]{any}{, }\item[{int}]{edat}{, }\item[{int}]{codi\+Nacionalitat}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene un conjunto de estudios según la edad, año y nacionalidad especificados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año de referencia. \\
+\hline
+{\em edat} & Edad de los habitantes. \\
+\hline
+{\em codi\+Nacionalitat} & Código de la nacionalidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un conjunto ({\ttfamily set}) de {\ttfamily string} con los niveles de estudios que cumplen las condiciones especificadas. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00149}{149}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+\Hypertarget{class_districte_a42965351e862e18778d413d03ee2ab62}\index{Districte@{Districte}!existeixSeccio@{existeixSeccio}}
+\index{existeixSeccio@{existeixSeccio}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{existeixSeccio()}{existeixSeccio()}}
+{\footnotesize\ttfamily \label{class_districte_a42965351e862e18778d413d03ee2ab62} 
+bool Districte\+::existeix\+Seccio (\begin{DoxyParamCaption}\item[{int}]{seccio}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si una sección existe en el distrito. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seccio} & Número de la sección a verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si la sección existe, {\ttfamily false} en caso contrario. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+\Hypertarget{class_districte_abd701b9fdab0749b9d880b0138e2bb16}\index{Districte@{Districte}!obtenirEdatMitjana@{obtenirEdatMitjana}}
+\index{obtenirEdatMitjana@{obtenirEdatMitjana}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{obtenirEdatMitjana()}{obtenirEdatMitjana()}}
+{\footnotesize\ttfamily \label{class_districte_abd701b9fdab0749b9d880b0138e2bb16} 
+double Districte\+::obtenir\+Edat\+Mitjana (\begin{DoxyParamCaption}\item[{int}]{any}{}\end{DoxyParamCaption}) const}
+
+
+
+Calcula la edad media de los habitantes en el distrito para un año específico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año para calcular la edad media. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La edad media como un valor de tipo {\ttfamily double}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+\Hypertarget{class_districte_aaef2cc9632a7f78934e77d4f6852e6f9}\index{Districte@{Districte}!obtenirNumHabitants@{obtenirNumHabitants}}
+\index{obtenirNumHabitants@{obtenirNumHabitants}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{obtenirNumHabitants()}{obtenirNumHabitants()}}
+{\footnotesize\ttfamily \label{class_districte_aaef2cc9632a7f78934e77d4f6852e6f9} 
+long Districte\+::obtenir\+Num\+Habitants (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el número total de habitantes en el distrito. 
+
+\begin{DoxyReturn}{Returns}
+El número total de habitantes como un valor de tipo {\ttfamily long}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+\Hypertarget{class_districte_a259fb9cd3d119c3b4b6de5f8a1ad98ad}\index{Districte@{Districte}!obtenirNumHabitantsNacionalitat@{obtenirNumHabitantsNacionalitat}}
+\index{obtenirNumHabitantsNacionalitat@{obtenirNumHabitantsNacionalitat}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{obtenirNumHabitantsNacionalitat()}{obtenirNumHabitantsNacionalitat()}}
+{\footnotesize\ttfamily \label{class_districte_a259fb9cd3d119c3b4b6de5f8a1ad98ad} 
+long Districte\+::obtenir\+Num\+Habitants\+Nacionalitat (\begin{DoxyParamCaption}\item[{int}]{codi\+Nacionalitat}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el número de habitantes de una nacionalidad específica en el distrito. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codi\+Nacionalitat} & Código de la nacionalidad a consultar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El número de habitantes de esa nacionalidad como un valor de tipo {\ttfamily long}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+\Hypertarget{class_districte_ad6ee5b117f0d10a73050085d8a8310ec}\index{Districte@{Districte}!obtenirNumHabitantsSeccio@{obtenirNumHabitantsSeccio}}
+\index{obtenirNumHabitantsSeccio@{obtenirNumHabitantsSeccio}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{obtenirNumHabitantsSeccio()}{obtenirNumHabitantsSeccio()}}
+{\footnotesize\ttfamily \label{class_districte_ad6ee5b117f0d10a73050085d8a8310ec} 
+map$<$ int, long $>$ Districte\+::obtenir\+Num\+Habitants\+Seccio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el número de habitantes por sección. 
+
+Devuelve un mapa que asocia cada sección con el número de habitantes correspondientes.
+
+\begin{DoxyReturn}{Returns}
+Un mapa donde la clave es el número de la sección y el valor es el número de habitantes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+\Hypertarget{class_districte_aac4d1ac5d97f7c81ef5dd9c63698e182}\index{Districte@{Districte}!obtenirNumJoves@{obtenirNumJoves}}
+\index{obtenirNumJoves@{obtenirNumJoves}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{obtenirNumJoves()}{obtenirNumJoves()}}
+{\footnotesize\ttfamily \label{class_districte_aac4d1ac5d97f7c81ef5dd9c63698e182} 
+long Districte\+::obtenir\+Num\+Joves (\begin{DoxyParamCaption}\item[{int}]{any}{}\end{DoxyParamCaption}) const}
+
+
+
+Calcula el número de jóvenes (habitantes menores de una edad determinada) en un año dado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año para el cual se desea contar los jóvenes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El número de jóvenes como un valor de tipo {\ttfamily long}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+\Hypertarget{class_districte_a3e3f2232421a3c23679feda35b6b0262}\index{Districte@{Districte}!resumEstudis@{resumEstudis}}
+\index{resumEstudis@{resumEstudis}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{resumEstudis()}{resumEstudis()}}
+{\footnotesize\ttfamily \label{class_districte_a3e3f2232421a3c23679feda35b6b0262} 
+set$<$ string $>$ Districte\+::resum\+Estudis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene un conjunto de estudios presentes en la población del distrito. 
+
+Devuelve un conjunto de cadenas que representan los diferentes niveles de estudios de los habitantes.
+
+\begin{DoxyReturn}{Returns}
+Un conjunto ({\ttfamily set}) de {\ttfamily string} con los niveles de estudios. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+\Hypertarget{class_districte_a27260f90eaafd146d9bb21e1d048ea9b}\index{Districte@{Districte}!resumNacionalitats@{resumNacionalitats}}
+\index{resumNacionalitats@{resumNacionalitats}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{resumNacionalitats()}{resumNacionalitats()}}
+{\footnotesize\ttfamily \label{class_districte_a27260f90eaafd146d9bb21e1d048ea9b} 
+map$<$ pair$<$ string, int $>$, long $>$ Districte\+::resum\+Nacionalitats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene un resumen de las nacionalidades en el distrito. 
+
+Devuelve un mapa que asocia un par de nombre de nacionalidad y código de nacionalidad con el número de habitantes.
+
+\begin{DoxyReturn}{Returns}
+Un mapa con las nacionalidades presentes y sus respectivos conteos. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+\Hypertarget{class_districte_abaf744b1134f19d7ba6c6007f5c25971}\index{Districte@{Districte}!resumNivellEstudis@{resumNivellEstudis}}
+\index{resumNivellEstudis@{resumNivellEstudis}!Districte@{Districte}}
+\doxysubsubsection{\texorpdfstring{resumNivellEstudis()}{resumNivellEstudis()}}
+{\footnotesize\ttfamily \label{class_districte_abaf744b1134f19d7ba6c6007f5c25971} 
+double Districte\+::resum\+Nivell\+Estudis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calcula el nivel medio de estudios en el distrito. 
+
+\begin{DoxyReturn}{Returns}
+El promedio del nivel de estudios como un valor de tipo {\ttfamily double}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_districte_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{_districte_8cpp_source}{Districte.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_districte_8h}{Districte.\+h}}\item 
+\mbox{\hyperlink{_districte_8cpp}{Districte.\+cpp}}\end{DoxyCompactItemize}

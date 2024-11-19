@@ -1,0 +1,142 @@
+\doxysection{Resum\+Nivell\+Estudis Struct Reference}
+\hypertarget{struct_resum_nivell_estudis}{}\label{struct_resum_nivell_estudis}\index{ResumNivellEstudis@{ResumNivellEstudis}}
+
+
+Resumen del nivel promedio de estudios de cada distrito por año.  
+
+
+
+
+{\ttfamily \#include $<$Resums.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_resum_nivell_estudis_a782aa9629923ae53f1c51ff0f8190092}{afegir\+Promig}} (int any, const vector$<$ double $>$ \&promig\+Districtes)
+\begin{DoxyCompactList}\small\item\em Añadir promedios de estudios para un año dado. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_resum_nivell_estudis_a02fb502f88362088eebcf91a78ef66bd}{mes\+Estudios}} (const vector$<$ double $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Determina el distrito con mayor nivel de estudios en un año. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_resum_nivell_estudis_a0c93d5d58046257b37b66fc7f3e6a2b0}{menys\+Estudios}} (const vector$<$ double $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Determina el distrito con menor nivel de estudios en un año. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_resum_nivell_estudis_a60c2e6b2c7a62a162c8a14c2143bf2c5}{mostrar\+Resum\+Nivell\+Estudis}} ()
+\begin{DoxyCompactList}\small\item\em Mostrar el resumen de niveles de estudios por distrito y año. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ int, vector$<$ double $>$ $>$ \mbox{\hyperlink{struct_resum_nivell_estudis_a0bafeb5754a329783ee009a601131a15}{promig}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resumen del nivel promedio de estudios de cada distrito por año. 
+
+Esta estructura almacena un mapa que asocia cada año con un vector de promedios de estudios para cada distrito. 
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00084}{84}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_resum_nivell_estudis_a782aa9629923ae53f1c51ff0f8190092}\index{ResumNivellEstudis@{ResumNivellEstudis}!afegirPromig@{afegirPromig}}
+\index{afegirPromig@{afegirPromig}!ResumNivellEstudis@{ResumNivellEstudis}}
+\doxysubsubsection{\texorpdfstring{afegirPromig()}{afegirPromig()}}
+{\footnotesize\ttfamily \label{struct_resum_nivell_estudis_a782aa9629923ae53f1c51ff0f8190092} 
+void Resum\+Nivell\+Estudis\+::afegir\+Promig (\begin{DoxyParamCaption}\item[{int}]{any}{, }\item[{const vector$<$ double $>$ \&}]{promig\+Districtes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Añadir promedios de estudios para un año dado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año al que se asocian los promedios. \\
+\hline
+{\em promig\+Districtes} & Vector con los promedios de estudios para cada distrito. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00092}{92}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+\Hypertarget{struct_resum_nivell_estudis_a0c93d5d58046257b37b66fc7f3e6a2b0}\index{ResumNivellEstudis@{ResumNivellEstudis}!menysEstudios@{menysEstudios}}
+\index{menysEstudios@{menysEstudios}!ResumNivellEstudis@{ResumNivellEstudis}}
+\doxysubsubsection{\texorpdfstring{menysEstudios()}{menysEstudios()}}
+{\footnotesize\ttfamily \label{struct_resum_nivell_estudis_a0c93d5d58046257b37b66fc7f3e6a2b0} 
+int Resum\+Nivell\+Estudis\+::menys\+Estudios (\begin{DoxyParamCaption}\item[{const vector$<$ double $>$ \&}]{vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determina el distrito con menor nivel de estudios en un año. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Vector con los niveles de estudios por distrito. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El índice del distrito con menor nivel de estudios. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00118}{118}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\Hypertarget{struct_resum_nivell_estudis_a02fb502f88362088eebcf91a78ef66bd}\index{ResumNivellEstudis@{ResumNivellEstudis}!mesEstudios@{mesEstudios}}
+\index{mesEstudios@{mesEstudios}!ResumNivellEstudis@{ResumNivellEstudis}}
+\doxysubsubsection{\texorpdfstring{mesEstudios()}{mesEstudios()}}
+{\footnotesize\ttfamily \label{struct_resum_nivell_estudis_a02fb502f88362088eebcf91a78ef66bd} 
+int Resum\+Nivell\+Estudis\+::mes\+Estudios (\begin{DoxyParamCaption}\item[{const vector$<$ double $>$ \&}]{vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determina el distrito con mayor nivel de estudios en un año. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Vector con los niveles de estudios por distrito. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El índice del distrito con mayor nivel de estudios. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00101}{101}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{struct_resum_nivell_estudis_a60c2e6b2c7a62a162c8a14c2143bf2c5}\index{ResumNivellEstudis@{ResumNivellEstudis}!mostrarResumNivellEstudis@{mostrarResumNivellEstudis}}
+\index{mostrarResumNivellEstudis@{mostrarResumNivellEstudis}!ResumNivellEstudis@{ResumNivellEstudis}}
+\doxysubsubsection{\texorpdfstring{mostrarResumNivellEstudis()}{mostrarResumNivellEstudis()}}
+{\footnotesize\ttfamily \label{struct_resum_nivell_estudis_a60c2e6b2c7a62a162c8a14c2143bf2c5} 
+void Resum\+Nivell\+Estudis\+::mostrar\+Resum\+Nivell\+Estudis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mostrar el resumen de niveles de estudios por distrito y año. 
+
+
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00133}{133}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_resum_nivell_estudis_a0bafeb5754a329783ee009a601131a15}\index{ResumNivellEstudis@{ResumNivellEstudis}!promig@{promig}}
+\index{promig@{promig}!ResumNivellEstudis@{ResumNivellEstudis}}
+\doxysubsubsection{\texorpdfstring{promig}{promig}}
+{\footnotesize\ttfamily \label{struct_resum_nivell_estudis_a0bafeb5754a329783ee009a601131a15} 
+map$<$int, vector$<$double$>$ $>$ Resum\+Nivell\+Estudis\+::promig}
+
+Mapa que asocia cada año con el promedio de estudios por distrito. 
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00085}{85}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_resums_8h}{Resums.\+h}}\end{DoxyCompactItemize}

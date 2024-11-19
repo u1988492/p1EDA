@@ -1,0 +1,120 @@
+\doxysection{Resum\+Nacionalitats Struct Reference}
+\hypertarget{struct_resum_nacionalitats}{}\label{struct_resum_nacionalitats}\index{ResumNacionalitats@{ResumNacionalitats}}
+
+
+Resumen de nacionalidades y número de habitantes por cada año.  
+
+
+
+
+{\ttfamily \#include $<$Resums.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_resum_nacionalitats_aa2480dec056873996aa541f06270f046}{afegir\+Nacionalitats}} (int any, const map$<$ pair$<$ string, int $>$, long $>$ \&map\+Resum)
+\begin{DoxyCompactList}\small\item\em Añadir resumen de nacionalidades para un año. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ pair$<$ string, int $>$, long $>$ $>$ \mbox{\hyperlink{struct_resum_nacionalitats_ae2056ec1ed91af872f3713f8e0f23287}{ordena\+Resum\+Nacionalitats}} (int any) const
+\begin{DoxyCompactList}\small\item\em Ordenar nacionalidades por número de habitantes en un año. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_resum_nacionalitats_a460454ce772af78e867c122f13ad02ef}{mostrar\+Resum\+Nacionalitats}} () const
+\begin{DoxyCompactList}\small\item\em Mostrar el resumen de nacionalidades ordenado por número de habitantes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ int, map$<$ pair$<$ string, int $>$, long $>$ $>$ \mbox{\hyperlink{struct_resum_nacionalitats_ac2d16a1f2a7219b18f1d7e5de31a2d73}{nacionalitats}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resumen de nacionalidades y número de habitantes por cada año. 
+
+Esta estructura almacena un mapa que asocia cada año con un mapa de nacionalidades y sus respectivos conteos de habitantes. 
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00160}{160}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_resum_nacionalitats_aa2480dec056873996aa541f06270f046}\index{ResumNacionalitats@{ResumNacionalitats}!afegirNacionalitats@{afegirNacionalitats}}
+\index{afegirNacionalitats@{afegirNacionalitats}!ResumNacionalitats@{ResumNacionalitats}}
+\doxysubsubsection{\texorpdfstring{afegirNacionalitats()}{afegirNacionalitats()}}
+{\footnotesize\ttfamily \label{struct_resum_nacionalitats_aa2480dec056873996aa541f06270f046} 
+void Resum\+Nacionalitats\+::afegir\+Nacionalitats (\begin{DoxyParamCaption}\item[{int}]{any}{, }\item[{const map$<$ pair$<$ string, int $>$, long $>$ \&}]{map\+Resum}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Añadir resumen de nacionalidades para un año. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año al que se asocia el resumen. \\
+\hline
+{\em map\+Resum} & Mapa de nacionalidades y sus conteos. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00168}{168}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\Hypertarget{struct_resum_nacionalitats_a460454ce772af78e867c122f13ad02ef}\index{ResumNacionalitats@{ResumNacionalitats}!mostrarResumNacionalitats@{mostrarResumNacionalitats}}
+\index{mostrarResumNacionalitats@{mostrarResumNacionalitats}!ResumNacionalitats@{ResumNacionalitats}}
+\doxysubsubsection{\texorpdfstring{mostrarResumNacionalitats()}{mostrarResumNacionalitats()}}
+{\footnotesize\ttfamily \label{struct_resum_nacionalitats_a460454ce772af78e867c122f13ad02ef} 
+void Resum\+Nacionalitats\+::mostrar\+Resum\+Nacionalitats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mostrar el resumen de nacionalidades ordenado por número de habitantes. 
+
+
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00202}{202}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{struct_resum_nacionalitats_ae2056ec1ed91af872f3713f8e0f23287}\index{ResumNacionalitats@{ResumNacionalitats}!ordenaResumNacionalitats@{ordenaResumNacionalitats}}
+\index{ordenaResumNacionalitats@{ordenaResumNacionalitats}!ResumNacionalitats@{ResumNacionalitats}}
+\doxysubsubsection{\texorpdfstring{ordenaResumNacionalitats()}{ordenaResumNacionalitats()}}
+{\footnotesize\ttfamily \label{struct_resum_nacionalitats_ae2056ec1ed91af872f3713f8e0f23287} 
+vector$<$ pair$<$ pair$<$ string, int $>$, long $>$ $>$ Resum\+Nacionalitats\+::ordena\+Resum\+Nacionalitats (\begin{DoxyParamCaption}\item[{int}]{any}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ordenar nacionalidades por número de habitantes en un año. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año del que se quiere ordenar la información. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector de pares con las nacionalidades ordenadas descendientemente por habitantes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00178}{178}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_resum_nacionalitats_ac2d16a1f2a7219b18f1d7e5de31a2d73}\index{ResumNacionalitats@{ResumNacionalitats}!nacionalitats@{nacionalitats}}
+\index{nacionalitats@{nacionalitats}!ResumNacionalitats@{ResumNacionalitats}}
+\doxysubsubsection{\texorpdfstring{nacionalitats}{nacionalitats}}
+{\footnotesize\ttfamily \label{struct_resum_nacionalitats_ac2d16a1f2a7219b18f1d7e5de31a2d73} 
+map$<$int, map$<$pair$<$string, int$>$, long$>$ $>$ Resum\+Nacionalitats\+::nacionalitats}
+
+Mapa que asocia cada año con el conteo de nacionalidades. 
+
+Definition at line \mbox{\hyperlink{_resums_8h_source_l00161}{161}} of file \mbox{\hyperlink{_resums_8h_source}{Resums.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_resums_8h}{Resums.\+h}}\end{DoxyCompactItemize}

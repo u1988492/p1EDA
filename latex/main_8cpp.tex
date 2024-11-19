@@ -1,0 +1,574 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Programa que gestiona la consulta de datos sobre los habitantes de un padrón de Girona.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include "{}Padro.\+h"{}}\newline
+{\ttfamily \#include "{}Resums.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a420b8957ed42067e3039759a0d0130c4}{mostra\+Titol}} (const string \&titol)
+\begin{DoxyCompactList}\small\item\em Muestra el título de una sección con un formato especial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a4897883549359d1f65b5748f25bfbd9d}{linea\+Char}} (char c)
+\begin{DoxyCompactList}\small\item\em Muestra una línea de caracteres repetidos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a71ee28124b09566e95a0780a85dcc53b}{cargar\+Datos}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Carga los datos del padrón desde un archivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ad118e24aa397b8a664206958c3f68b71}{existeix\+Any}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Consulta si existe un año en los datos cargados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a89fb7d343810cf36ac51a28ad9a52577}{num\+Habitants}} (const \mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Obtiene el número de habitantes por año y muestra el promedio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a68c5f813ee540c41425442ef8d279295}{num\+Habitants\+Any}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Obtiene el número de habitantes de un año específico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a100fb390dc1e2f30d563345a7e8ffae7}{num\+Habitants\+Any\+Districte}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Obtiene el número de habitantes de un año y un distrito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a4230886114a1d36362657336b7a078bf}{resum\+Estudis\+Poblacio}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Muestra un resumen de los estudios de la población por año. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_acfb319f83e3b28cd43da7ccabdb2cfe5}{num\+Estudis\+Districte}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Consulta el número de estudios de un distrito por año. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ac0820cbfdc3be0336e62fd7f91295345}{promig\+Nivell\+Estudis}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Muestra el resumen del nivel de estudios por año y distrito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a31126fbd7bea18915c3efcd1d3cc3a33}{resumen\+Nacionalitats}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Muestra un resumen de las nacionalidades por año. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a912a5bc4435ccdb414f10d829676a498}{moviments\+Comunitat}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Muestra los movimientos de una comunidad por código de nacionalidad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ad0002dad68f3a8d1478d481af3d691ea}{resumen\+Edats}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Muestra un resumen de las edades de la población. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a844a6bfba37ee782f41de4c59651ff57}{moviments\+Mes\+Vells}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Muestra los movimientos de los mayores de edad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a894463629f9f901ab3c12ccd02a787df}{mes\+Joves}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Muestra el distrito con más jóvenes entre un rango de años. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a1c3d6c8fc2337b733ae2cd3fc0a4ed11}{estudis\+Filtre}} (\mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Muestra los estudios correspondientes a un año, distrito, edad y nacionalidad específicos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}} ()
+\begin{DoxyCompactList}\small\item\em Muestra el menú de opciones del programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a5289933794b2beb79f44578f8d07af19}{gestio\+Opcio}} (string opcioS, \mbox{\hyperlink{class_padro}{Padro}} \&p)
+\begin{DoxyCompactList}\small\item\em Gestiona las opciones seleccionadas por el usuario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}} \mbox{\hyperlink{main_8cpp_a99444fe5c111e3761f95ec802625ac86}{mostrar\+Resum\+Nacionalitats}} ()
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Función principal que ejecuta el programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Here s the updated Doxygen style documentation for options of your \mbox{\hyperlink{main_8cpp_a2917768ffef1f507b7c6d5371f25117c}{program}}
+\item 
+\mbox{\hyperlink{struct_resum_nacionalitats}{Resum\+Nacionalitats}} \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}} = p.\+resum\+Nacionalitats()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Programa que gestiona la consulta de datos sobre los habitantes de un padrón de Girona. 
+
+Este programa lee, consulta y presenta datos sobre la población de un padrón en Girona, como el número de habitantes por año, estudios, edades, movimientos y más.
+
+\begin{DoxyAuthor}{Author}
+Claudia Rebeca Hodoroga (u1988492) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024/2025 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a71ee28124b09566e95a0780a85dcc53b}\index{main.cpp@{main.cpp}!cargarDatos@{cargarDatos}}
+\index{cargarDatos@{cargarDatos}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{cargarDatos()}{cargarDatos()}}
+{\footnotesize\ttfamily \label{main_8cpp_a71ee28124b09566e95a0780a85dcc53b} 
+void cargar\+Datos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Carga los datos del padrón desde un archivo. 
+
+Esta función solicita al usuario el nombre del archivo desde el cual se cargarán los datos y luego procesa los datos de dicho archivo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} donde se almacenarán los datos cargados. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00068}{68}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{main_8cpp_a1c3d6c8fc2337b733ae2cd3fc0a4ed11}\index{main.cpp@{main.cpp}!estudisFiltre@{estudisFiltre}}
+\index{estudisFiltre@{estudisFiltre}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{estudisFiltre()}{estudisFiltre()}}
+{\footnotesize\ttfamily \label{main_8cpp_a1c3d6c8fc2337b733ae2cd3fc0a4ed11} 
+void estudis\+Filtre (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Muestra los estudios correspondientes a un año, distrito, edad y nacionalidad específicos. 
+
+Esta función consulta los estudios de la población filtrados por el año, distrito, edad y nacionalidad, y muestra los resultados correspondientes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00377}{377}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{main_8cpp_ad118e24aa397b8a664206958c3f68b71}\index{main.cpp@{main.cpp}!existeixAny@{existeixAny}}
+\index{existeixAny@{existeixAny}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{existeixAny()}{existeixAny()}}
+{\footnotesize\ttfamily \label{main_8cpp_ad118e24aa397b8a664206958c3f68b71} 
+void existeix\+Any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Consulta si existe un año en los datos cargados. 
+
+Esta función permite al usuario consultar si un año determinado existe en los datos cargados.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} que contiene los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00090}{90}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{main_8cpp_a5289933794b2beb79f44578f8d07af19}\index{main.cpp@{main.cpp}!gestioOpcio@{gestioOpcio}}
+\index{gestioOpcio@{gestioOpcio}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{gestioOpcio()}{gestioOpcio()}}
+{\footnotesize\ttfamily \label{main_8cpp_a5289933794b2beb79f44578f8d07af19} 
+void gestio\+Opcio (\begin{DoxyParamCaption}\item[{string}]{opcioS}{, }\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Gestiona las opciones seleccionadas por el usuario. 
+
+Esta función ejecuta la opción seleccionada por el usuario, llamando a la función correspondiente según el número de opción ingresado.
+
+
+\begin{DoxyParams}{Parameters}
+{\em opcioS} & La opción seleccionada por el usuario, como una cadena de texto. \\
+\hline
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00435}{435}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+\Hypertarget{main_8cpp_a4897883549359d1f65b5748f25bfbd9d}\index{main.cpp@{main.cpp}!lineaChar@{lineaChar}}
+\index{lineaChar@{lineaChar}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{lineaChar()}{lineaChar()}}
+{\footnotesize\ttfamily \label{main_8cpp_a4897883549359d1f65b5748f25bfbd9d} 
+void linea\+Char (\begin{DoxyParamCaption}\item[{char}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Muestra una línea de caracteres repetidos. 
+
+Esta función muestra una línea de un carácter específico repetido 15 veces.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & El carácter que se repetirá. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Función principal que ejecuta el programa. 
+
+Esta función muestra el menú, procesa las opciones seleccionadas por el usuario y ejecuta las funciones correspondientes según la elección del usuario.
+
+\begin{DoxyReturn}{Returns}
+Código de salida del programa. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00708}{708}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\Hypertarget{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}\index{main.cpp@{main.cpp}!menu@{menu}}
+\index{menu@{menu}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily \label{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a} 
+void menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Muestra el menú de opciones del programa. 
+
+Esta función muestra el menú principal con todas las opciones disponibles para el usuario. 
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00402}{402}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{main_8cpp_a894463629f9f901ab3c12ccd02a787df}\index{main.cpp@{main.cpp}!mesJoves@{mesJoves}}
+\index{mesJoves@{mesJoves}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mesJoves()}{mesJoves()}}
+{\footnotesize\ttfamily \label{main_8cpp_a894463629f9f901ab3c12ccd02a787df} 
+void mes\+Joves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Muestra el distrito con más jóvenes entre un rango de años. 
+
+Esta función permite consultar el distrito con más jóvenes dentro de un rango de años proporcionado por el usuario.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00354}{354}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\Hypertarget{main_8cpp_a99444fe5c111e3761f95ec802625ac86}\index{main.cpp@{main.cpp}!mostrarResumNacionalitats@{mostrarResumNacionalitats}}
+\index{mostrarResumNacionalitats@{mostrarResumNacionalitats}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mostrarResumNacionalitats()}{mostrarResumNacionalitats()}}
+{\footnotesize\ttfamily \label{main_8cpp_a99444fe5c111e3761f95ec802625ac86} 
+\mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}} mostrar\+Resum\+Nacionalitats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a420b8957ed42067e3039759a0d0130c4}\index{main.cpp@{main.cpp}!mostraTitol@{mostraTitol}}
+\index{mostraTitol@{mostraTitol}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mostraTitol()}{mostraTitol()}}
+{\footnotesize\ttfamily \label{main_8cpp_a420b8957ed42067e3039759a0d0130c4} 
+void mostra\+Titol (\begin{DoxyParamCaption}\item[{const string \&}]{titol}{}\end{DoxyParamCaption})}
+
+
+
+Muestra el título de una sección con un formato especial. 
+
+Esta función recibe un título y lo muestra rodeado por asteriscos para destacarlo en la consola.
+
+
+\begin{DoxyParams}{Parameters}
+{\em titol} & El título que se mostrará. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 13
+\Hypertarget{main_8cpp_a912a5bc4435ccdb414f10d829676a498}\index{main.cpp@{main.cpp}!movimentsComunitat@{movimentsComunitat}}
+\index{movimentsComunitat@{movimentsComunitat}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{movimentsComunitat()}{movimentsComunitat()}}
+{\footnotesize\ttfamily \label{main_8cpp_a912a5bc4435ccdb414f10d829676a498} 
+void moviments\+Comunitat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Muestra los movimientos de una comunidad por código de nacionalidad. 
+
+Esta función consulta y muestra los movimientos de la población perteneciente a una comunidad identificada por un código de nacionalidad específico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00296}{296}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\Hypertarget{main_8cpp_a844a6bfba37ee782f41de4c59651ff57}\index{main.cpp@{main.cpp}!movimentsMesVells@{movimentsMesVells}}
+\index{movimentsMesVells@{movimentsMesVells}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{movimentsMesVells()}{movimentsMesVells()}}
+{\footnotesize\ttfamily \label{main_8cpp_a844a6bfba37ee782f41de4c59651ff57} 
+void moviments\+Mes\+Vells (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Muestra los movimientos de los mayores de edad. 
+
+Esta función consulta y muestra los movimientos de la población de mayor edad, proporcionando los datos por año.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00335}{335}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\Hypertarget{main_8cpp_acfb319f83e3b28cd43da7ccabdb2cfe5}\index{main.cpp@{main.cpp}!numEstudisDistricte@{numEstudisDistricte}}
+\index{numEstudisDistricte@{numEstudisDistricte}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{numEstudisDistricte()}{numEstudisDistricte()}}
+{\footnotesize\ttfamily \label{main_8cpp_acfb319f83e3b28cd43da7ccabdb2cfe5} 
+void num\+Estudis\+Districte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Consulta el número de estudios de un distrito por año. 
+
+Esta función permite al usuario consultar el número de estudios de un distrito por año.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00234}{234}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+\Hypertarget{main_8cpp_a89fb7d343810cf36ac51a28ad9a52577}\index{main.cpp@{main.cpp}!numHabitants@{numHabitants}}
+\index{numHabitants@{numHabitants}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{numHabitants()}{numHabitants()}}
+{\footnotesize\ttfamily \label{main_8cpp_a89fb7d343810cf36ac51a28ad9a52577} 
+void num\+Habitants (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene el número de habitantes por año y muestra el promedio. 
+
+Esta función muestra el número de habitantes por año y calcula el promedio de habitantes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} que contiene los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 20
+Here is the caller graph for this function\+:
+% FIG 21
+\Hypertarget{main_8cpp_a68c5f813ee540c41425442ef8d279295}\index{main.cpp@{main.cpp}!numHabitantsAny@{numHabitantsAny}}
+\index{numHabitantsAny@{numHabitantsAny}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{numHabitantsAny()}{numHabitantsAny()}}
+{\footnotesize\ttfamily \label{main_8cpp_a68c5f813ee540c41425442ef8d279295} 
+void num\+Habitants\+Any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene el número de habitantes de un año específico. 
+
+Esta función permite al usuario consultar el número de habitantes de un año en específico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00142}{142}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 22
+Here is the caller graph for this function\+:
+% FIG 23
+\Hypertarget{main_8cpp_a100fb390dc1e2f30d563345a7e8ffae7}\index{main.cpp@{main.cpp}!numHabitantsAnyDistricte@{numHabitantsAnyDistricte}}
+\index{numHabitantsAnyDistricte@{numHabitantsAnyDistricte}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{numHabitantsAnyDistricte()}{numHabitantsAnyDistricte()}}
+{\footnotesize\ttfamily \label{main_8cpp_a100fb390dc1e2f30d563345a7e8ffae7} 
+void num\+Habitants\+Any\+Districte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene el número de habitantes de un año y un distrito. 
+
+Esta función permite al usuario consultar el número de habitantes de un año y un distrito específico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00180}{180}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 24
+Here is the caller graph for this function\+:
+% FIG 25
+\Hypertarget{main_8cpp_ac0820cbfdc3be0336e62fd7f91295345}\index{main.cpp@{main.cpp}!promigNivellEstudis@{promigNivellEstudis}}
+\index{promigNivellEstudis@{promigNivellEstudis}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{promigNivellEstudis()}{promigNivellEstudis()}}
+{\footnotesize\ttfamily \label{main_8cpp_ac0820cbfdc3be0336e62fd7f91295345} 
+void promig\+Nivell\+Estudis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Muestra el resumen del nivel de estudios por año y distrito. 
+
+Esta función muestra un resumen del nivel de estudios por año y distrito.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00263}{263}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 26
+Here is the caller graph for this function\+:
+% FIG 27
+\Hypertarget{main_8cpp_ad0002dad68f3a8d1478d481af3d691ea}\index{main.cpp@{main.cpp}!resumenEdats@{resumenEdats}}
+\index{resumenEdats@{resumenEdats}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{resumenEdats()}{resumenEdats()}}
+{\footnotesize\ttfamily \label{main_8cpp_ad0002dad68f3a8d1478d481af3d691ea} 
+void resumen\+Edats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Muestra un resumen de las edades de la población. 
+
+Esta función genera un resumen de las edades de la población y las muestra en pantalla, utilizando la clase {\ttfamily \doxylink{struct_resum_edats}{Resum\+Edats}} para organizar los datos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00319}{319}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 28
+Here is the caller graph for this function\+:
+% FIG 29
+\Hypertarget{main_8cpp_a31126fbd7bea18915c3efcd1d3cc3a33}\index{main.cpp@{main.cpp}!resumenNacionalitats@{resumenNacionalitats}}
+\index{resumenNacionalitats@{resumenNacionalitats}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{resumenNacionalitats()}{resumenNacionalitats()}}
+{\footnotesize\ttfamily \label{main_8cpp_a31126fbd7bea18915c3efcd1d3cc3a33} 
+void resumen\+Nacionalitats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Muestra un resumen de las nacionalidades por año. 
+
+Esta función genera un resumen de las nacionalidades de la población por año, utilizando la clase {\ttfamily \doxylink{struct_resum_nacionalitats}{Resum\+Nacionalitats}} para organizar y mostrar los datos correspondientes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00279}{279}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 30
+Here is the caller graph for this function\+:
+% FIG 31
+\Hypertarget{main_8cpp_a4230886114a1d36362657336b7a078bf}\index{main.cpp@{main.cpp}!resumEstudisPoblacio@{resumEstudisPoblacio}}
+\index{resumEstudisPoblacio@{resumEstudisPoblacio}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{resumEstudisPoblacio()}{resumEstudisPoblacio()}}
+{\footnotesize\ttfamily \label{main_8cpp_a4230886114a1d36362657336b7a078bf} 
+void resum\+Estudis\+Poblacio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_padro}{Padro}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Muestra un resumen de los estudios de la población por año. 
+
+Esta función muestra un resumen de los estudios de la población por año.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un objeto de la clase \doxylink{class_padro}{Padro} con los datos del padrón. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00218}{218}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 32
+Here is the caller graph for this function\+:
+% FIG 33
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_a2917768ffef1f507b7c6d5371f25117c}\index{main.cpp@{main.cpp}!program@{program}}
+\index{program@{program}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{program}{program}}
+{\footnotesize\ttfamily \label{main_8cpp_a2917768ffef1f507b7c6d5371f25117c} 
+Here s the updated Doxygen style documentation for options of your program}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00490}{490}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\Hypertarget{main_8cpp_a3903a04ec2931656591de59d23c1d672}\index{main.cpp@{main.cpp}!res@{res}}
+\index{res@{res}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{res}{res}}
+{\footnotesize\ttfamily \label{main_8cpp_a3903a04ec2931656591de59d23c1d672} 
+\mbox{\hyperlink{struct_resum_nacionalitats}{Resum\+Nacionalitats}} res = p.\+resum\+Nacionalitats()}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00504}{504}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+

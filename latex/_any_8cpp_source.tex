@@ -1,0 +1,160 @@
+\doxysection{Any.\+cpp}
+\hypertarget{_any_8cpp_source}{}\label{_any_8cpp_source}\mbox{\hyperlink{_any_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_any_8h}{Any.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_districte_8h}{Districte.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00004}00004\ \textcolor{comment}{//Constructor\ con\ 6\ distritos,\ numero\ fijo\ de\ distritos}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00005}\mbox{\hyperlink{class_any_adde1510a848d26d7d19f940c508ab24a}{00005}}\ \mbox{\hyperlink{class_any_adde1510a848d26d7d19f940c508ab24a}{Any::Any}}()\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00006}00006\ \ \ \ \ vecDistrictes\ =\ vector<Districte>(7);}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00007}00007\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00009}00009\ \textcolor{comment}{//Función para\ añadir\ datos\ a\ vector\ de\ distritos}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00010}\mbox{\hyperlink{class_any_aa4f47442695b9a2afb547c64fdde64bd}{00010}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_any_aa4f47442695b9a2afb547c64fdde64bd}{Any::afegirAny}}(\textcolor{keywordtype}{int}\ districte,\ \textcolor{keywordtype}{int}\ codiNivellEstudis,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&nivellEstudis,\ \textcolor{keywordtype}{int}\ anyNaixement,\ \textcolor{keywordtype}{int}\ codiNacionalitat,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&nomNacionalitat,\ \textcolor{keywordtype}{int}\ seccio)\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{comment}{//pre:\ datos\ correctos\ del\ padrón}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{if}(districte<1\ ||districte>6)\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ indice\ de\ distrito\ no\ valido"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00016}00016\ \ \ \ \ vecDistrictes[districte].afegirDistricte(codiNivellEstudis,\ nivellEstudis,\ anyNaixement,\ codiNacionalitat,\ nomNacionalitat,\ seccio);}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00019}00019\ \textcolor{comment}{//Función para\ consultar\ el\ total\ de\ habitantes\ por\ distrito\ en\ un\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00020}\mbox{\hyperlink{class_any_a44257b25797d2fac17a0ac7b3545b605}{00020}}\ vector<long>\ \mbox{\hyperlink{class_any_a44257b25797d2fac17a0ac7b3545b605}{Any::obtenirNumHabitantsPerDistricte}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00021}00021\ \ \ \ \ vector<long>\ habitants;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00022}00022\ \ \ \ \ habitants.reserve(vecDistrictes.size());}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 1;\ i<vecDistrictes.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ habitants.push\_back(vecDistrictes[i].obtenirNumHabitants());}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ habitants;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00029}00029\ \textcolor{comment}{//Función para\ consultar\ el\ total\ de\ habitantes\ por\ sección, de\ un\ distrito}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00030}\mbox{\hyperlink{class_any_a7cdd86ebeec19b5b1e2a66308e02658f}{00030}}\ map<int,\ long>\ \mbox{\hyperlink{class_any_a7cdd86ebeec19b5b1e2a66308e02658f}{Any::obtenirNumHabitantsPerSeccio}}(\textcolor{keywordtype}{int}\ districte)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ vecDistrictes[districte].obtenirNumHabitantsSeccio();}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00034}00034\ \textcolor{comment}{//Función para\ obtener\ el\ resumen\ de\ estudios\ de\ la\ población de\ un\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00035}\mbox{\hyperlink{class_any_a0bd7040c79faa392c0e3390f8ece6a8c}{00035}}\ set<string>\ \mbox{\hyperlink{class_any_a0bd7040c79faa392c0e3390f8ece6a8c}{Any::resumEstudis}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//guardar\ set\ de\ strings\ con\ los\ estudios\ únicos\ del\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00037}00037\ \ \ \ \ set<string>\ resum;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i=1;\ i<vecDistrictes.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ set<string>\ resumDistricte\ =\ vecDistrictes[i].resumEstudis();\ \textcolor{comment}{//resumen\ estudios\ del\ distrito}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//recorrer\ set\ del\ distrito\ y\ guardar}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ set<string>::const\_iterator\ itResDis\ =\ resumDistricte.begin();}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(itResDis!=resumDistricte.end())\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ resum.insert(*itResDis);}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ ++itResDis;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{return}\ resum;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00053}00053\ \textcolor{comment}{//Función para\ obtener\ el\ resumen\ de\ estudios\ para\ un\ único\ distrito}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00054}\mbox{\hyperlink{class_any_a437a7e36c5461e77e02b07dd204f8c21}{00054}}\ set<string>\ \mbox{\hyperlink{class_any_a437a7e36c5461e77e02b07dd204f8c21}{Any::resumEstudisDistricte}}(\textcolor{keywordtype}{int}\ districte)\textcolor{keyword}{const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{return}\ vecDistrictes[districte].resumEstudis();\ \textcolor{comment}{//resumen\ estudios\ del\ distrito;}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00059}00059\ \textcolor{comment}{//Función para\ obtener\ el\ promedio\ de\ nivel\ de\ un\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00060}\mbox{\hyperlink{class_any_a8330313b2b55da18efc621d0bfc95e37}{00060}}\ vector<double>\ \mbox{\hyperlink{class_any_a8330313b2b55da18efc621d0bfc95e37}{Any::resumNivellEstudis}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00061}00061\ \ \ \ \ vector<double>\ promigDistrictes(vecDistrictes.size());\ \textcolor{comment}{//vector\ para\ guardar\ el\ promedio\ de\ cada\ distrito}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i=1;\ i<vecDistrictes.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ promig\ =\ vecDistrictes[i].resumNivellEstudis();}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ promigDistrictes[i]\ =\ promig;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{return}\ promigDistrictes;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00069}00069\ \textcolor{comment}{//Función para\ obtener\ el\ resumen\ de\ nacionalidades\ de\ un\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00070}\mbox{\hyperlink{class_any_aee477ac576a34718476c57f34357ba1c}{00070}}\ map<pair<string,\ int>,\ \textcolor{keywordtype}{long}>\ \mbox{\hyperlink{class_any_aee477ac576a34718476c57f34357ba1c}{Any::resumNacionalitats}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00071}00071\ \ \ \ \ map<pair<string,\ int>,\ \textcolor{keywordtype}{long}>\ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}};\ \textcolor{comment}{//map\ para\ guardar\ resumen}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{comment}{//para\ cada\ distrito,\ guardar\ el\ resumen\ de\ nacionalidades}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i=1;\ i<vecDistrictes.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//obtener\ mapas\ de\ nacionalidades\ de\ cada\ distrito\ y\ unirlos\ en\ uno\ único}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ map<pair<string,\ int>,\ \textcolor{keywordtype}{long}>\ resumDistricte\ =\ vecDistrictes[i].resumNacionalitats();}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ map<pair<string,\ int>,\ \textcolor{keywordtype}{long}>::const\_iterator\ itResDis\ =\ resumDistricte.begin();}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(itResDis!=resumDistricte.end())\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}}[itResDis-\/>first]\ +=\ itResDis-\/>second;\ \textcolor{comment}{//si\ existe\ la\ nacionalidad,\ actualizar\ contador;\ si\ no,\ añade\ nueva}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ itResDis++;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}};}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00084}00084\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00086}00086\ \textcolor{comment}{//Función para\ obtener\ el\ índice\ del\ distrito\ con\ la\ mayor\ concentración de\ habitantes\ de\ una\ nacionalidad}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00087}\mbox{\hyperlink{class_any_ac4be61ce671e5b50f6cb0c2f05cd46be}{00087}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_any_ac4be61ce671e5b50f6cb0c2f05cd46be}{Any::maxNacionalitat}}(\textcolor{keywordtype}{int}\ codiNacionalitat)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{int}\ maxDistricte;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00089}00089\ \ \ \ \ vector<long>nacionalitatDistricte;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00090}00090\ \ \ \ \ nacionalitatDistricte.reserve(vecDistrictes.size()-\/1);\ \textcolor{comment}{//6\ posiciones}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{comment}{//para\ cada\ distrito,\ guardar\ el\ número\ de\ habitantes\ de\ esa\ nacionalidad}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i=1;\ i<vecDistrictes.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{main_8cpp_a89fb7d343810cf36ac51a28ad9a52577}{numHabitants}}\ =\ vecDistrictes[i].obtenirNumHabitantsNacionalitat(codiNacionalitat);}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ nacionalitatDistricte.push\_back(\mbox{\hyperlink{main_8cpp_a89fb7d343810cf36ac51a28ad9a52577}{numHabitants}});}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00097}00097\ \ \ \ \ \textcolor{comment}{//obtener\ posición del\ distrito\ con\ el\ máximo}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{auto}\ itMaxDistricte\ =\ max\_element(nacionalitatDistricte.begin(),\ nacionalitatDistricte.end());}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordflow}{if}(itMaxDistricte!=nacionalitatDistricte.end())\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ indexDistricte\ =\ distance(nacionalitatDistricte.begin(),\ itMaxDistricte);\ \textcolor{comment}{//es\ 0\ si\ el\ maximo\ en\ ese\ año es\ 0}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(indexDistricte==0)\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ maxDistricte\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ maxDistricte\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(indexDistricte)+1;\ \textcolor{comment}{//static\ cast\ para\ poder\ devolver\ un\ int\ de\ la\ posición}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{return}\ maxDistricte;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00108}00108\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00110}00110\ \textcolor{comment}{//Función para\ obtener\ el\ promedio\ de\ edades\ de\ cada\ distrito\ del\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00111}\mbox{\hyperlink{class_any_ab311bec819677504523fbefdc26e9824}{00111}}\ vector<double>\ \mbox{\hyperlink{class_any_ab311bec819677504523fbefdc26e9824}{Any::resumEdat}}(\textcolor{keywordtype}{int}\ any)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00112}00112\ \ \ \ \ vector<double>\ resumDistrictes(vecDistrictes.size()-\/1);}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00113}00113\ \ \ \ \ \textcolor{comment}{//para\ cada\ distrito,\ calcular\ promedio}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00114}00114\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i=1;\ i<vecDistrictes.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ resumDistrictes[i-\/1]\ =\ vecDistrictes[i].obtenirEdatMitjana(any);}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00118}00118\ \ \ \ \ \textcolor{keywordflow}{return}\ resumDistrictes;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00119}00119\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00121}00121\ \textcolor{comment}{//Función para\ obtener\ el\ distrito\ con\ mayor\ media\ de\ edad\ del\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00122}\mbox{\hyperlink{class_any_a15447edcb20d709a09eeed57a2c0a755}{00122}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_any_a15447edcb20d709a09eeed57a2c0a755}{Any::maxEdat}}(\textcolor{keywordtype}{int}\ any)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keyword}{const}\ vector<double>\ resumEdats\ =\ \mbox{\hyperlink{class_any_ab311bec819677504523fbefdc26e9824}{resumEdat}}(any);\ \textcolor{comment}{//vector\ de\ promedios\ de\ edad\ por\ distrito}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{if}(resumEdats.empty())\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00128}00128\ \ \ \ \ \textcolor{keyword}{auto}\ maxDistricte\ =\ max\_element(resumEdats.begin(),\ resumEdats.end());\ \textcolor{comment}{//iterador\ al\ elemento\ maximo}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00130}00130\ \ \ \ \ \textcolor{keywordtype}{int}\ indexMax\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(distance(resumEdats.begin(),\ maxDistricte));}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{return}\ indexMax+1;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00133}00133\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00135}00135\ \textcolor{comment}{//Función para\ obtener\ el\ incremento\ de\ jóvenes\ de\ cada\ distrito\ de\ un\ año}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00136}\mbox{\hyperlink{class_any_a2572daeb322732ef30a0a4bcd414e893}{00136}}\ vector<long>\ \mbox{\hyperlink{class_any_a2572daeb322732ef30a0a4bcd414e893}{Any::incrementJoves}}(\textcolor{keywordtype}{int}\ any)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00137}00137\ \ \ \ \ vector<long>\ joves(vecDistrictes.size());}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00139}00139\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i=1;\ i<vecDistrictes.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ joves[i]\ =\ vecDistrictes[i].obtenirNumJoves(any);}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00141}00141\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00142}00142\ \ \ \ \ \textcolor{keywordflow}{return}\ joves;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00143}00143\ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00145}00145\ \textcolor{comment}{//Función para\ obtener\ la\ lista\ de\ estudios\ de\ los\ habitantes\ que\ cumplan\ las\ condiciones\ introducidas}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00146}\mbox{\hyperlink{class_any_a8910885c14747139f2d849f60f5c3abe}{00146}}\ list<string>\ \mbox{\hyperlink{class_any_a8910885c14747139f2d849f60f5c3abe}{Any::estudisEdat}}(\textcolor{keywordtype}{int}\ any,\ \textcolor{keywordtype}{int}\ districte,\ \textcolor{keywordtype}{int}\ edat,\ \textcolor{keywordtype}{int}\ CodiNacionalitat)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00147}00147\ \ \ \ \ \textcolor{keywordflow}{if}(districte\ <\ 0\ ||\ districte>=vecDistrictes.size())\{}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};\ \textcolor{comment}{//devolver\ vacío si\ los\ datos\ no\ son\ válidos}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00149}00149\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00151}00151\ \ \ \ \ set<string>\ estudisUnics\ =\ vecDistrictes[districte].estudisEdat(any,\ edat,\ CodiNacionalitat);}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00152}00152\ \ \ \ \ list<string>\ estudis(estudisUnics.begin(),\ estudisUnics.end());}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00154}00154\ \ \ \ \ \textcolor{keywordflow}{return}\ estudis;}
+\DoxyCodeLine{\Hypertarget{_any_8cpp_source_l00155}00155\ \}}
+
+\end{DoxyCode}

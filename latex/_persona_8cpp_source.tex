@@ -1,0 +1,45 @@
+\doxysection{Persona.\+cpp}
+\hypertarget{_persona_8cpp_source}{}\label{_persona_8cpp_source}\mbox{\hyperlink{_persona_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_persona_8h}{Persona.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_estudi_8h}{Estudi.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_nacionalitat_8h}{Nacionalitat.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00005}00005\ \textcolor{comment}{//Constructor\ de\ Persona\ a\ partir\ de\ parámetros}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00006}\mbox{\hyperlink{class_persona_a10853fe29c5346193ebeb27a5ca1a51d}{00006}}\ \mbox{\hyperlink{class_persona_a10853fe29c5346193ebeb27a5ca1a51d}{Persona::Persona}}(\textcolor{keywordtype}{int}\ codiNivellEstudis,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&nivellEstudis,\ \textcolor{keywordtype}{int}\ anyNaixement,\ \textcolor{keywordtype}{int}\ codiPaisNaixement,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&paisNaixement)}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00007}00007\ :a\_anyNaixement(anyNaixement),\ a\_estudis(codiNivellEstudis,\ nivellEstudis),\ a\_nacionalitat(codiPaisNaixement,\ paisNaixement)\{\}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00009}00009\ \textcolor{comment}{//Función para\ obtener\ fecha\ de\ nacimiento\ de\ la\ persona}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00010}\mbox{\hyperlink{class_persona_a274d0ed5d128c75dac2101a51d2d38c1}{00010}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_persona_a274d0ed5d128c75dac2101a51d2d38c1}{Persona::obtenirAnyNaixement}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{return}\ a\_anyNaixement;}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00014}00014\ \textcolor{comment}{//Función para\ obtener\ los\ estudios\ de\ la\ persona}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00015}\mbox{\hyperlink{class_persona_aaa217107841783839cad7e6de9769597}{00015}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_persona_aaa217107841783839cad7e6de9769597}{Persona::obtenirNivellEstudis}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{return}\ a\_estudis.\mbox{\hyperlink{class_estudi_ae0418b107b8667580d8cd32340253f1e}{obtenirNom}}();}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00019}00019\ \textcolor{comment}{//Función para\ obtener\ el\ código\ del\ nivel\ de\ estudios\ de\ la\ persona}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00020}\mbox{\hyperlink{class_persona_a34b8b16170598ee651d77ab986808b76}{00020}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_persona_a34b8b16170598ee651d77ab986808b76}{Persona::obtenirCodiNivellEstudis}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ a\_estudis.\mbox{\hyperlink{class_estudi_a7a7ae02d49fe987c81e77fcb141f7ff4}{obtenirId}}();}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00024}\mbox{\hyperlink{class_persona_a05a07c920b714959761b87d93fcb524d}{00024}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_persona_a05a07c920b714959761b87d93fcb524d}{Persona::obtenirNacionalitat}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{return}\ a\_nacionalitat.\mbox{\hyperlink{class_nacionalitat_af250dcafe670bef93b37a933d05e0a29}{obtenirNom}}();}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00028}00028\ \textcolor{comment}{//Función para\ obtener\ el\ codigo\ de\ nacionalidad\ de\ la\ persona}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00029}\mbox{\hyperlink{class_persona_a2d3592c6659d36ef673d59977d757a13}{00029}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_persona_a2d3592c6659d36ef673d59977d757a13}{Persona::obtenirCodiPaisNaixement}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{return}\ a\_nacionalitat.\mbox{\hyperlink{class_nacionalitat_ad6b20a84453e176f3880e46a0923ac03}{obtenirId}}();}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00033}\mbox{\hyperlink{class_persona_a1082a81132f1b6cd11d992c058de8c52}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_persona_a1082a81132f1b6cd11d992c058de8c52}{Persona::mostraPersona}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{int}\ codiEstudis\ =\ a\_estudis.\mbox{\hyperlink{class_estudi_a7a7ae02d49fe987c81e77fcb141f7ff4}{obtenirId}}();}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{string}\ nivellEstudis\ =\ a\_estudis.\mbox{\hyperlink{class_estudi_ae0418b107b8667580d8cd32340253f1e}{obtenirNom}}();}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{int}\ codiNacionalitat\ =\ a\_nacionalitat.\mbox{\hyperlink{class_nacionalitat_ad6b20a84453e176f3880e46a0923ac03}{obtenirId}}();}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{string}\ nacionalitat\ =\ a\_nacionalitat.\mbox{\hyperlink{class_nacionalitat_af250dcafe670bef93b37a933d05e0a29}{obtenirNom}}();}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00039}00039\ \ \ \ \ cout\ <<\ a\_anyNaixement\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ codiEstudis\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ nivellEstudis\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ codiNacionalitat\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ nacionalitat\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_persona_8cpp_source_l00040}00040\ \}}
+
+\end{DoxyCode}

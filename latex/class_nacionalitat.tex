@@ -1,0 +1,128 @@
+\doxysection{Nacionalitat Class Reference}
+\hypertarget{class_nacionalitat}{}\label{class_nacionalitat}\index{Nacionalitat@{Nacionalitat}}
+
+
+Clase que representa una nacionalidad.  
+
+
+
+
+{\ttfamily \#include $<$Nacionalitat.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_nacionalitat_a69a4a9e63e18aced93f761bbb9cf0d77}{Nacionalitat}} (int id, string nom)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_nacionalitat}{Nacionalitat}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_nacionalitat_ad6b20a84453e176f3880e46a0923ac03}{obtenir\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el código de la nacionalidad. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_nacionalitat_af250dcafe670bef93b37a933d05e0a29}{obtenir\+Nom}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre de la nacionalidad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_nacionalitat_a174532d462c4f20e184198aa4b305a5a}{operator==}} (const \mbox{\hyperlink{class_nacionalitat}{Nacionalitat}} \&nacio) const
+\begin{DoxyCompactList}\small\item\em Operador de igualdad para comparar dos objetos {\ttfamily \doxylink{class_nacionalitat}{Nacionalitat}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa una nacionalidad. 
+
+La clase {\ttfamily \doxylink{class_nacionalitat}{Nacionalitat}} se utiliza para almacenar y gestionar la información de una nacionalidad, incluyendo un identificador y el nombre de la nacionalidad. 
+
+Definition at line \mbox{\hyperlink{_nacionalitat_8h_source_l00027}{27}} of file \mbox{\hyperlink{_nacionalitat_8h_source}{Nacionalitat.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_nacionalitat_a69a4a9e63e18aced93f761bbb9cf0d77}\index{Nacionalitat@{Nacionalitat}!Nacionalitat@{Nacionalitat}}
+\index{Nacionalitat@{Nacionalitat}!Nacionalitat@{Nacionalitat}}
+\doxysubsubsection{\texorpdfstring{Nacionalitat()}{Nacionalitat()}}
+{\footnotesize\ttfamily \label{class_nacionalitat_a69a4a9e63e18aced93f761bbb9cf0d77} 
+Nacionalitat\+::\+Nacionalitat (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{string}]{nom}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_nacionalitat}{Nacionalitat}. 
+
+Inicializa un objeto {\ttfamily \doxylink{class_nacionalitat}{Nacionalitat}} con un identificador y un nombre.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Código de la nacionalidad. \\
+\hline
+{\em nom} & Nombre de la nacionalidad. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_nacionalitat_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_nacionalitat_8cpp_source}{Nacionalitat.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_nacionalitat_ad6b20a84453e176f3880e46a0923ac03}\index{Nacionalitat@{Nacionalitat}!obtenirId@{obtenirId}}
+\index{obtenirId@{obtenirId}!Nacionalitat@{Nacionalitat}}
+\doxysubsubsection{\texorpdfstring{obtenirId()}{obtenirId()}}
+{\footnotesize\ttfamily \label{class_nacionalitat_ad6b20a84453e176f3880e46a0923ac03} 
+int Nacionalitat\+::obtenir\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el código de la nacionalidad. 
+
+\begin{DoxyReturn}{Returns}
+El código de la nacionalidad como un valor entero ({\ttfamily int}). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_nacionalitat_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_nacionalitat_8cpp_source}{Nacionalitat.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\Hypertarget{class_nacionalitat_af250dcafe670bef93b37a933d05e0a29}\index{Nacionalitat@{Nacionalitat}!obtenirNom@{obtenirNom}}
+\index{obtenirNom@{obtenirNom}!Nacionalitat@{Nacionalitat}}
+\doxysubsubsection{\texorpdfstring{obtenirNom()}{obtenirNom()}}
+{\footnotesize\ttfamily \label{class_nacionalitat_af250dcafe670bef93b37a933d05e0a29} 
+string Nacionalitat\+::obtenir\+Nom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el nombre de la nacionalidad. 
+
+\begin{DoxyReturn}{Returns}
+El nombre de la nacionalidad como una cadena ({\ttfamily string}). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_nacionalitat_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_nacionalitat_8cpp_source}{Nacionalitat.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{class_nacionalitat_a174532d462c4f20e184198aa4b305a5a}\index{Nacionalitat@{Nacionalitat}!operator==@{operator==}}
+\index{operator==@{operator==}!Nacionalitat@{Nacionalitat}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_nacionalitat_a174532d462c4f20e184198aa4b305a5a} 
+bool Nacionalitat\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_nacionalitat}{Nacionalitat}} \&}]{nacio}{}\end{DoxyParamCaption}) const}
+
+
+
+Operador de igualdad para comparar dos objetos {\ttfamily \doxylink{class_nacionalitat}{Nacionalitat}}. 
+
+Compara dos objetos {\ttfamily \doxylink{class_nacionalitat}{Nacionalitat}} para determinar si tienen el mismo código y nombre de nacionalidad.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nacio} & Objeto {\ttfamily \doxylink{class_nacionalitat}{Nacionalitat}} con el que se comparará. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si ambos objetos tienen el mismo código y nombre; de lo contrario, {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_nacionalitat_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_nacionalitat_8cpp_source}{Nacionalitat.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_nacionalitat_8h}{Nacionalitat.\+h}}\item 
+\mbox{\hyperlink{_nacionalitat_8cpp}{Nacionalitat.\+cpp}}\end{DoxyCompactItemize}

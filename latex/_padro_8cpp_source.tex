@@ -1,0 +1,258 @@
+\doxysection{Padro.\+cpp}
+\hypertarget{_padro_8cpp_source}{}\label{_padro_8cpp_source}\mbox{\hyperlink{_padro_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_padro_8h}{Padro.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_any_8h}{Any.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00004}\mbox{\hyperlink{_padro_8cpp_a56786f18cd14ae0859e538c4c3d4b987}{00004}}\ vector<string>\ \mbox{\hyperlink{_padro_8cpp_a56786f18cd14ae0859e538c4c3d4b987}{nomsDistrictes}}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{stringliteral}{"{}Carme,\ Vila-\/roja"{}},}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00007}00007\ \ \ \ \ \textcolor{stringliteral}{"{}Eixample,\ Montilivi"{}},}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{stringliteral}{"{}Santa\ Eugenia,\ Mas\ Xirgu"{}},}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{stringliteral}{"{}Casc\ Antic"{}},}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{stringliteral}{"{}Montjuic,\ Pont\ major"{}},}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{stringliteral}{"{}Sant\ Ponc,\ Domeny,\ Taiala"{}}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00012}00012\ \};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00014}\mbox{\hyperlink{_padro_8cpp_a48aa78b1fe5fc91651ffd5cd37dac261}{00014}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_padro_8cpp_a48aa78b1fe5fc91651ffd5cd37dac261}{stringToInt}}(\textcolor{keywordtype}{string}\ s)\ \{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (s.length()==0)\ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{char}\ c:\ s\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(c<\textcolor{charliteral}{'0'}\ ||\ c>\textcolor{charliteral}{'9'})\ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{return}\ stoi(\ s\ );}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00022}00022\ \textcolor{comment}{//Función para\ comprobar\ si\ hay\ algún dato\ del\ padrón que\ no\ sea\ válido}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00023}\mbox{\hyperlink{_padro_8cpp_a55b5ec92d8bf2f88a3ee30257ad0367d}{00023}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_padro_8cpp_a55b5ec92d8bf2f88a3ee30257ad0367d}{validarDades}}(\textcolor{keywordtype}{int}\ any,\ \textcolor{keywordtype}{int}\ districte,\ \textcolor{keywordtype}{int}\ codiNivellEstudis,\ \textcolor{keywordtype}{string}\ nivellEstudis,\ \textcolor{keywordtype}{int}\ anyNaixement,\ \textcolor{keywordtype}{int}\ codiNacionalitat,\ \textcolor{keywordtype}{string}\ nomNacionalitat,\ \textcolor{keywordtype}{int}\ seccio)\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ dadesValides\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{if}((any<0)\ ||\ (districte<0\ ||\ districte>6)\ ||\ (codiNivellEstudis<0)\ ||\ (codiNacionalitat<0)\ ||\ (nivellEstudis==\textcolor{stringliteral}{"{}\ "{}})\ ||\ (nomNacionalitat==\textcolor{stringliteral}{"{}\ "{}})\ ||\ (anyNaixement<0\ ||\ anyNaixement>any)\ ||\ (seccio<0))\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ dadesValides\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ dadesValides;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00031}00031\ \textcolor{comment}{//constructor\ vacío}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00032}\mbox{\hyperlink{class_padro_a1570f530f2c493e4ac8cc8f4910a0c0f}{00032}}\ \mbox{\hyperlink{class_padro_a1570f530f2c493e4ac8cc8f4910a0c0f}{Padro::Padro}}()\{\}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00034}00034\ \textcolor{comment}{//Función para\ leer\ los\ datos\ de\ un\ archivo\ CSV\ introducido\ por\ el\ usuario,\ y\ cargarlos\ a\ las\ estructuras\ de\ datos}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00035}\mbox{\hyperlink{class_padro_ac75d33c1e3e722a3f45e7ede2ffb1523}{00035}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_padro_ac75d33c1e3e722a3f45e7ede2ffb1523}{Padro::llegirDades}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&path)\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//pre:\ dirección del\ archivo\ "{}path"{}\ introducido\ por\ el\ usuario}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00037}00037\ \ \ \ \ ifstream\ f;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00038}00038\ \ \ \ \ f.open(path);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}(!f.is\_open())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}No\ se\ pudo\ abrir\ el\ archivo\ "{}}\ <<\ path\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//si\ se\ pudo\ abrir\ el\ archivo,\ leer\ y\ procesar\ datos}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{string}\ linea;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00047}00047\ \ \ \ \ vector<string>\ campos;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{int}\ nDades\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00049}00049\ \ \ \ \ getline(f,\ linea);\ \textcolor{comment}{//saltar\ linea\ de\ la\ cabecera}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00050}00050\ \ \ \ \ getline(f,\ linea);\ \textcolor{comment}{//leer\ segunda\ linea\ del\ archivo}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{while}(!f.eof())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ campos\ =\ \mbox{\hyperlink{eines_8cpp_ac386a3def60373b4661b397131f3c9fc}{tokens}}(linea,\ \textcolor{charliteral}{','},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(campos.size()>=12)\{\ \textcolor{comment}{//solo\ procesar\ lineas\ que\ tengan\ al\ menos\ los\ datos\ necesarios}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//procesar\ los\ campos\ de\ interes}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ any\ =\ \mbox{\hyperlink{_padro_8cpp_a48aa78b1fe5fc91651ffd5cd37dac261}{stringToInt}}(campos[0]);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ districte\ =\ \mbox{\hyperlink{_padro_8cpp_a48aa78b1fe5fc91651ffd5cd37dac261}{stringToInt}}(campos[1]);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ seccio\ =\ \mbox{\hyperlink{_padro_8cpp_a48aa78b1fe5fc91651ffd5cd37dac261}{stringToInt}}(campos[2]);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ codiNivellEstudis\ =\ \mbox{\hyperlink{_padro_8cpp_a48aa78b1fe5fc91651ffd5cd37dac261}{stringToInt}}(campos[4]);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nivellEstudis\ =\ campos[5];}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ anyNaixement\ =\ \mbox{\hyperlink{_padro_8cpp_a48aa78b1fe5fc91651ffd5cd37dac261}{stringToInt}}(campos[6]);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ codiNacionalitat\ =\ \mbox{\hyperlink{_padro_8cpp_a48aa78b1fe5fc91651ffd5cd37dac261}{stringToInt}}(campos[11]);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nomNacionalitat\ =\ campos[12];}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//comprobar\ que\ los\ datos\ sean\ válidos\ antes\ de\ cargarlos}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{_padro_8cpp_a55b5ec92d8bf2f88a3ee30257ad0367d}{validarDades}}(any,\ districte,\ codiNivellEstudis,\ nivellEstudis,\ anyNaixement,\ codiNacionalitat,\ nomNacionalitat,\ seccio))\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ padroAnys[any].afegirAny(districte,\ codiNivellEstudis,\ nivellEstudis,\ anyNaixement,\ codiNacionalitat,\ nomNacionalitat,\ seccio);\ \textcolor{comment}{//cargar\ los\ datos\ leídos}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nDades++;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ getline(f,\ linea);\ \textcolor{comment}{//leer\ siguiente\ linea}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00072}00072\ \ \ \ \ f.close();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{return}\ nDades;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00074}00074\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00076}00076\ \textcolor{comment}{//Función para\ buscar\ si\ existe\ o\ no\ un\ año en\ el\ mapa\ del\ objeto\ Padro}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00077}\mbox{\hyperlink{class_padro_a5b9d914c93083f32d935b3512cb2a744}{00077}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_padro_a5b9d914c93083f32d935b3512cb2a744}{Padro::existeixAny}}(\textcolor{keywordtype}{int}\ any)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{return}\ padroAnys.find(any)\ !=\ padroAnys.end();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00081}00081\ \textcolor{comment}{//Función para\ obtener\ el\ número\ de\ habitantes\ del\ padrón, por\ año}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00082}\mbox{\hyperlink{class_padro_a59658d3507d7bd123aecc71b146256f0}{00082}}\ map<int,\ long>\ \mbox{\hyperlink{class_padro_a59658d3507d7bd123aecc71b146256f0}{Padro::obtenirNumHabitantsPerAny}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00083}00083\ \ \ \ \ map<int,\ long>\ habitants;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00084}00084\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadro\ =\ padroAnys.begin();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{while}(itPadro!=padroAnys.end())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ totalAny\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ vector<long>\ districtesTotal\ =\ itPadro-\/>second.obtenirNumHabitantsPerDistricte();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ i=0;\ i<districtesTotal.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ totalAny\ +=\ districtesTotal[i];}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ habitants[itPadro-\/>first]\ =\ totalAny;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ ++itPadro;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{return}\ habitants;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00099}00099\ \textcolor{comment}{//Función para\ obtener\ el\ número\ de\ habitantes\ de\ un\ año en\ concreto,\ por\ distrito}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00100}\mbox{\hyperlink{class_padro_a7907328c1f8c9847391ce4152f09ca82}{00100}}\ vector<long>\ \mbox{\hyperlink{class_padro_a7907328c1f8c9847391ce4152f09ca82}{Padro::obtenirNumHabitantsPerDistricte}}(\textcolor{keywordtype}{int}\ any)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00101}00101\ \ \ \ \ vector<long>\ habitantsAny;\ \textcolor{comment}{//vector\ para\ guardar\ los\ habitantes\ de\ cada\ distrito}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00102}00102\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadro\ =\ padroAnys.find(any);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00103}00103\ \ \ \ \ habitantsAny\ =\ itPadro-\/>second.obtenirNumHabitantsPerDistricte();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{return}\ habitantsAny;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00107}00107\ \textcolor{comment}{//Función para\ obtener\ el\ número\ de\ habitantes\ de\ un\ año y\ distrito\ concretos}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00108}\mbox{\hyperlink{class_padro_a655cb85928afe9a416ce324e90ad5028}{00108}}\ map<int,\ long>\ \mbox{\hyperlink{class_padro_a655cb85928afe9a416ce324e90ad5028}{Padro::obtenirNumHabitantsPerSeccio}}(\textcolor{keywordtype}{int}\ any,\ \textcolor{keywordtype}{int}\ districte)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{comment}{//llamar\ a\ función para\ obtener\ habitantes\ por\ sección de\ un\ distrito}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00110}00110\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadro\ =\ padroAnys.find(any);\ \textcolor{comment}{//se\ da\ por\ hecho\ que\ el\ año existe\ porque\ se\ ha\ validado\ previamente}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00111}00111\ \ \ \ \ \textcolor{keywordflow}{return}\ itPadro-\/>second.obtenirNumHabitantsPerSeccio(districte);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00112}00112\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00114}00114\ \textcolor{comment}{//Función para\ obtener\ los\ estudios\ de\ la\ población de\ cada\ año del\ padrón, por\ su\ nombre}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00115}\mbox{\hyperlink{class_padro_a875c51ab7323045e333ccbfcb07c1c45}{00115}}\ \mbox{\hyperlink{struct_resum_estudis}{ResumEstudis}}\ \mbox{\hyperlink{class_padro_a875c51ab7323045e333ccbfcb07c1c45}{Padro::resumEstudis}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00116}00116\ \ \ \ \ \mbox{\hyperlink{struct_resum_estudis}{ResumEstudis}}\ resum;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00118}00118\ \ \ \ \ \textcolor{comment}{//recorrer\ los\ años de\ padrón}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00119}00119\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadro\ =\ padroAnys.begin();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{while}(itPadro!=padroAnys.end())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ set<string>\ resumAny\ =\ itPadro-\/>second.resumEstudis();\ \textcolor{comment}{//resumen\ de\ estudios\ de\ cada\ distrito\ del\ año}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{comment}{//recorrer\ set\ de\ resumen\ año y\ guardar\ a\ resum}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ set<string>::const\_iterator\ itResAny\ =\ resumAny.begin();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(itResAny!=resumAny.end())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ resum.\mbox{\hyperlink{struct_resum_estudis_aea02e5def78843544b34187dcb79c110}{afegirResumEstudis}}(itPadro-\/>first,\ resumAny);\ \textcolor{comment}{//guardar\ el\ año y\ el\ resumen\ del\ año}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ ++itResAny;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ ++itPadro;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00129}00129\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{return}\ resum;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00131}00131\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00133}00133\ \textcolor{comment}{//Función para\ obtener\ el\ número\ de\ estudios\ por\ año de\ un\ distrito}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00134}\mbox{\hyperlink{class_padro_a7abf15790e89639d7bbbdb1965a3aea1}{00134}}\ map<int,int>\ \mbox{\hyperlink{class_padro_a7abf15790e89639d7bbbdb1965a3aea1}{Padro::nombreEstudisDistricte}}(\textcolor{keywordtype}{int}\ districte)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00135}00135\ \ \ \ \ map<int,\ int>\ nEstudis;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{comment}{//para\ cada\ año del\ padrón, acceder\ al\ distrito\ y\ obtener\ el\ numero\ de\ estudios\ únicos}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00137}00137\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadro\ =\ padroAnys.begin();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00138}00138\ \ \ \ \ \textcolor{keywordflow}{while}(itPadro!=padroAnys.end())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ set<string>\ resDistricte\ =\ itPadro-\/>second.resumEstudisDistricte(districte);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ nEstudis[itPadro-\/>first]\ =\ resDistricte.size();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ ++itPadro;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00142}00142\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00143}00143\ \ \ \ \ \textcolor{keywordflow}{return}\ nEstudis;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00144}00144\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00146}00146\ \textcolor{comment}{//Función para\ obtener\ los\ promedios\ de\ nivel\ de\ estudios\ de\ cada\ distrito\ en\ cada\ año del\ padrón}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00147}\mbox{\hyperlink{class_padro_a03264959db8614688bdb84969a36c826}{00147}}\ \mbox{\hyperlink{struct_resum_nivell_estudis}{ResumNivellEstudis}}\ \mbox{\hyperlink{class_padro_a03264959db8614688bdb84969a36c826}{Padro::resumNivellEstudis}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00148}00148\ \ \ \ \ \mbox{\hyperlink{struct_resum_nivell_estudis}{ResumNivellEstudis}}\ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00149}00149\ \ \ \ \ \textcolor{comment}{//para\ cada\ año del\ padrón, obtener\ el\ promedio\ de\ estudios\ de\ cada\ distrito}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00150}00150\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadro\ =\ padroAnys.begin();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00151}00151\ \ \ \ \ \textcolor{keywordflow}{while}(itPadro!=padroAnys.end())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ vector<double>\ promigAny\ =\ itPadro-\/>second.resumNivellEstudis();\ \textcolor{comment}{//vector\ con\ el\ promedio\ de\ cada\ distrito\ ese\ año}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}}.afegirPromig(itPadro-\/>first,\ promigAny);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ ++itPadro;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00155}00155\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00156}00156\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00157}00157\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00159}00159\ \textcolor{comment}{//Función para\ obtener\ las\ nacionalidades\ de\ los\ habitantes\ de\ cada\ año del\ padrón, con\ el\ número\ de\ habitantes\ de\ esa\ nacionalidad}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00160}\mbox{\hyperlink{class_padro_abfdea33e54d16d396be0f0f53790f44f}{00160}}\ \mbox{\hyperlink{struct_resum_nacionalitats}{ResumNacionalitats}}\ \mbox{\hyperlink{class_padro_abfdea33e54d16d396be0f0f53790f44f}{Padro::resumNacionalitats}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00161}00161\ \ \ \ \ \mbox{\hyperlink{struct_resum_nacionalitats}{ResumNacionalitats}}\ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00162}00162\ \ \ \ \ \textcolor{comment}{//para\ cada\ año, obtener\ el\ resumen\ de\ nacionalidades}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00163}00163\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadro\ =\ padroAnys.begin();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00164}00164\ \ \ \ \ \textcolor{keywordflow}{while}(itPadro!=padroAnys.end())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ map<pair<string,\ int>,\ \textcolor{keywordtype}{long}>\ resAny\ =\ itPadro-\/>second.resumNacionalitats();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}}.\mbox{\hyperlink{struct_resum_nacionalitats_aa2480dec056873996aa541f06270f046}{afegirNacionalitats}}(itPadro-\/>first,\ resAny);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ ++itPadro;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00170}00170\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00171}00171\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00172}00172\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00174}00174\ \textcolor{comment}{//Función para\ obtener\ el\ nombre\ del\ distrito\ con\ más habitantes\ de\ una\ nacionalidad\ en\ cada\ año}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00175}\mbox{\hyperlink{class_padro_aba2ed2ad94a28917ab20f43a5100f42e}{00175}}\ map<int,\ string>\ \mbox{\hyperlink{class_padro_aba2ed2ad94a28917ab20f43a5100f42e}{Padro::movimentsComunitat}}(\textcolor{keywordtype}{int}\ codiNacionalitat)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00176}00176\ \ \ \ \ map<int,\ string>\ moviments;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00177}00177\ \ \ \ \ \textcolor{comment}{//para\ cada\ año, obtener\ distrito\ con\ mayor\ concentración de\ habitantes\ de\ esa\ nacionalidad}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00178}00178\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadro\ =\ padroAnys.begin();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00179}00179\ \ \ \ \ \textcolor{keywordflow}{while}(itPadro!=padroAnys.end())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ districte\ =\ itPadro-\/>second.maxNacionalitat(codiNacionalitat);\ \textcolor{comment}{//guardar\ el\ distrito\ con\ mayor\ concentración}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(districte==-\/1)\ moviments[itPadro-\/>first]\ =\ \textcolor{stringliteral}{"{}No\ té habitants"{}};\ \textcolor{comment}{//si\ no\ se\ ha\ encontrado\ el\ distrito\ con\ el\ maximo}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ moviments[itPadro-\/>first]\ =\ \mbox{\hyperlink{_padro_8cpp_a56786f18cd14ae0859e538c4c3d4b987}{nomsDistrictes}}[districte];\ \textcolor{comment}{//asignar\ valor\ de\ nomsDistrictes\ correspondiente}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ ++itPadro;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00184}00184\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00185}00185\ \ \ \ \ \textcolor{keywordflow}{return}\ moviments;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00186}00186\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00188}\mbox{\hyperlink{class_padro_aff1712c17752dd8c4019fc8a040bd978}{00188}}\ \mbox{\hyperlink{struct_resum_edats}{ResumEdats}}\ \mbox{\hyperlink{class_padro_aff1712c17752dd8c4019fc8a040bd978}{Padro::resumEdat}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00189}00189\ \ \ \ \ \mbox{\hyperlink{struct_resum_edats}{ResumEdats}}\ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00190}00190\ \ \ \ \ \textcolor{comment}{//para\ cada\ año, obtener\ promedio\ de\ edad\ de\ sus\ distritos}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00191}00191\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadro\ =\ padroAnys.begin();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00192}00192\ \ \ \ \ \textcolor{keywordflow}{while}(itPadro!=padroAnys.end())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ vector<double>\ resAny\ =\ itPadro-\/>second.resumEdat(itPadro-\/>first);\ \textcolor{comment}{//obtener\ resumen\ de\ edades\ del\ año}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}}.afegirEdats(itPadro-\/>first,\ resAny);\ \textcolor{comment}{//guardar\ el\ resumen\ de\ edades\ del\ año}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ ++itPadro;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00196}00196\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00197}00197\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{main_8cpp_a3903a04ec2931656591de59d23c1d672}{res}};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00198}00198\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00200}00200\ \textcolor{comment}{//Función para\ obtener\ el\ distrito\ con\ mayor\ media\ de\ edad\ de\ cada\ año}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00201}\mbox{\hyperlink{class_padro_a0d4996420f913cc011b979909c625c86}{00201}}\ map<int,\ string>\ \mbox{\hyperlink{class_padro_a0d4996420f913cc011b979909c625c86}{Padro::movimentVells}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00202}00202\ \ \ \ \ map<int,\ string>\ moviments;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00203}00203\ \ \ \ \ \textcolor{comment}{//para\ cada\ año, obtener\ distrito\ con\ mayor\ media\ de\ edad}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00204}00204\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadro\ =\ padroAnys.begin();}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00205}00205\ \ \ \ \ \textcolor{keywordflow}{while}(itPadro!=padroAnys.end())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mesVell\ =\ itPadro-\/>second.maxEdat(itPadro-\/>first);\ \textcolor{comment}{//resumen\ de\ edades\ de\ los\ distritos,\ de\ menor\ a\ mayor\ media}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(mesVell==-\/1)\ cout\ <<\ \textcolor{stringliteral}{"{}No\ hay\ distrito"{}}\ <<endl;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ moviments[itPadro-\/>first]\ =\ \mbox{\hyperlink{_padro_8cpp_a56786f18cd14ae0859e538c4c3d4b987}{nomsDistrictes}}[mesVell];\ \textcolor{comment}{//guardar\ nombre\ del\ distrito\ y\ año}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ ++itPadro;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00212}00212\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00213}00213\ \ \ \ \ \textcolor{keywordflow}{return}\ moviments;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00214}00214\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00216}00216\ \textcolor{comment}{//Función para\ obtener\ el\ distrito\ con\ mayor\ incremento\ de\ jóvenes}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00217}\mbox{\hyperlink{class_padro_aa709492625d612ac3968ce08c3cab47e}{00217}}\ pair<string,\ long>\ \mbox{\hyperlink{class_padro_aa709492625d612ac3968ce08c3cab47e}{Padro::mesJoves}}(\textcolor{keywordtype}{int}\ anyInicial,\ \textcolor{keywordtype}{int}\ anyFinal)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00218}00218\ \ \ \ \ pair<string,\ long>\ joves;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00220}00220\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadroInici\ =\ padroAnys.lower\_bound(anyInicial);\ \textcolor{comment}{//iterador\ de\ padro\ en\ el\ año inicial\ o\ el\ más cercano}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00221}00221\ \ \ \ \ map<int,\ Any>::const\_iterator\ itPadroFinal\ =\ padroAnys.lower\_bound(anyFinal);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00223}00223\ \ \ \ \ vector<long>\ jovesInici\ =\ itPadroInici-\/>second.incrementJoves(itPadroInici-\/>first);\ \textcolor{comment}{//numero\ de\ jovenes\ en\ el\ año inicial\ por\ distrito}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00224}00224\ \ \ \ \ vector<long>\ jovesFinal\ =\ itPadroFinal-\/>second.incrementJoves(itPadroFinal-\/>first);\ \textcolor{comment}{//numero\ de\ jovenes\ en\ el\ año final\ por\ distrito}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00225}00225\ \ \ \ \ vector<long>\ increment(jovesFinal.begin(),\ jovesFinal.end());\ \textcolor{comment}{//guardar\ numero\ final\ de\ jovenes}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00227}00227\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i=1;\ i<increment.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00228}00228\ \ \ \ \ \ \ \ \ increment[i-\/1]\ -\/=\ jovesInici[i];}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00229}00229\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00230}00230\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00231}00231\ \ \ \ \ \textcolor{comment}{//obtener\ posición maxima}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00232}00232\ \ \ \ \ \textcolor{keyword}{auto}\ maxDistricte\ =\ max\_element(increment.begin(),\ increment.end());\ \textcolor{comment}{//iterador\ a\ max}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00233}00233\ \ \ \ \ \textcolor{keywordtype}{int}\ indexMax\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(distance(increment.begin(),\ maxDistricte));}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00235}00235\ \ \ \ \ \textcolor{keywordflow}{if}(indexMax>=0\ \&\&\ indexMax<\mbox{\hyperlink{_padro_8cpp_a56786f18cd14ae0859e538c4c3d4b987}{nomsDistrictes}}.size())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ joves\ =\ \{\mbox{\hyperlink{_padro_8cpp_a56786f18cd14ae0859e538c4c3d4b987}{nomsDistrictes}}[indexMax],\ *maxDistricte\};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00237}00237\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00238}00238\ \ \ \ \ \textcolor{keywordflow}{else}\ joves\ =\ \{\textcolor{stringliteral}{"{}Distrito\ desconocido"{}},\ 0\};}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00240}00240\ \ \ \ \ \textcolor{keywordflow}{return}\ joves;}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00241}00241\ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00242}00242\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00243}00243\ \textcolor{comment}{//Función para\ obtener\ la\ lista\ de\ estudios\ de\ los\ habitantes\ que\ cumplen\ las\ condiciones\ introducidas}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00244}\mbox{\hyperlink{class_padro_a175cbefefea3c0d5798ce142c7469dc2}{00244}}\ list<string>\ \mbox{\hyperlink{class_padro_a175cbefefea3c0d5798ce142c7469dc2}{Padro::estudisEdat}}(\textcolor{keywordtype}{int}\ any,\ \textcolor{keywordtype}{int}\ districte,\ \textcolor{keywordtype}{int}\ edat,\ \textcolor{keywordtype}{int}\ CodiNacionalitat)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00245}00245\ \ \ \ \ \textcolor{keyword}{auto}\ itAny\ =\ padroAnys.find(any);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00247}00247\ \ \ \ \ \textcolor{keywordflow}{if}(itAny!=padroAnys.end())\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ itAny-\/>second.estudisEdat(any,\ districte,\ edat,\ CodiNacionalitat);}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00249}00249\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00250}00250\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00251}00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};\ \textcolor{comment}{//devolver\ vacío si\ no\ existe\ el\ año}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00252}00252\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_padro_8cpp_source_l00253}00253\ \}}
+
+\end{DoxyCode}

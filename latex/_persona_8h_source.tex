@@ -1,0 +1,46 @@
+\doxysection{Persona.\+h}
+\hypertarget{_persona_8h_source}{}\label{_persona_8h_source}\mbox{\hyperlink{_persona_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00009}00009\ \textcolor{preprocessor}{\#ifndef\ PERSONA\_H}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00010}00010\ \textcolor{preprocessor}{\#define\ PERSONA\_H}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_estudi_8h}{Estudi.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_nacionalitat_8h}{Nacionalitat.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00022}00022\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00032}\mbox{\hyperlink{class_persona}{00032}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_persona}{Persona}}}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00033}00033\ \{}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_persona_a10853fe29c5346193ebeb27a5ca1a51d}{Persona}}(\textcolor{keywordtype}{int}\ codiNivellEstudis,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&nivellEstudis,\ \textcolor{keywordtype}{int}\ anyNaixement,\ \textcolor{keywordtype}{int}\ codiPaisNaixement,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&paisNaixement);}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_persona_a1082a81132f1b6cd11d992c058de8c52}{mostraPersona}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_persona_a274d0ed5d128c75dac2101a51d2d38c1}{obtenirAnyNaixement}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_persona_aaa217107841783839cad7e6de9769597}{obtenirNivellEstudis}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_persona_a34b8b16170598ee651d77ab986808b76}{obtenirCodiNivellEstudis}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_persona_a05a07c920b714959761b87d93fcb524d}{obtenirNacionalitat}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_persona_a2d3592c6659d36ef673d59977d757a13}{obtenirCodiPaisNaixement}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00090}00090\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ a\_anyNaixement;\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00092}00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_estudi}{Estudi}}\ a\_estudis;\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00093}00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nacionalitat}{Nacionalitat}}\ a\_nacionalitat;\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00095}00095\ \};}
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_persona_8h_source_l00097}00097\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PERSONA\_H}}
+
+\end{DoxyCode}

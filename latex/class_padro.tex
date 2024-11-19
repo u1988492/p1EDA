@@ -1,0 +1,429 @@
+\doxysection{Padro Class Reference}
+\hypertarget{class_padro}{}\label{class_padro}\index{Padro@{Padro}}
+
+
+Clase que gestiona los datos del padrón, incluyendo habitantes, estudios y movimientos.  
+
+
+
+
+{\ttfamily \#include $<$Padro.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_padro_a1570f530f2c493e4ac8cc8f4910a0c0f}{Padro}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_padro}{Padro}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_padro_ac75d33c1e3e722a3f45e7ede2ffb1523}{llegir\+Dades}} (const string \&path)
+\begin{DoxyCompactList}\small\item\em Lee los datos desde un archivo y los carga en las estructuras internas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_padro_a5b9d914c93083f32d935b3512cb2a744}{existeix\+Any}} (int any) const
+\begin{DoxyCompactList}\small\item\em Verifica si existe un año en los datos cargados. \end{DoxyCompactList}\item 
+map$<$ int, long $>$ \mbox{\hyperlink{class_padro_a59658d3507d7bd123aecc71b146256f0}{obtenir\+Num\+Habitants\+Per\+Any}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el número total de habitantes por año. \end{DoxyCompactList}\item 
+vector$<$ long $>$ \mbox{\hyperlink{class_padro_a7907328c1f8c9847391ce4152f09ca82}{obtenir\+Num\+Habitants\+Per\+Districte}} (int any) const
+\begin{DoxyCompactList}\small\item\em Obtiene el número de habitantes por distrito en un año específico. \end{DoxyCompactList}\item 
+map$<$ int, long $>$ \mbox{\hyperlink{class_padro_a655cb85928afe9a416ce324e90ad5028}{obtenir\+Num\+Habitants\+Per\+Seccio}} (int any, int districte) const
+\begin{DoxyCompactList}\small\item\em Obtiene el número de habitantes por sección de un distrito en un año específico. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_resum_estudis}{Resum\+Estudis}} \mbox{\hyperlink{class_padro_a875c51ab7323045e333ccbfcb07c1c45}{resum\+Estudis}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene un resumen de los estudios de la población en cada año. \end{DoxyCompactList}\item 
+map$<$ int, int $>$ \mbox{\hyperlink{class_padro_a7abf15790e89639d7bbbdb1965a3aea1}{nombre\+Estudis\+Districte}} (int districte) const
+\begin{DoxyCompactList}\small\item\em Obtiene el número de estudios por distrito en un año. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_resum_nivell_estudis}{Resum\+Nivell\+Estudis}} \mbox{\hyperlink{class_padro_a03264959db8614688bdb84969a36c826}{resum\+Nivell\+Estudis}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene un resumen del nivel de estudios por distrito y año. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_resum_nacionalitats}{Resum\+Nacionalitats}} \mbox{\hyperlink{class_padro_abfdea33e54d16d396be0f0f53790f44f}{resum\+Nacionalitats}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene un resumen de las nacionalidades en el padrón. \end{DoxyCompactList}\item 
+map$<$ int, string $>$ \mbox{\hyperlink{class_padro_aba2ed2ad94a28917ab20f43a5100f42e}{moviments\+Comunitat}} (int codi\+Nacionalitat) const
+\begin{DoxyCompactList}\small\item\em Obtiene los movimientos de una comunidad según su código de nacionalidad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_resum_edats}{Resum\+Edats}} \mbox{\hyperlink{class_padro_aff1712c17752dd8c4019fc8a040bd978}{resum\+Edat}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene un resumen de las edades promedio por distrito, por año. \end{DoxyCompactList}\item 
+map$<$ int, string $>$ \mbox{\hyperlink{class_padro_a0d4996420f913cc011b979909c625c86}{moviment\+Vells}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene los movimientos de los mayores, es decir, los distritos con mayor promedio de edad. \end{DoxyCompactList}\item 
+pair$<$ string, long $>$ \mbox{\hyperlink{class_padro_aa709492625d612ac3968ce08c3cab47e}{mes\+Joves}} (int any\+Inicial, int any\+Final) const
+\begin{DoxyCompactList}\small\item\em Obtiene el distrito con el mayor incremento de jóvenes entre dos años. \end{DoxyCompactList}\item 
+list$<$ string $>$ \mbox{\hyperlink{class_padro_a175cbefefea3c0d5798ce142c7469dc2}{estudis\+Edat}} (int any, int districte, int edat, int codi\+Nacionalitat) const
+\begin{DoxyCompactList}\small\item\em Obtiene los estudios de los habitantes en un año, distrito, edad y nacionalidad específicos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que gestiona los datos del padrón, incluyendo habitantes, estudios y movimientos. 
+
+La clase {\ttfamily \doxylink{class_padro}{Padro}} proporciona una interfaz para cargar datos, consultar estadísticas sobre la población, los estudios y movimientos de los habitantes, y calcular resúmenes de edades y nacionalidades por año. 
+
+Definition at line \mbox{\hyperlink{_padro_8h_source_l00035}{35}} of file \mbox{\hyperlink{_padro_8h_source}{Padro.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_padro_a1570f530f2c493e4ac8cc8f4910a0c0f}\index{Padro@{Padro}!Padro@{Padro}}
+\index{Padro@{Padro}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{Padro()}{Padro()}}
+{\footnotesize\ttfamily \label{class_padro_a1570f530f2c493e4ac8cc8f4910a0c0f} 
+Padro\+::\+Padro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_padro}{Padro}. 
+
+Inicializa un objeto {\ttfamily \doxylink{class_padro}{Padro}} vacío, preparado para leer datos de archivos. 
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_padro_a175cbefefea3c0d5798ce142c7469dc2}\index{Padro@{Padro}!estudisEdat@{estudisEdat}}
+\index{estudisEdat@{estudisEdat}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{estudisEdat()}{estudisEdat()}}
+{\footnotesize\ttfamily \label{class_padro_a175cbefefea3c0d5798ce142c7469dc2} 
+list$<$ string $>$ Padro\+::estudis\+Edat (\begin{DoxyParamCaption}\item[{int}]{any}{, }\item[{int}]{districte}{, }\item[{int}]{edat}{, }\item[{int}]{codi\+Nacionalitat}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene los estudios de los habitantes en un año, distrito, edad y nacionalidad específicos. 
+
+Este método devuelve una lista con los nombres de los estudios de los habitantes que cumplen las condiciones especificadas (año, distrito, edad, nacionalidad).
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año de los datos a consultar. \\
+\hline
+{\em districte} & Código del distrito. \\
+\hline
+{\em edat} & Edad de los habitantes. \\
+\hline
+{\em codi\+Nacionalitat} & Código de la nacionalidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una lista con los nombres de los estudios de los habitantes que cumplen las condiciones. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00244}{244}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\Hypertarget{class_padro_a5b9d914c93083f32d935b3512cb2a744}\index{Padro@{Padro}!existeixAny@{existeixAny}}
+\index{existeixAny@{existeixAny}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{existeixAny()}{existeixAny()}}
+{\footnotesize\ttfamily \label{class_padro_a5b9d914c93083f32d935b3512cb2a744} 
+bool Padro\+::existeix\+Any (\begin{DoxyParamCaption}\item[{int}]{any}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifica si existe un año en los datos cargados. 
+
+Este método verifica si el año solicitado existe en los datos del padrón.
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el año existe, {\ttfamily false} en caso contrario. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{class_padro_ac75d33c1e3e722a3f45e7ede2ffb1523}\index{Padro@{Padro}!llegirDades@{llegirDades}}
+\index{llegirDades@{llegirDades}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{llegirDades()}{llegirDades()}}
+{\footnotesize\ttfamily \label{class_padro_ac75d33c1e3e722a3f45e7ede2ffb1523} 
+int Padro\+::llegir\+Dades (\begin{DoxyParamCaption}\item[{const string \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Lee los datos desde un archivo y los carga en las estructuras internas. 
+
+Este método carga los datos de población desde un archivo, organizándolos por año.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Ruta al archivo con los datos a cargar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El número total de datos leídos del archivo. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_padro_aa709492625d612ac3968ce08c3cab47e}\index{Padro@{Padro}!mesJoves@{mesJoves}}
+\index{mesJoves@{mesJoves}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{mesJoves()}{mesJoves()}}
+{\footnotesize\ttfamily \label{class_padro_aa709492625d612ac3968ce08c3cab47e} 
+pair$<$ string, long $>$ Padro\+::mes\+Joves (\begin{DoxyParamCaption}\item[{int}]{any\+Inicial}{, }\item[{int}]{any\+Final}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el distrito con el mayor incremento de jóvenes entre dos años. 
+
+Este método devuelve un par que incluye el nombre del distrito con el mayor incremento de jóvenes entre los dos años especificados, junto con el valor de ese incremento.
+
+
+\begin{DoxyParams}{Parameters}
+{\em any\+Inicial} & Año inicial. \\
+\hline
+{\em any\+Final} & Año final. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un par con el nombre del distrito y el incremento de jóvenes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00217}{217}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{class_padro_aba2ed2ad94a28917ab20f43a5100f42e}\index{Padro@{Padro}!movimentsComunitat@{movimentsComunitat}}
+\index{movimentsComunitat@{movimentsComunitat}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{movimentsComunitat()}{movimentsComunitat()}}
+{\footnotesize\ttfamily \label{class_padro_aba2ed2ad94a28917ab20f43a5100f42e} 
+map$<$ int, string $>$ Padro\+::moviments\+Comunitat (\begin{DoxyParamCaption}\item[{int}]{codi\+Nacionalitat}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene los movimientos de una comunidad según su código de nacionalidad. 
+
+Este método devuelve un mapa con el año y el nombre del distrito con el mayor número de habitantes de una comunidad (nacionalidad) en ese año.
+
+
+\begin{DoxyParams}{Parameters}
+{\em codi\+Nacionalitat} & Código de la nacionalidad a consultar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mapa con el año y el nombre del distrito con más habitantes de la nacionalidad. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00175}{175}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{class_padro_a0d4996420f913cc011b979909c625c86}\index{Padro@{Padro}!movimentVells@{movimentVells}}
+\index{movimentVells@{movimentVells}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{movimentVells()}{movimentVells()}}
+{\footnotesize\ttfamily \label{class_padro_a0d4996420f913cc011b979909c625c86} 
+map$<$ int, string $>$ Padro\+::moviment\+Vells (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene los movimientos de los mayores, es decir, los distritos con mayor promedio de edad. 
+
+Este método devuelve un mapa con el nombre del distrito con mayor promedio de edad para cada año.
+
+\begin{DoxyReturn}{Returns}
+Un mapa con el nombre del distrito de mayor edad promedio para cada año. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00201}{201}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{class_padro_a7abf15790e89639d7bbbdb1965a3aea1}\index{Padro@{Padro}!nombreEstudisDistricte@{nombreEstudisDistricte}}
+\index{nombreEstudisDistricte@{nombreEstudisDistricte}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{nombreEstudisDistricte()}{nombreEstudisDistricte()}}
+{\footnotesize\ttfamily \label{class_padro_a7abf15790e89639d7bbbdb1965a3aea1} 
+map$<$ int, int $>$ Padro\+::nombre\+Estudis\+Districte (\begin{DoxyParamCaption}\item[{int}]{districte}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el número de estudios por distrito en un año. 
+
+Este método devuelve un mapa con el número total de estudios en cada distrito para un año específico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em districte} & Código del distrito. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mapa donde la clave es el año y el valor es el número de estudios del distrito en ese año. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{class_padro_a59658d3507d7bd123aecc71b146256f0}\index{Padro@{Padro}!obtenirNumHabitantsPerAny@{obtenirNumHabitantsPerAny}}
+\index{obtenirNumHabitantsPerAny@{obtenirNumHabitantsPerAny}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{obtenirNumHabitantsPerAny()}{obtenirNumHabitantsPerAny()}}
+{\footnotesize\ttfamily \label{class_padro_a59658d3507d7bd123aecc71b146256f0} 
+map$<$ int, long $>$ Padro\+::obtenir\+Num\+Habitants\+Per\+Any (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el número total de habitantes por año. 
+
+Este método devuelve un mapa con el número total de habitantes para cada año registrado en el padrón.
+
+\begin{DoxyReturn}{Returns}
+Un mapa donde la clave es el año y el valor es el número total de habitantes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00082}{82}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{class_padro_a7907328c1f8c9847391ce4152f09ca82}\index{Padro@{Padro}!obtenirNumHabitantsPerDistricte@{obtenirNumHabitantsPerDistricte}}
+\index{obtenirNumHabitantsPerDistricte@{obtenirNumHabitantsPerDistricte}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{obtenirNumHabitantsPerDistricte()}{obtenirNumHabitantsPerDistricte()}}
+{\footnotesize\ttfamily \label{class_padro_a7907328c1f8c9847391ce4152f09ca82} 
+vector$<$ long $>$ Padro\+::obtenir\+Num\+Habitants\+Per\+Districte (\begin{DoxyParamCaption}\item[{int}]{any}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el número de habitantes por distrito en un año específico. 
+
+Este método devuelve un vector con el número de habitantes para cada distrito en el año especificado.
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año de los datos a consultar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vector donde el índice representa el distrito y el valor es el número de habitantes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00100}{100}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\Hypertarget{class_padro_a655cb85928afe9a416ce324e90ad5028}\index{Padro@{Padro}!obtenirNumHabitantsPerSeccio@{obtenirNumHabitantsPerSeccio}}
+\index{obtenirNumHabitantsPerSeccio@{obtenirNumHabitantsPerSeccio}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{obtenirNumHabitantsPerSeccio()}{obtenirNumHabitantsPerSeccio()}}
+{\footnotesize\ttfamily \label{class_padro_a655cb85928afe9a416ce324e90ad5028} 
+map$<$ int, long $>$ Padro\+::obtenir\+Num\+Habitants\+Per\+Seccio (\begin{DoxyParamCaption}\item[{int}]{any}{, }\item[{int}]{districte}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el número de habitantes por sección de un distrito en un año específico. 
+
+Este método devuelve un mapa con el número de habitantes por cada sección dentro de un distrito, para un año específico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em any} & Año de los datos a consultar. \\
+\hline
+{\em districte} & Distrito de los datos a consultar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mapa donde la clave es el número de sección y el valor es el número de habitantes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00108}{108}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{class_padro_aff1712c17752dd8c4019fc8a040bd978}\index{Padro@{Padro}!resumEdat@{resumEdat}}
+\index{resumEdat@{resumEdat}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{resumEdat()}{resumEdat()}}
+{\footnotesize\ttfamily \label{class_padro_aff1712c17752dd8c4019fc8a040bd978} 
+\mbox{\hyperlink{struct_resum_edats}{Resum\+Edats}} Padro\+::resum\+Edat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene un resumen de las edades promedio por distrito, por año. 
+
+Este método devuelve un mapa con el promedio de edad para cada distrito en cada año.
+
+\begin{DoxyReturn}{Returns}
+Un objeto {\ttfamily \doxylink{struct_resum_edats}{Resum\+Edats}} con los promedios de edad por distrito y año. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00188}{188}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{class_padro_a875c51ab7323045e333ccbfcb07c1c45}\index{Padro@{Padro}!resumEstudis@{resumEstudis}}
+\index{resumEstudis@{resumEstudis}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{resumEstudis()}{resumEstudis()}}
+{\footnotesize\ttfamily \label{class_padro_a875c51ab7323045e333ccbfcb07c1c45} 
+\mbox{\hyperlink{struct_resum_estudis}{Resum\+Estudis}} Padro\+::resum\+Estudis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene un resumen de los estudios de la población en cada año. 
+
+Este método genera un resumen de los estudios de los habitantes, agrupado por año.
+
+\begin{DoxyReturn}{Returns}
+Un objeto {\ttfamily \doxylink{struct_resum_estudis}{Resum\+Estudis}} con los estudios de los habitantes por año. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\Hypertarget{class_padro_abfdea33e54d16d396be0f0f53790f44f}\index{Padro@{Padro}!resumNacionalitats@{resumNacionalitats}}
+\index{resumNacionalitats@{resumNacionalitats}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{resumNacionalitats()}{resumNacionalitats()}}
+{\footnotesize\ttfamily \label{class_padro_abfdea33e54d16d396be0f0f53790f44f} 
+\mbox{\hyperlink{struct_resum_nacionalitats}{Resum\+Nacionalitats}} Padro\+::resum\+Nacionalitats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene un resumen de las nacionalidades en el padrón. 
+
+Este método devuelve un mapa que contiene los nombres de las nacionalidades y el número de habitantes de cada nacionalidad, ordenados de mayor a menor.
+
+\begin{DoxyReturn}{Returns}
+Un objeto {\ttfamily \doxylink{struct_resum_nacionalitats}{Resum\+Nacionalitats}} con los resúmenes de nacionalidades y número de habitantes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00160}{160}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\Hypertarget{class_padro_a03264959db8614688bdb84969a36c826}\index{Padro@{Padro}!resumNivellEstudis@{resumNivellEstudis}}
+\index{resumNivellEstudis@{resumNivellEstudis}!Padro@{Padro}}
+\doxysubsubsection{\texorpdfstring{resumNivellEstudis()}{resumNivellEstudis()}}
+{\footnotesize\ttfamily \label{class_padro_a03264959db8614688bdb84969a36c826} 
+\mbox{\hyperlink{struct_resum_nivell_estudis}{Resum\+Nivell\+Estudis}} Padro\+::resum\+Nivell\+Estudis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene un resumen del nivel de estudios por distrito y año. 
+
+Este método devuelve un resumen que incluye el promedio del nivel de estudios por distrito, para cada año del padrón.
+
+\begin{DoxyReturn}{Returns}
+Un objeto {\ttfamily \doxylink{struct_resum_nivell_estudis}{Resum\+Nivell\+Estudis}} con los promedios de nivel de estudios por distrito y año. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_padro_8cpp_source_l00147}{147}} of file \mbox{\hyperlink{_padro_8cpp_source}{Padro.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 16
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_padro_8h}{Padro.\+h}}\item 
+\mbox{\hyperlink{_padro_8cpp}{Padro.\+cpp}}\end{DoxyCompactItemize}

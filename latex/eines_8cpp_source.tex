@@ -1,0 +1,52 @@
+\doxysection{eines.\+cpp}
+\hypertarget{eines_8cpp_source}{}\label{eines_8cpp_source}\mbox{\hyperlink{eines_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ jordir\ on\ 25/9/21.}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{eines_8h}{eines.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00007}\mbox{\hyperlink{eines_8cpp_ac386a3def60373b4661b397131f3c9fc}{00007}}\ vector<string>\ \mbox{\hyperlink{eines_8cpp_ac386a3def60373b4661b397131f3c9fc}{tokens}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&s,\ \textcolor{keywordtype}{char}\ separador,\ \textcolor{keywordtype}{bool}\ cometes)\ \{}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00008}00008\ \ \ \ \ vector<string>\ resultat;}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{if}\ (!s.empty())\ \{}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ primer\ =\ 0,\ ultim\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (ultim\ !=\ string::npos)}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ resultat.push\_back(\mbox{\hyperlink{eines_8cpp_aa9cc83610105486fab4a21343e5dccc5}{token}}(s,\ separador,\ cometes,\ primer,\ ultim));}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{return}\ resultat;}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00017}\mbox{\hyperlink{eines_8cpp_aa9cc83610105486fab4a21343e5dccc5}{00017}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{eines_8cpp_aa9cc83610105486fab4a21343e5dccc5}{token}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&s,\ \textcolor{keywordtype}{char}\ separador,\ \textcolor{keywordtype}{bool}\ cometes,\ \textcolor{keywordtype}{long}\ \&primer,\ \textcolor{keywordtype}{long}\ \&ultim)\ \{}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{string}\ t;}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{if}\ (!cometes\ ||\ s[primer]\ !=\ \textcolor{charliteral}{'"{}'})\ \{\ \textcolor{comment}{//\ No\ volem\ tenir\ en\ compte\ les\ "{}\ o\ no\ comença per\ "{}}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(s[primer]==\textcolor{charliteral}{'\ '}\ \&\&\ primer<s.length())\ \textcolor{comment}{//\ ens\ \ mengem\ els\ espais\ inicials\ si\ no\ hi\ ha\ cometes}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ primer++;}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ ultim\ =\ s.find(separador,\ primer);}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ultim\ ==\ string::npos)}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ t\ =\ s.substr(primer);}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ t\ =\ s.substr(primer,\ ultim\ -\/\ primer);}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ primer\ =\ ultim\ +\ 1;\ \textcolor{comment}{//\ ens\ mengem\ la\ ,}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00030}00030\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{comment}{//\ comença per\ "{}\ i\ les\ volem\ tenir\ en\ compte\ com\ delimitadors}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ primer++;}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ ultim\ =\ s.find(\textcolor{charliteral}{'"{}'},\ primer);}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (s.length()>ultim+1\ \&\&\ s[ultim+1]==\textcolor{charliteral}{'"{}'})\ \{}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ ultim\ =\ s.find(\textcolor{charliteral}{'"{}'},\ ultim+2);\ \textcolor{comment}{//saltem\ "{}"{}\ dobles\ seguides}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ultim\ ==\ string::npos)}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ (\textcolor{stringliteral}{"{}cometes\ no\ tancades"{}});}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ t\ =\ s.substr(primer,\ ultim\ -\/\ primer);}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ primer\ =\ ultim\ +\ 2;\ \textcolor{comment}{//\ ens\ mengem\ els\ "{},}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (primer\ >\ s.length())}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ultim\ =\ string::npos;\ \textcolor{comment}{//era\ l'últim\ token}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ t;}
+\DoxyCodeLine{\Hypertarget{eines_8cpp_source_l00047}00047\ \}}
+
+\end{DoxyCode}
